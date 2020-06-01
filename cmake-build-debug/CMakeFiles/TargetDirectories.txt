@@ -1,0 +1,3 @@
+C:/Users/rolla/CLionProjects/RV32EM-simulator/cmake-build-debug/CMakeFiles/RV32EM_simulator.dir
+C:/Users/rolla/CLionProjects/RV32EM-simulator/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/rolla/CLionProjects/RV32EM-simulator/cmake-build-debug/CMakeFiles/rebuild_cache.dir
