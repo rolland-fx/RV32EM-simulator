@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/rolla/CLionProjects/RV32EM-simulator/main.c" "C:/Users/rolla/CLionProjects/RV32EM-simulator/cmake-build-debug/CMakeFiles/RV32EM_simulator.dir/main.c.obj"
+  "C:/Users/alexa/CLionProjects/RV32EM-simulator/main.c" "C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/CMakeFiles/RV32EM_simulator.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

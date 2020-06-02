@@ -3,4 +3,4 @@ project(RV32EM_simulator C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(RV32EM_simulator main.c)
+add_executable(RV32EM_simulator main.c cmake-build-debug/RV32EM.h)
