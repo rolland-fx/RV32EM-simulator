@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\alexa\CLionProjects\RV32EM-simulator
+CMAKE_SOURCE_DIR = C:\Users\rolla\CLionProjects\RV32EM-simulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -110,44 +110,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named RV32EM_simulator
+# Target rules for targets named simulateur
 
 # Build rule for target.
-RV32EM_simulator: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 RV32EM_simulator
-.PHONY : RV32EM_simulator
+simulateur: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 simulateur
+.PHONY : simulateur
 
 # fast build rule for target.
-RV32EM_simulator/fast:
-	$(MAKE) -f CMakeFiles\RV32EM_simulator.dir\build.make CMakeFiles/RV32EM_simulator.dir/build
-.PHONY : RV32EM_simulator/fast
+simulateur/fast:
+	$(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/build
+.PHONY : simulateur/fast
 
-main.obj: main.c.obj
+#=============================================================================
+# Target rules for targets named test
 
-.PHONY : main.obj
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 test
+.PHONY : test
 
-# target to build an object file
-main.c.obj:
-	$(MAKE) -f CMakeFiles\RV32EM_simulator.dir\build.make CMakeFiles/RV32EM_simulator.dir/main.c.obj
-.PHONY : main.c.obj
+# fast build rule for target.
+test/fast:
+	$(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/build
+.PHONY : test/fast
 
-main.i: main.c.i
+#=============================================================================
+# Target rules for targets named unity
 
-.PHONY : main.i
+# Build rule for target.
+unity: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 unity
+.PHONY : unity
 
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles\RV32EM_simulator.dir\build.make CMakeFiles/RV32EM_simulator.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles\RV32EM_simulator.dir\build.make CMakeFiles/RV32EM_simulator.dir/main.c.s
-.PHONY : main.c.s
+# fast build rule for target.
+unity/fast:
+	$(MAKE) -f test\unity\CMakeFiles\unity.dir\build.make test/unity/CMakeFiles/unity.dir/build
+.PHONY : unity/fast
 
 # Help Target
 help:
@@ -155,12 +154,11 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... RV32EM_simulator
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... simulateur
+	@echo ... test
+	@echo ... unity
 .PHONY : help
 
 
