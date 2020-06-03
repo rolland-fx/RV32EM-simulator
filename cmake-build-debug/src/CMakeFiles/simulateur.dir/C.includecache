@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/rolla/CLionProjects/RV32EM-simulator/src/RV32EM.h
+stdio.h
+-
+stdint.h
+-
+string.h
+-
+stdlib.h
+-
+
+C:/Users/rolla/CLionProjects/RV32EM-simulator/src/main.c
+RV32EM.h
+C:/Users/rolla/CLionProjects/RV32EM-simulator/src/RV32EM.h
+
