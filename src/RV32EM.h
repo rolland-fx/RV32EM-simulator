@@ -128,4 +128,5 @@ void decoder_type_J(uint32_t instruction, struct_J* ptr_struct);
  * @param ptr_struct
  */
 char executer_type_U(uint32_t instruction, struct_U* ptr_struct);
+void executer_type_I_LOAD(struct_I* ptr_struct);
 #endif //RV32EM_SIMULATOR_RV32EM_H

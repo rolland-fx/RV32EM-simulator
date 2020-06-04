@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rolla\CLionProjects\RV32EM-simulator
+CMAKE_SOURCE_DIR = C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,14 +79,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug\test\unity\CMakeFiles\progress.marks
-	cd /d C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 test/unity/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles 0
+	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug\CMakeFiles C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug\test\unity\CMakeFiles\progress.marks
+	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 test/unity/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 test/unity/clean
+	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 test/unity/clean
 .PHONY : clean
 
 # The main clean target
@@ -96,22 +96,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 test/unity/preinstall
+	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 test/unity/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 test/unity/preinstall
+	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 test/unity/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/unity/CMakeFiles/unity.dir/rule:
-	cd /d C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 test/unity/CMakeFiles/unity.dir/rule
+	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 test/unity/CMakeFiles/unity.dir/rule
 .PHONY : test/unity/CMakeFiles/unity.dir/rule
 
 # Convenience name for target.
@@ -121,7 +121,7 @@ unity: test/unity/CMakeFiles/unity.dir/rule
 
 # fast build rule for target.
 unity/fast:
-	cd /d C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\unity\CMakeFiles\unity.dir\build.make test/unity/CMakeFiles/unity.dir/build
+	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f test\unity\CMakeFiles\unity.dir\build.make test/unity/CMakeFiles/unity.dir/build
 .PHONY : unity/fast
 
 unity.obj: unity.c.obj
@@ -130,7 +130,7 @@ unity.obj: unity.c.obj
 
 # target to build an object file
 unity.c.obj:
-	cd /d C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\unity\CMakeFiles\unity.dir\build.make test/unity/CMakeFiles/unity.dir/unity.c.obj
+	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f test\unity\CMakeFiles\unity.dir\build.make test/unity/CMakeFiles/unity.dir/unity.c.obj
 .PHONY : unity.c.obj
 
 unity.i: unity.c.i
@@ -139,7 +139,7 @@ unity.i: unity.c.i
 
 # target to preprocess a source file
 unity.c.i:
-	cd /d C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\unity\CMakeFiles\unity.dir\build.make test/unity/CMakeFiles/unity.dir/unity.c.i
+	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f test\unity\CMakeFiles\unity.dir\build.make test/unity/CMakeFiles/unity.dir/unity.c.i
 .PHONY : unity.c.i
 
 unity.s: unity.c.s
@@ -148,7 +148,7 @@ unity.s: unity.c.s
 
 # target to generate assembly for a file
 unity.c.s:
-	cd /d C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\unity\CMakeFiles\unity.dir\build.make test/unity/CMakeFiles/unity.dir/unity.c.s
+	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f test\unity\CMakeFiles\unity.dir\build.make test/unity/CMakeFiles/unity.dir/unity.c.s
 .PHONY : unity.c.s
 
 # Help Target
@@ -174,6 +174,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\rolla\CLionProjects\RV32EM-simulator\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
