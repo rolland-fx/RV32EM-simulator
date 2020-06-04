@@ -10,6 +10,9 @@
 #include <string.h>
 #include <stdlib.h>
 
+#define REGISTER_NUMBER 17
+#define PC 16
+
 typedef enum type_t {R_type, I_type, S_type, B_type, U_type, J_type} type_t;
 
 typedef struct{
@@ -34,12 +37,17 @@ typedef struct{
 }struct_B;
 
 typedef struct{
+    uint32_t imm;   //20 bits
+    uint8_t rd;     //5 bits
+    uint8_t opcode; //7 bits (LUI : 0x17 / AUIPC : 0x37)
 
 }struct_U;
 
 typedef struct{
 
 }struct_J;
+
+uint32_t Register[REGISTER_NUMBER];
 
 
 /**
@@ -58,6 +66,10 @@ type_t decoder_instruction(uint32_t instruction, void* return_struct);
  */
 void decoder_type_R(uint32_t instruction, struct_R* ptr_struct);
 
-
-
+/**
+ * Decode l'instruction passé en paramètre et place les information de celle-ci dans ptr_struct
+ * @param instruction
+ * @param ptr_struct
+ */
+char decoder_type_U(uint32_t instruction, struct_U* ptr_struct);
 #endif //RV32EM_SIMULATOR_RV32EM_H
