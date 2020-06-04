@@ -18,7 +18,7 @@ void AfficheEtatCourant()
 
 char CodeRun() {
     char choix = 's';
-
+    NextInstructionExist = 1;
     while (NextInstructionExist) {
         if (choix == 's') {
             printf("Exécution pas-à-pas (s) ou continue (c)\n");
@@ -26,7 +26,8 @@ char CodeRun() {
             scanf(" %c", &choix);
             fflush(stdin);
         }
-        //NextInstructionExist = RunNextInstruction();
+        ManageRegisterPC();
+        NextInstructionExist = RunNextInstruction();
         if (choix == 's') AfficheEtatCourant();
     }
     AfficheEtatCourant();

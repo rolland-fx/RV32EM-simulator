@@ -70,7 +70,7 @@ typedef struct{
 
 uint32_t Register[REGISTER_NUMBER];
 
-char NextInstructionExist = 1;
+char NextInstructionExist;
 
 
 /**
@@ -131,4 +131,9 @@ void decoder_type_J(uint32_t instruction, struct_J* ptr_struct);
  */
 char executer_type_U(uint32_t instruction, struct_U* ptr_struct);
 void executer_type_I_LOAD(struct_I* ptr_struct);
+
+char loadFile(FILE* HexaSourceFile);
+char MemoryCreation(void);
+char RunNextInstruction(void);
+void ManageRegisterPC(void);
 #endif //RV32EM_SIMULATOR_RV32EM_H
