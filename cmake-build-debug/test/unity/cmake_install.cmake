@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/jeanp/Documents/Ecole/ELE749/RV32EM-Simulateur/test/unity
+# Install script for directory: C:/Users/rolla/CLionProjects/RV32EM-simulator/test/unity
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

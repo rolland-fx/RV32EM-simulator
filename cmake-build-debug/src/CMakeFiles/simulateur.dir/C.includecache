@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/jeanp/Documents/Ecole/ELE749/RV32EM-Simulateur/src/RV32EM.h
+C:/Users/rolla/CLionProjects/RV32EM-simulator/src/RV32EM.h
 stdio.h
 -
 stdint.h
@@ -16,11 +16,15 @@ string.h
 stdlib.h
 -
 
-C:/Users/jeanp/Documents/Ecole/ELE749/RV32EM-Simulateur/src/decoder.c
+C:/Users/rolla/CLionProjects/RV32EM-simulator/src/decoder.c
 RV32EM.h
-C:/Users/jeanp/Documents/Ecole/ELE749/RV32EM-Simulateur/src/RV32EM.h
+C:/Users/rolla/CLionProjects/RV32EM-simulator/src/RV32EM.h
 
-C:/Users/jeanp/Documents/Ecole/ELE749/RV32EM-Simulateur/src/main.c
+C:/Users/rolla/CLionProjects/RV32EM-simulator/src/executer.c
 RV32EM.h
-C:/Users/jeanp/Documents/Ecole/ELE749/RV32EM-Simulateur/src/RV32EM.h
+C:/Users/rolla/CLionProjects/RV32EM-simulator/src/RV32EM.h
+
+C:/Users/rolla/CLionProjects/RV32EM-simulator/src/main.c
+RV32EM.h
+C:/Users/rolla/CLionProjects/RV32EM-simulator/src/RV32EM.h
 

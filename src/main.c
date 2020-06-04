@@ -1,34 +1,41 @@
 #include "RV32EM.h"
 
-char decoder_type_U(uint32_t instruction, struct_U* ptr_struct) {
-    char decode_return;
-    switch (instruction & 0x0000007Fu) {
-        case 0x17 : //LUI
-            Register[ptr_struct->rd] = ((ptr_struct->imm << 12) | 0b000000000000);
-            decode_return = 1;
-            break;
-        case 0x37: //AUIPC
-            Register[ptr_struct->rd] = (((ptr_struct->imm << 12) | 0b000000000000) + Register[PC]);
-            decode_return = 2;
-            break;
-        default :
-            decode_return = 0;
-            break;
-    }
+#define DEBUG 1
+void AffichageInitial()
+{
+    printf("Simulateur RISC-V RV32E par :\n");
+    printf("- Alexandre Viau\n");
+    printf("- Filipe Andres\n");
+    printf("- F-X Rolland\n");
+    printf("- Jean-Pascal Choiniere\n");
+    printf("2020\n");
 }
 
+char CodeRun()
+{
+    return 0;
+}
 
 int main(int argc, char *argv[] ) {
-    char Filename_Buffer[30];
-    FILE* HexaSourceFile = fopen(argv[1],"r");
-    //AffichageInitial();
+    char FileName[30];
+    FILE* HexaSourceFile;
+    AffichageInitial();
+    if (argv[1] == NULL)
+    {
+        printf("Entrez le nom du fichier a simuler:\n");
+        scanf("%s", FileName);
+        HexaSourceFile = fopen(FileName,"r");
+    }
+    else
+    {
+        HexaSourceFile = fopen(argv[1],"r");
+    }
     if(HexaSourceFile == NULL)
     {
-        //AffichageErreur();
+        printf("Ce fichier ne peut pas etre ouvert\n");
         return -1;
     }
     //MemoryCreation();
     //loadFile(HexaSourceFile);
-    //ChoixModeExecution();
-    return 0;
+    return CodeRun();
 }

@@ -4,6 +4,9 @@
 src/CMakeFiles/simulateur.dir/decoder.c.obj: ../src/RV32EM.h
 src/CMakeFiles/simulateur.dir/decoder.c.obj: ../src/decoder.c
 
+src/CMakeFiles/simulateur.dir/executer.c.obj: ../src/RV32EM.h
+src/CMakeFiles/simulateur.dir/executer.c.obj: ../src/executer.c
+
 src/CMakeFiles/simulateur.dir/main.c.obj: ../src/RV32EM.h
 src/CMakeFiles/simulateur.dir/main.c.obj: ../src/main.c
 
