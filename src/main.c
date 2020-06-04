@@ -11,8 +11,25 @@ void AffichageInitial()
     printf("2020\n");
 }
 
-char CodeRun()
+void AfficheEtatCourant()
 {
+}
+
+
+char CodeRun() {
+    char choix = 's';
+
+    while (NextInstructionExist) {
+        if (choix == 's') {
+            printf("Exécution pas-à-pas (s) ou continue (c)\n");
+            printf(">");
+            scanf(" %c", &choix);
+            fflush(stdin);
+        }
+        //NextInstructionExist = RunNextInstruction();
+        if (choix == 's') AfficheEtatCourant();
+    }
+    AfficheEtatCourant();
     return 0;
 }
 
@@ -23,6 +40,7 @@ int main(int argc, char *argv[] ) {
     if (argv[1] == NULL)
     {
         printf("Entrez le nom du fichier a simuler:\n");
+        printf(">");
         scanf("%s", FileName);
         HexaSourceFile = fopen(FileName,"r");
     }
@@ -35,7 +53,20 @@ int main(int argc, char *argv[] ) {
         printf("Ce fichier ne peut pas etre ouvert\n");
         return -1;
     }
-    //MemoryCreation();
-    //loadFile(HexaSourceFile);
+    if(loadFile(HexaSourceFile) == -1)
+    {
+        printf("Ce fichier n'est pas un fichier d'instruction valide\n");
+        return -1;
+    } else{
+        printf("Fichier d'instruction charge\n");
+    }
+    if(MemoryCreation() == -1)
+    {
+        printf("L'espace memoire n'a pas pu être cree\n");
+        return -1;
+    } else{
+        printf("La memoire a ete cree\n");
+    }
+    fclose (HexaSourceFile);
     return CodeRun();
 }

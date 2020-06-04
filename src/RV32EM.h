@@ -70,6 +70,8 @@ typedef struct{
 
 uint32_t Register[REGISTER_NUMBER];
 
+char NextInstructionExist = 1;
+
 
 /**
  * Decode l'instruction reçu, alloue de l'espace mémoire pour la structure reliée à ce type d'instruction et retourne
