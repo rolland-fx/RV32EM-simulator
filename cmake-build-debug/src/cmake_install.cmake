@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/rolla/CLionProjects/RV32EM-simulator/src
+# Install script for directory: C:/Users/jeanp/Documents/Ecole/ELE749/RV32EM-Simulateur/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,6 +1,6 @@
 #include "RV32EM.h"
 
-int main(int argc, char *argv[] ) {
+/*int main(int argc, char *argv[] ) {
     char Filename_Buffer[30];
     FILE* HexaSourceFile = fopen(argv[1],"r");
     //AffichageInitial();
@@ -14,3 +14,4 @@ int main(int argc, char *argv[] ) {
     //ChoixModeExecution();
     return 0;
 }
+*/

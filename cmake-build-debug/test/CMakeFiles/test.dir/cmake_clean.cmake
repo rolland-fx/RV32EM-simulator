@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/test.dir/__/src/decoder.c.obj"
   "CMakeFiles/test.dir/__/src/main.c.obj"
   "CMakeFiles/test.dir/main_test.c.obj"
   "libtest.dll.a"
