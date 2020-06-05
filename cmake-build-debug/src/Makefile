@@ -47,10 +47,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur
+CMAKE_SOURCE_DIR = C:\Users\alexa\CLionProjects\RV32EM-simulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,14 +79,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug\CMakeFiles C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug\src\CMakeFiles\progress.marks
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug\CMakeFiles 0
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\src\CMakeFiles\progress.marks
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 src/clean
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -96,22 +96,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 src/preinstall
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 src/preinstall
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/simulateur.dir/rule:
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 src/CMakeFiles/simulateur.dir/rule
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f CMakeFiles\Makefile2 src/CMakeFiles/simulateur.dir/rule
 .PHONY : src/CMakeFiles/simulateur.dir/rule
 
 # Convenience name for target.
@@ -121,7 +121,7 @@ simulateur: src/CMakeFiles/simulateur.dir/rule
 
 # fast build rule for target.
 simulateur/fast:
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/build
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/build
 .PHONY : simulateur/fast
 
 decoder.obj: decoder.c.obj
@@ -130,7 +130,7 @@ decoder.obj: decoder.c.obj
 
 # target to build an object file
 decoder.c.obj:
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/decoder.c.obj
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/decoder.c.obj
 .PHONY : decoder.c.obj
 
 decoder.i: decoder.c.i
@@ -139,7 +139,7 @@ decoder.i: decoder.c.i
 
 # target to preprocess a source file
 decoder.c.i:
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/decoder.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/decoder.c.i
 .PHONY : decoder.c.i
 
 decoder.s: decoder.c.s
@@ -148,7 +148,7 @@ decoder.s: decoder.c.s
 
 # target to generate assembly for a file
 decoder.c.s:
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/decoder.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/decoder.c.s
 .PHONY : decoder.c.s
 
 executer.obj: executer.c.obj
@@ -157,7 +157,7 @@ executer.obj: executer.c.obj
 
 # target to build an object file
 executer.c.obj:
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/executer.c.obj
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/executer.c.obj
 .PHONY : executer.c.obj
 
 executer.i: executer.c.i
@@ -166,7 +166,7 @@ executer.i: executer.c.i
 
 # target to preprocess a source file
 executer.c.i:
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/executer.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/executer.c.i
 .PHONY : executer.c.i
 
 executer.s: executer.c.s
@@ -175,8 +175,35 @@ executer.s: executer.c.s
 
 # target to generate assembly for a file
 executer.c.s:
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/executer.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/executer.c.s
 .PHONY : executer.c.s
+
+interface.obj: interface.c.obj
+
+.PHONY : interface.obj
+
+# target to build an object file
+interface.c.obj:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/interface.c.obj
+.PHONY : interface.c.obj
+
+interface.i: interface.c.i
+
+.PHONY : interface.i
+
+# target to preprocess a source file
+interface.c.i:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/interface.c.i
+.PHONY : interface.c.i
+
+interface.s: interface.c.s
+
+.PHONY : interface.s
+
+# target to generate assembly for a file
+interface.c.s:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/interface.c.s
+.PHONY : interface.c.s
 
 main.obj: main.c.obj
 
@@ -184,7 +211,7 @@ main.obj: main.c.obj
 
 # target to build an object file
 main.c.obj:
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/main.c.obj
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/main.c.obj
 .PHONY : main.c.obj
 
 main.i: main.c.i
@@ -193,7 +220,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/main.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -202,8 +229,35 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/main.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/main.c.s
 .PHONY : main.c.s
+
+memory.obj: memory.c.obj
+
+.PHONY : memory.obj
+
+# target to build an object file
+memory.c.obj:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/memory.c.obj
+.PHONY : memory.c.obj
+
+memory.i: memory.c.i
+
+.PHONY : memory.i
+
+# target to preprocess a source file
+memory.c.i:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/memory.c.i
+.PHONY : memory.c.i
+
+memory.s: memory.c.s
+
+.PHONY : memory.s
+
+# target to generate assembly for a file
+memory.c.s:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f src\CMakeFiles\simulateur.dir\build.make src/CMakeFiles/simulateur.dir/memory.c.s
+.PHONY : memory.c.s
 
 # Help Target
 help:
@@ -220,9 +274,15 @@ help:
 	@echo ... executer.obj
 	@echo ... executer.i
 	@echo ... executer.s
+	@echo ... interface.obj
+	@echo ... interface.i
+	@echo ... interface.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... memory.obj
+	@echo ... memory.i
+	@echo ... memory.s
 .PHONY : help
 
 
@@ -234,6 +294,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d C:\Users\jeanp\Documents\Ecole\ELE749\RV32EM-Simulateur\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

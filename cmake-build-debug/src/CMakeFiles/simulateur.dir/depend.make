@@ -3,10 +3,20 @@
 
 src/CMakeFiles/simulateur.dir/decoder.c.obj: ../src/RV32EM.h
 src/CMakeFiles/simulateur.dir/decoder.c.obj: ../src/decoder.c
+src/CMakeFiles/simulateur.dir/decoder.c.obj: ../src/memory.h
 
 src/CMakeFiles/simulateur.dir/executer.c.obj: ../src/RV32EM.h
 src/CMakeFiles/simulateur.dir/executer.c.obj: ../src/executer.c
+src/CMakeFiles/simulateur.dir/executer.c.obj: ../src/memory.h
+
+src/CMakeFiles/simulateur.dir/interface.c.obj: ../src/RV32EM.h
+src/CMakeFiles/simulateur.dir/interface.c.obj: ../src/interface.c
+src/CMakeFiles/simulateur.dir/interface.c.obj: ../src/memory.h
 
 src/CMakeFiles/simulateur.dir/main.c.obj: ../src/RV32EM.h
 src/CMakeFiles/simulateur.dir/main.c.obj: ../src/main.c
+src/CMakeFiles/simulateur.dir/main.c.obj: ../src/memory.h
+
+src/CMakeFiles/simulateur.dir/memory.c.obj: ../src/memory.c
+src/CMakeFiles/simulateur.dir/memory.c.obj: ../src/memory.h
 

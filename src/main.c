@@ -13,8 +13,8 @@ char CodeRun() {
             printf("\n");
             fflush(stdin);
         }
-        ManageRegisterPC();
-        NextInstructionExist = RunNextInstruction();
+        //ManageRegisterPC();
+        //NextInstructionExist = RunNextInstruction();
         if (choix == 's') {
             AfficheInstruction();
             AfficheEtatCourant();
@@ -44,7 +44,6 @@ char CodeRun() {
 
 int main(int argc, char *argv[] ) {
     char FileName[30];
-    FILE* HexaSourceFile;
     AffichageInitial();
     if (argv[1] == NULL)
     {
@@ -52,31 +51,19 @@ int main(int argc, char *argv[] ) {
         printf(">");
         scanf("%s", FileName);
         printf("\n");
-        HexaSourceFile = fopen(FileName,"r");
     }
     else
     {
-        HexaSourceFile = fopen(argv[1],"r");
+        strcpy(FileName, argv[1]);
     }
-    if(HexaSourceFile == NULL)
-    {
-        printf("Ce fichier ne peut pas etre ouvert\n");
-        return -1;
-    }
-    if(loadFile(HexaSourceFile) == -1)
+
+    if(loadProgramToMemory(FileName))
     {
         printf("\nCe fichier n'est pas un fichier d'instruction valide\n");
         return -1;
     } else{
         printf("\nFichier d'instruction charge\n");
     }
-    if(MemoryCreation() == -1)
-    {
-        printf("L'espace memoire n'a pas pu être cree\n");
-        return -1;
-    } else{
-        printf("La memoire a ete cree\n");
-    }
-    fclose (HexaSourceFile);
+
     return CodeRun();
 }

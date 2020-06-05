@@ -10,6 +10,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+#include "memory.h"
+
 #define REGISTER_NUMBER 17
 #define PC 16
 
@@ -68,8 +70,7 @@ typedef struct{
     uint8_t opcode;     //7 bits
 }struct_J;
 
-uint32_t Register[REGISTER_NUMBER];
-uint16_t Memory[2097152];
+
 char NextInstructionExist;
 
 
@@ -132,8 +133,6 @@ void decoder_type_J(uint32_t instruction, struct_J* ptr_struct);
 char executer_type_U(uint32_t instruction, struct_U* ptr_struct);
 void executer_type_I_LOAD(struct_I* ptr_struct);
 
-char loadFile(FILE* HexaSourceFile);
-char MemoryCreation(void);
 char RunNextInstruction(void);
 void ManageRegisterPC(void);
 void AffichageInitial(void);

@@ -3,12 +3,29 @@
 
 test/CMakeFiles/test.dir/__/src/decoder.c.obj: ../src/RV32EM.h
 test/CMakeFiles/test.dir/__/src/decoder.c.obj: ../src/decoder.c
+test/CMakeFiles/test.dir/__/src/decoder.c.obj: ../src/memory.h
 
-test/CMakeFiles/test.dir/__/src/main.c.obj: ../src/RV32EM.h
-test/CMakeFiles/test.dir/__/src/main.c.obj: ../src/main.c
+test/CMakeFiles/test.dir/__/src/executer.c.obj: ../src/RV32EM.h
+test/CMakeFiles/test.dir/__/src/executer.c.obj: ../src/executer.c
+test/CMakeFiles/test.dir/__/src/executer.c.obj: ../src/memory.h
+
+test/CMakeFiles/test.dir/__/src/interface.c.obj: ../src/RV32EM.h
+test/CMakeFiles/test.dir/__/src/interface.c.obj: ../src/interface.c
+test/CMakeFiles/test.dir/__/src/interface.c.obj: ../src/memory.h
+
+test/CMakeFiles/test.dir/__/src/memory.c.obj: ../src/memory.c
+test/CMakeFiles/test.dir/__/src/memory.c.obj: ../src/memory.h
 
 test/CMakeFiles/test.dir/main_test.c.obj: ../src/RV32EM.h
+test/CMakeFiles/test.dir/main_test.c.obj: ../src/memory.h
 test/CMakeFiles/test.dir/main_test.c.obj: ../test/main_test.c
+test/CMakeFiles/test.dir/main_test.c.obj: ../test/memory_test.h
 test/CMakeFiles/test.dir/main_test.c.obj: ../test/unity/unity.h
 test/CMakeFiles/test.dir/main_test.c.obj: ../test/unity/unity_internals.h
+
+test/CMakeFiles/test.dir/memory_test.c.obj: ../src/memory.h
+test/CMakeFiles/test.dir/memory_test.c.obj: ../test/memory_test.c
+test/CMakeFiles/test.dir/memory_test.c.obj: ../test/memory_test.h
+test/CMakeFiles/test.dir/memory_test.c.obj: ../test/unity/unity.h
+test/CMakeFiles/test.dir/memory_test.c.obj: ../test/unity/unity_internals.h
 

@@ -6,25 +6,13 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/rolla/CLionProjects/RV32EM-simulator/src/RV32EM.h
-stdio.h
--
+C:/Users/alexa/CLionProjects/RV32EM-simulator/src/memory.c
+memory.h
+C:/Users/alexa/CLionProjects/RV32EM-simulator/src/memory.h
+
+C:/Users/alexa/CLionProjects/RV32EM-simulator/src/memory.h
 stdint.h
 -
-string.h
+stdio.h
 -
-stdlib.h
--
-
-C:/Users/rolla/CLionProjects/RV32EM-simulator/src/decoder.c
-RV32EM.h
-C:/Users/rolla/CLionProjects/RV32EM-simulator/src/RV32EM.h
-
-C:/Users/rolla/CLionProjects/RV32EM-simulator/src/executer.c
-RV32EM.h
-C:/Users/rolla/CLionProjects/RV32EM-simulator/src/RV32EM.h
-
-C:/Users/rolla/CLionProjects/RV32EM-simulator/src/main.c
-RV32EM.h
-C:/Users/rolla/CLionProjects/RV32EM-simulator/src/RV32EM.h
 

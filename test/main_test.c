@@ -4,6 +4,7 @@
 
 #include "unity/unity.h"
 #include "../src/RV32EM.h"
+#include "memory_test.h"
 
 void setUp(void)
 {
@@ -239,7 +240,10 @@ void run_test_all_type_J(){
 int main(void)
 {
     UNITY_BEGIN();
-    RUN_TEST(test_decoder_instruction);
+    //RUN_TEST(test_decoder_instruction);
+    RUN_TEST(loadProgramToMemory_should_return_non_zero_on_missing_file);
+    RUN_TEST(loadProgramToMemory_should_copy_file_to_memory);
+    RUN_TEST(loadProgramToMemory_should_initialize_userMemorySize_and_userMemory);
     return UNITY_END();
 }
 
