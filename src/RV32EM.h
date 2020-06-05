@@ -69,7 +69,7 @@ typedef struct{
 }struct_J;
 
 uint32_t Register[REGISTER_NUMBER];
-
+uint16_t Memory[2097152];
 char NextInstructionExist;
 
 
@@ -136,4 +136,8 @@ char loadFile(FILE* HexaSourceFile);
 char MemoryCreation(void);
 char RunNextInstruction(void);
 void ManageRegisterPC(void);
+void AffichageInitial(void);
+void AfficheInstruction(void);
+void AfficheEtatCourant(void);
+void AfficheMemoire(uint32_t,char);
 #endif //RV32EM_SIMULATOR_RV32EM_H

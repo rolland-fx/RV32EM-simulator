@@ -1,38 +1,16 @@
 #include "RV32EM.h"
-
-#define DEBUG 1
-void AffichageInitial()
-{
-    printf("Simulateur RISC-V RV32E par :\n");
-    printf("- Alexandre Viau\n");
-    printf("- Filipe Andres\n");
-    printf("- F-X Rolland\n");
-    printf("- Jean-Pascal Choiniere\n");
-    printf("2020\n");
-}
-void AfficheInstruction()
-{
-    printf("Instruction : 0x%08x [xxxxxxxxxxxxxxx]",15);
-
-}
-
-void AfficheEtatCourant()
-{
-    printf("PC : 0x%08x x1 : 0x%08x x2 : 0x%08x x3 : 0x%08x\n", Register[16],Register[1],Register[2],Register[3]);
-    printf("x4 : 0x%08x x5 : 0x%08x x6 : 0x%08x x7 : 0x%08x\n", Register[4],Register[5],Register[6],Register[7]);
-    printf("x8 : 0x%08x x9 : 0x%08x x10: 0x%08x x11: 0x%08x\n", Register[8],Register[9],Register[10],Register[11]);
-    printf("x12: 0x%08x x13: 0x%08x x14: 0x%08x x15: 0x%08x\n", Register[12],Register[13],Register[14],Register[15]);
-}
-
-
 char CodeRun() {
     char choix = 's';
+    char MemoryAdressString[7];
+    uint32_t MemoryAdress;
+    char MemoryCaseToShow;
     NextInstructionExist = 1;
     while (NextInstructionExist) {
         if (choix == 's') {
             printf("Exécution pas-à-pas (s) ou continue (c)\n");
             printf(">");
-            scanf(" %c", &choix);
+            scanf("%c", &choix);
+            printf("\n");
             fflush(stdin);
         }
         ManageRegisterPC();
@@ -40,6 +18,23 @@ char CodeRun() {
         if (choix == 's') {
             AfficheInstruction();
             AfficheEtatCourant();
+        }
+        else if (choix == 'm')
+        {
+            printf("Choix de l'adresse memoire a afficher. Format : FFFFFF \n");
+            printf(">");
+            scanf("%s", MemoryAdressString);
+            printf("\n");
+            fflush(stdin);
+            printf("Nombre de case mémoire a afficher\n");
+            printf(">");
+            scanf("%c", MemoryCaseToShow);
+            printf("\n");
+            fflush(stdin);
+            MemoryAdress = (uint32_t)strtol(MemoryAdressString, NULL, 16);
+            AfficheInstruction();
+            AfficheEtatCourant();
+            AfficheMemoire(MemoryAdress,MemoryCaseToShow);
         }
     }
     AfficheInstruction();
@@ -56,6 +51,7 @@ int main(int argc, char *argv[] ) {
         printf("Entrez le nom du fichier a simuler:\n");
         printf(">");
         scanf("%s", FileName);
+        printf("\n");
         HexaSourceFile = fopen(FileName,"r");
     }
     else
@@ -69,10 +65,10 @@ int main(int argc, char *argv[] ) {
     }
     if(loadFile(HexaSourceFile) == -1)
     {
-        printf("Ce fichier n'est pas un fichier d'instruction valide\n");
+        printf("\nCe fichier n'est pas un fichier d'instruction valide\n");
         return -1;
     } else{
-        printf("Fichier d'instruction charge\n");
+        printf("\nFichier d'instruction charge\n");
     }
     if(MemoryCreation() == -1)
     {
