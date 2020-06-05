@@ -5,6 +5,21 @@
 #include "RV32EM.h"
 
 /**
+ * Decodes the instruction of type R and puts every parts inside a structure
+ * @param instruction
+ * @param ptr_struct
+ */
+void decoder_type_R(uint32_t instruction, struct_R* ptr_struct){
+
+    ptr_struct->opcode      =   (instruction & 0x0000007Fu);
+    ptr_struct->rd          =   (instruction & 0x00000F80u) >> 7u;
+    ptr_struct->func3       =   (instruction & 0x00007000u) >> 12u;
+    ptr_struct->rs1         =   (instruction & 0x000F8000u) >> 15u;
+    ptr_struct->rs2         =   (instruction & 0x01F00000u) >> 20u;
+    ptr_struct->funct7      =   (instruction & 0xFE000000u) >> 25u;
+}
+
+/**
  * Decodes the instruction of type I and puts every parts inside a structure
  * @param instruction
  * @param ptr_struct
@@ -31,6 +46,24 @@ void decoder_type_S(uint32_t instruction, struct_S* ptr_struct){
     ptr_struct->rs2         =   (instruction & 0x01F00000u) >> 20u;
     ptr_struct->imm_11_5    =   (instruction & 0xFE000000u) >> 25u;
 }
+
+/**
+ * Decodes the instruction of type B and puts every parts inside a structure
+ * @param instruction
+ * @param ptr_struct
+ */
+void decoder_type_B(uint32_t instruction, struct_B* ptr_struct){
+
+    ptr_struct->opcode      =   (instruction & 0x0000007Fu);
+    ptr_struct->imm_11      =   (instruction & 0x00000080u) >> 7u;
+    ptr_struct->imm_4_1     =   (instruction & 0x00000F00u) >> 8u;
+    ptr_struct->func3       =   (instruction & 0x00007000u) >> 12u;
+    ptr_struct->rs1         =   (instruction & 0x000F8000u) >> 15u;
+    ptr_struct->rs2         =   (instruction & 0x01F00000u) >> 20u;
+    ptr_struct->imm_10_5    =   (instruction & 0x7E000000u) >> 25u;
+    ptr_struct->imm_12      =   (instruction & 0x80000000u) >> 31u;
+}
+
 /**
  * Decodes the instruction of type J and puts every parts inside a structure
  * @param instruction
@@ -81,7 +114,7 @@ type_t decoder_instruction(uint32_t instruction, void* return_struct){
     }
     switch (instruction_type) {
         case R_type:
-            //decoder_type_R();
+            decoder_type_R(instruction,(struct_R*)return_struct);
             break;
         case I_type:
             decoder_type_I(instruction,(struct_I*)return_struct);
@@ -90,7 +123,7 @@ type_t decoder_instruction(uint32_t instruction, void* return_struct){
             decoder_type_S(instruction,(struct_S*)return_struct);
             break;
         case B_type:
-            //decoder_type_B();
+            decoder_type_B(instruction,(struct_B*)return_struct);
             break;
         case U_type:
             decoder_type_U(instruction,(struct_U*)return_struct);
