@@ -69,10 +69,6 @@ typedef struct{
     uint8_t opcode;     //7 bits
 }struct_J;
 
-
-char NextInstructionExist;
-
-
 /**
  * Decode l'instruction reçu, alloue de l'espace mémoire pour la structure reliée à ce type d'instruction et retourne
  * le type d'linstruction
