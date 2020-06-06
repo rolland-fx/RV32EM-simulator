@@ -28,7 +28,7 @@ void PrintCurrentState()
 void PrintSliceofMemory(uint32_t address, uint8_t MemoryCaseToShow)
 {
     printf("contenu memoire :\n");
-    for (uint32_t i = address; i <= (uint32_t) address + MemoryCaseToShow; i++)
+    for (uint32_t i = address; i < (uint32_t) address + MemoryCaseToShow; i++)
     {
         if(i < MEMORY_SIZE)
         {

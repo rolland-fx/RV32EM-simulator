@@ -5,6 +5,10 @@
 #include "unity/unity.h"
 #include "../src/RV32EM.h"
 #include "memory_test.h"
+#include "decoder_test.h"
+#include "executer_test.h"
+#include "manager_test.h"
+
 
 void setUp(void)
 {
