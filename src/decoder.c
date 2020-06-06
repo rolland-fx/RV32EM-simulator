@@ -46,6 +46,24 @@ void decoder_type_S(uint32_t instruction, struct_S* ptr_struct){
     ptr_struct->rs2         =   (instruction & 0x01F00000u) >> 20u;
     ptr_struct->imm_11_5    =   (instruction & 0xFE000000u) >> 25u;
 }
+
+/**
+ * Decodes the instruction of type B and puts every parts inside a structure
+ * @param instruction
+ * @param ptr_struct
+ */
+void decoder_type_B(uint32_t instruction, struct_B* ptr_struct){
+
+    ptr_struct->opcode      =   (instruction & 0x0000007Fu);
+    ptr_struct->imm_11      =   (instruction & 0x00000080u) >> 7u;
+    ptr_struct->imm_4_1     =   (instruction & 0x00000F00u) >> 8u;
+    ptr_struct->func3       =   (instruction & 0x00007000u) >> 12u;
+    ptr_struct->rs1         =   (instruction & 0x000F8000u) >> 15u;
+    ptr_struct->rs2         =   (instruction & 0x01F00000u) >> 20u;
+    ptr_struct->imm_10_5    =   (instruction & 0x7E000000u) >> 25u;
+    ptr_struct->imm_12      =   (instruction & 0x80000000u) >> 31u;
+}
+
 /**
  * Decodes the instruction of type J and puts every parts inside a structure
  * @param instruction
