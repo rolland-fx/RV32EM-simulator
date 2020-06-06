@@ -1,9 +1,9 @@
 //
 // Created by rolla on 2020-06-04.
 //
-#include "RV32EM.h"
+#include "interface.h"
 
-void AffichageInitial()
+void InitialPrint()
 {
     printf("Simulateur RISC-V RV32E par :\n");
     printf("- Alexandre Viau\n");
@@ -12,12 +12,12 @@ void AffichageInitial()
     printf("- F-X Rolland\n");
     printf("2020\n");
 }
-void AfficheInstruction()
+void PrintInstruction()
 {
     printf("Instruction : 0x%08x [xxxxxxxxxxxxxxx]\n",0x00a12023);
 }
 
-void AfficheEtatCourant()
+void PrintCurrentState()
 {
     printf("PC : 0x%08x x1 : 0x%08x x2 : 0x%08x x3 : 0x%08x\n", Register[PC],Register[1],Register[2],Register[3]);
     printf("x4 : 0x%08x x5 : 0x%08x x6 : 0x%08x x7 : 0x%08x\n", Register[4],Register[5],Register[6],Register[7]);
@@ -25,11 +25,15 @@ void AfficheEtatCourant()
     printf("x12: 0x%08x x13: 0x%08x x14: 0x%08x x15: 0x%08x\n", Register[12],Register[13],Register[14],Register[15]);
 }
 
-void AfficheMemoire(uint32_t adresse,char MemoryCaseToShow)
+void PrintSliceofMemory(uint32_t address, uint8_t MemoryCaseToShow)
 {
-    printf("contenu memoire :");
-    for (uint32_t i = adresse; i <= (uint32_t) adresse + MemoryCaseToShow; i++)
+    printf("contenu memoire :\n");
+    for (uint32_t i = address; i <= (uint32_t) address + MemoryCaseToShow; i++)
     {
-        printf("%X : %X\n",i,Memory[i]);
+        if(i < MEMORY_SIZE)
+        {
+            printf("0x%08x : 0x%08x\n",i,Memory[i]);
+        }
     }
+    printf("\n\n");
 }

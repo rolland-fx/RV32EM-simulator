@@ -1,23 +1,23 @@
 #include "RV32EM.h"
 char CodeRun() {
     char choix = 's';
-    char MemoryAdressString[7];
+    char MemoryAdressString[10];
+    char *ptr;
     uint32_t MemoryAdress;
-    char MemoryCaseToShow;
+    uint8_t MemoryCaseToShow;
     NextInstructionExist = 1;
     while (NextInstructionExist) {
-        if (choix == 's') {
-            printf("Exécution pas-à-pas (s) ou continue (c)\n");
+        if (choix != 'c') {
+            printf("Execution pas-a-pas (s) ou continue (c)\n");
             printf(">");
-            scanf("%c", &choix);
-            printf("\n");
+            scanf(" %c", &choix);
             fflush(stdin);
         }
-        //ManageRegisterPC();
-        //NextInstructionExist = RunNextInstruction();
+        //NEXT FUNCTION TO FINISH TO MAKE THE PROGRAM DO SOMEHTING !
+        NextInstructionExist = RunNextInstruction();
         if (choix == 's') {
-            AfficheInstruction();
-            AfficheEtatCourant();
+            PrintInstruction();
+            PrintCurrentState();
         }
         else if (choix == 'm')
         {
@@ -26,25 +26,25 @@ char CodeRun() {
             scanf("%s", MemoryAdressString);
             printf("\n");
             fflush(stdin);
-            printf("Nombre de case mémoire a afficher\n");
+            printf("Nombre de case memoire a afficher\n");
             printf(">");
-            scanf("%c", MemoryCaseToShow);
+            scanf("%d", &MemoryCaseToShow);
             printf("\n");
             fflush(stdin);
-            MemoryAdress = (uint32_t)strtol(MemoryAdressString, NULL, 16);
-            AfficheInstruction();
-            AfficheEtatCourant();
-            AfficheMemoire(MemoryAdress,MemoryCaseToShow);
+            MemoryAdress = (uint32_t)strtol(MemoryAdressString, &ptr, 16);
+            PrintSliceofMemory(MemoryAdress, MemoryCaseToShow);
+            PrintInstruction();
+            PrintCurrentState();
         }
     }
-    AfficheInstruction();
-    AfficheEtatCourant();
+    PrintInstruction();
+    PrintCurrentState();
     return 0;
 }
 
 int main(int argc, char *argv[] ) {
     char FileName[30];
-    AffichageInitial();
+    InitialPrint();
     if (argv[1] == NULL)
     {
         printf("Entrez le nom du fichier a simuler:\n");
@@ -64,6 +64,5 @@ int main(int argc, char *argv[] ) {
     } else{
         printf("\nFichier d'instruction charge\n");
     }
-
     return CodeRun();
 }

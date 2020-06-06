@@ -11,9 +11,8 @@
 #include <stdlib.h>
 
 #include "memory.h"
-
-#define REGISTER_NUMBER 17
-#define PC 16
+#include "interface.h"
+#include "manager.h"
 
 typedef enum type_t {R_type, I_type, S_type, B_type, U_type, J_type} type_t;
 
@@ -126,17 +125,16 @@ void decoder_type_U(uint32_t instruction, struct_U* ptr_struct);
 void decoder_type_J(uint32_t instruction, struct_J* ptr_struct);
 
 /**
- * Decode l'instruction passé en paramètre et place les information de celle-ci dans ptr_struct
+ * Execute une instruction de type U en utilisant les informations stockée dans la structure
  * @param instruction
  * @param ptr_struct
  */
 char executer_type_U(uint32_t instruction, struct_U* ptr_struct);
+/**
+ * Decode l'instruction passé en paramètre et place les information de celle-ci dans ptr_struct
+ * @param instruction
+ * @param ptr_struct
+ */
 void executer_type_I_LOAD(struct_I* ptr_struct);
 
-char RunNextInstruction(void);
-void ManageRegisterPC(void);
-void AffichageInitial(void);
-void AfficheInstruction(void);
-void AfficheEtatCourant(void);
-void AfficheMemoire(uint32_t,char);
 #endif //RV32EM_SIMULATOR_RV32EM_H
