@@ -6,6 +6,7 @@
 
 char CodeRun() {
     char Selection = 's';
+    char InstructionCounter = 0;
     NextInstructionExist = 1;
     while (NextInstructionExist)
     {
@@ -33,6 +34,7 @@ char CodeRun() {
             PrintInstruction();
             PrintCurrentState();
         }
+        InstructionCounter++;
         //NEXT FUNCTION TO FINISH TO MAKE THE PROGRAM DO SOMEHTING !
         //NextInstructionExist = RunNextInstruction();
     }
@@ -41,7 +43,7 @@ char CodeRun() {
         PrintInstruction();
         PrintCurrentState();
     }
-    return 0;
+    return InstructionCounter;
 }
 
 char RunNextInstruction(void)
