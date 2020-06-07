@@ -94,44 +94,45 @@ void decoder_type_U(uint32_t instruction, struct_U* ptr_struct) {
  * @param return_struct
  * @return
  */
-type_t decoder_instruction(uint32_t instruction, void* return_struct){
+void* decoder_instruction(uint32_t instruction, type_t* instruction_type){
 
     uint8_t opcode = (instruction & 0x7Fu);
-    type_t instruction_type;
+    void* retVal = NULL;
     switch (opcode) {
-        case 0x33: instruction_type = R_type; break;
+        case 0x33: *instruction_type = R_type; break;
         case 0x03:
         case 0x0F:
         case 0x13:
         case 0x67:
-        case 0x73: instruction_type = I_type; break;
-        case 0x23: instruction_type = S_type; break;
-        case 0x63: instruction_type = B_type; break;
+        case 0x73: *instruction_type = I_type; break;
+        case 0x23: *instruction_type = S_type; break;
+        case 0x63: *instruction_type = B_type; break;
         case 0x17:
-        case 0x37: instruction_type = U_type; break;
-        case 0x6F: instruction_type = J_type; break;
+        case 0x37: *instruction_type = U_type; break;
+        case 0x6F: *instruction_type = J_type; break;
         default:    break;
     }
-    switch (instruction_type) {
+    switch (*instruction_type) {
         case R_type:
-            decoder_type_R(instruction,(struct_R*)return_struct);
+            retVal = malloc(sizeof(struct_R));
+            decoder_type_R(instruction,(struct_R*)(&retVal));
             break;
         case I_type:
-            decoder_type_I(instruction,(struct_I*)return_struct);
+            decoder_type_I(instruction,(struct_I*)(&retVal));
             break;
         case S_type:
-            decoder_type_S(instruction,(struct_S*)return_struct);
+            decoder_type_S(instruction,(struct_S*)(&retVal));
             break;
         case B_type:
-            decoder_type_B(instruction,(struct_B*)return_struct);
+            decoder_type_B(instruction,(struct_B*)(&retVal));
             break;
         case U_type:
-            decoder_type_U(instruction,(struct_U*)return_struct);
+            decoder_type_U(instruction,(struct_U*)(&retVal));
             break;
         case J_type:
-            decoder_type_J(instruction,(struct_J*)return_struct);
+            decoder_type_J(instruction,(struct_J*)(&retVal));
             break;
         default:    break;
     }
-    return instruction_type;
+    return retVal;
 }
