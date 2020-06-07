@@ -73,7 +73,7 @@ void decoder_type_J(uint32_t instruction, struct_J* ptr_struct){
 
     ptr_struct->opcode      =   (instruction & 0x0000007Fu);
     ptr_struct->rd          =   (instruction & 0x00000F80u) >> 07u;
-    ptr_struct->imm_19_12   =   (instruction & 0x000FF000u) >> 12u;;
+    ptr_struct->imm_19_12   =   (instruction & 0x000FF000u) >> 12u;
     ptr_struct->imm_11      =   (instruction & 0x00100000u) >> 20u;
     ptr_struct->imm_10_1    =   (instruction & 0x7FE00000u) >> 21u;
     ptr_struct->imm_20      =   (instruction & 0x80000000u) >> 31u;
@@ -82,7 +82,7 @@ void decoder_type_J(uint32_t instruction, struct_J* ptr_struct){
 void decoder_type_U(uint32_t instruction, struct_U* ptr_struct) {
     ptr_struct->opcode      =   (instruction & 0x0000007Fu);
     ptr_struct->rd          =   (instruction & 0x00000F80u) >> 07u;
-    ptr_struct->imm         =   (instruction & 0xFFFFF000u) >> 12u;;
+    ptr_struct->imm         =   (instruction & 0xFFFFF000u) >> 12u;
 }
 
 
