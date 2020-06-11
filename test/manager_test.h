@@ -6,6 +6,6 @@
 #define RV32EM_SIMULATOR_MANAGER_TEST_H
 
 #include "unity/unity.h"
-#include "../src/manager.h"
+#include "../simulateur/src/manager.h"
 
 #endif //RV32EM_SIMULATOR_MANAGER_TEST_H

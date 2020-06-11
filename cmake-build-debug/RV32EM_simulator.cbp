@@ -5,79 +5,79 @@
 		<Option title="RV32EM_simulator"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\test\;CMake Files\test\unity\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\simulateur\;CMake Files\test\;CMake Files\test\unity\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug"/>
+				<Option working_dir="C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug"/>
+				<Option working_dir="C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug"/>
+				<Option working_dir="C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="simulateur">
-				<Option output="C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/src/simulateur.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/src"/>
+				<Option output="C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/simulateur/simulateur.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/simulateur"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/filip/CLionProjects/RV32EM-simulator/src"/>
+					<Add directory="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur"/>
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 simulateur"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/simulateur/Makefile&quot;  VERBOSE=1 simulateur"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/simulateur/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/simulateur/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/simulateur/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="simulateur/fast">
-				<Option output="C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/src/simulateur.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/src"/>
+				<Option output="C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/simulateur/simulateur.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/simulateur"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/filip/CLionProjects/RV32EM-simulator/src"/>
+					<Add directory="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur"/>
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 simulateur/fast"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/simulateur/Makefile&quot;  VERBOSE=1 simulateur/fast"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/simulateur/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/simulateur/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/simulateur/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="test">
-				<Option output="C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/test.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test"/>
+				<Option output="C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -87,15 +87,15 @@
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 test"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="test/fast">
-				<Option output="C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/test.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test"/>
+				<Option output="C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/test.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -105,15 +105,15 @@
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 test/fast"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 test/fast"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="unity">
-				<Option output="C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/libunity.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity"/>
+				<Option output="C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/libunity.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -123,15 +123,15 @@
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/Makefile&quot;  VERBOSE=1 unity"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/Makefile&quot;  VERBOSE=1 unity"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="unity/fast">
-				<Option output="C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/libunity.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity"/>
+				<Option output="C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/libunity.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -141,60 +141,135 @@
 					<Add directory="C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/Makefile&quot;  VERBOSE=1 unity/fast"/>
-					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/Makefile&quot;  VERBOSE=1 unity/fast"/>
+					<CompileFile command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~2/MINGW-~1/I686-8~1.0-P/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/filip/CLionProjects/RV32EM-simulator/src/decoder.c">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/main.c">
+			<Option target="simulateur"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/decoder.c">
 			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/filip/CLionProjects/RV32EM-simulator/src/executer.c">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/decoder.h">
 			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/filip/CLionProjects/RV32EM-simulator/src/interface.c">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer.c">
 			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/filip/CLionProjects/RV32EM-simulator/src/main.c">
-			<Option target="simulateur"/>
-		</Unit>
-		<Unit filename="C:/Users/filip/CLionProjects/RV32EM-simulator/src/memory.c">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer.h">
 			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/filip/CLionProjects/RV32EM-simulator/src/memory.h">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_B.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_B.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_I.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_I.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_J.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_J.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_R.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_R.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_S.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_S.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_U.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_U.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/interface.c">
 			<Option target="simulateur"/>
-		</Unit>
-		<Unit filename="C:/Users/filip/CLionProjects/RV32EM-simulator/test/main_test.c">
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/filip/CLionProjects/RV32EM-simulator/test/memory_test.c">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/interface.h">
+			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/filip/CLionProjects/RV32EM-simulator/test/memory_test.h">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/manager.c">
+			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/filip/CLionProjects/RV32EM-simulator/test/unity/unity.c">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/manager.h">
+			<Option target="simulateur"/>
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/memory.c">
+			<Option target="simulateur"/>
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/memory.h">
+			<Option target="simulateur"/>
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/decoder_test.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/decoder_test.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/executer_test.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/executer_test.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/main_test.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/manager_test.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/manager_test.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/memory_test.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/memory_test.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/unity/unity.c">
 			<Option target="unity"/>
 		</Unit>
-		<Unit filename="C:/Users/filip/CLionProjects/RV32EM-simulator/test/unity/unity.h">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/unity/unity.h">
 			<Option target="unity"/>
 		</Unit>
-		<Unit filename="C:/Users/filip/CLionProjects/RV32EM-simulator/CMakeLists.txt">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Users/filip/CLionProjects/RV32EM-simulator/src/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\src\"/>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\simulateur\"/>
 		</Unit>
-		<Unit filename="C:/Users/filip/CLionProjects/RV32EM-simulator/test/CMakeLists.txt">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\"/>
 		</Unit>
-		<Unit filename="C:/Users/filip/CLionProjects/RV32EM-simulator/test/unity/CMakeLists.txt">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/unity/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\test\unity\"/>
 		</Unit>
 	</Project>

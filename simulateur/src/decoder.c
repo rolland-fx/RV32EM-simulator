@@ -2,7 +2,7 @@
 // Created by jeanp on 2020-06-03.
 //
 
-#include "RV32EM.h"
+#include "decoder.h"
 
 /**
  * Decodes the instruction of type R and puts every parts inside a structure

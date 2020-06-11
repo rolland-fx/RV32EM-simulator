@@ -6,7 +6,7 @@
 #define RV32EM_SIMULATOR_DECODER_TEST_H
 
 #include "unity/unity.h"
-#include "../src/RV32EM.h"
+#include "../simulateur/RV32EM.h"
 
 
 struct_I init_struct_I();
