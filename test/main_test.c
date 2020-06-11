@@ -6,8 +6,9 @@
 #include "../simulateur/RV32EM.h"
 #include "memory_test.h"
 #include "decoder_test.h"
-#include "executer_test.h"
+#include "execute_test.h"
 #include "manager_test.h"
+#include "execute_test.h"
 
 
 void setUp(void)
@@ -35,9 +36,11 @@ int main(void)
     RUN_TEST(run_test_all_type_S);
     RUN_TEST(run_test_all_type_J);
     RUN_TEST(run_test_all_type_U);
-    RUN_TEST(loadProgramToMemory_should_return_non_zero_on_missing_file);
-    RUN_TEST(loadProgramToMemory_should_copy_file_to_memory);
-    RUN_TEST(loadProgramToMemory_should_initialize_userMemorySize_and_userMemory);
+    RUN_TEST_loadProgramToMemory();
+    RUN_TEST_executer_type_J_JAL();
+    RUN_TEST_executer_type_I_JALR();
+    RUN_TEST_execute_type_I_ADDI();
+    RUN_TEST_execute_type_I_SLTI();
     return UNITY_END();
 }
 

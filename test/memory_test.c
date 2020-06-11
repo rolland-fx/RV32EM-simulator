@@ -30,3 +30,9 @@ void loadProgramToMemory_should_initialize_userMemorySize_and_userMemory()
     TEST_ASSERT_EQUAL_UINT32 (MEMORY_SIZE - 42, userMemorySize);
     TEST_ASSERT_EQUAL_UINT32 (Memory + 42, userMemory);
 }
+
+void RUN_TEST_loadProgramToMemory(){
+    RUN_TEST(loadProgramToMemory_should_return_non_zero_on_missing_file);
+    RUN_TEST(loadProgramToMemory_should_copy_file_to_memory);
+    RUN_TEST(loadProgramToMemory_should_initialize_userMemorySize_and_userMemory);
+}

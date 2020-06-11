@@ -1,4 +1,4 @@
-file(GLOB SOURCES ./*.c ../simulateur/src/*.c ../simulateur/src/executer/*.c)
+file(GLOB SOURCES ./*.c execute_test/*.c ../simulateur/src/*.c ../simulateur/src/execute/*.c)
 
 add_subdirectory(unity)
 add_executable(test ${SOURCES})

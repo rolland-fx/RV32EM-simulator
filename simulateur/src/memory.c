@@ -7,6 +7,8 @@
 //Prototpes fonctions privées
 uint8_t stringToHex(char* string, uint32_t* hex);
 
+uint32_t PC = 0;
+
 uint32_t Register[REGISTER_NUMBER];
 uint32_t Memory[MEMORY_SIZE];
 uint32_t *userMemory;

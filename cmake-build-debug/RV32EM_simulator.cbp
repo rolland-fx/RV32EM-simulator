@@ -159,48 +159,48 @@
 			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer.c">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute.c">
 			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer.h">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute.h">
 			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_B.c">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_B.c">
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_B.h">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_B.h">
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_I.c">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_I.c">
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_I.h">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_I.h">
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_J.c">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_J.c">
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_J.h">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_J.h">
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_R.c">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_R.c">
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_R.h">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_R.h">
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_S.c">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_S.c">
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_S.h">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_S.h">
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_U.c">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_U.c">
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/executer/executer_U.h">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_U.h">
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/interface.c">
@@ -233,10 +233,22 @@
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/decoder_test.h">
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/executer_test.c">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/execute_test.c">
 			<Option target="test"/>
 		</Unit>
-		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/executer_test.h">
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/execute_test.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/execute_test/execute_I_test.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/execute_test/execute_I_test.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/execute_test/execute_J_test.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/execute_test/execute_J_test.h">
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/main_test.c">

@@ -8,8 +8,9 @@
 #include "unity/unity.h"
 #include "../simulateur/src/memory.h"
 
-void loadProgramToMemory_should_return_non_zero_on_missing_file();
-void loadProgramToMemory_should_copy_file_to_memory();
-void loadProgramToMemory_should_initialize_userMemorySize_and_userMemory();
+/**
+ * Run all test for fucntion loadProgramToMemory
+ */
+void RUN_TEST_loadProgramToMemory();
 
 #endif //RV32EM_SIMULATOR_MEMORY_TEST_H

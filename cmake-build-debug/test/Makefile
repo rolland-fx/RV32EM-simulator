@@ -151,194 +151,194 @@ __/simulateur/src/decoder.c.s:
 	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/decoder.c.s
 .PHONY : __/simulateur/src/decoder.c.s
 
-__/simulateur/src/executer.obj: __/simulateur/src/executer.c.obj
+__/simulateur/src/execute.obj: __/simulateur/src/execute.c.obj
 
-.PHONY : __/simulateur/src/executer.obj
-
-# target to build an object file
-__/simulateur/src/executer.c.obj:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer.c.obj
-.PHONY : __/simulateur/src/executer.c.obj
-
-__/simulateur/src/executer.i: __/simulateur/src/executer.c.i
-
-.PHONY : __/simulateur/src/executer.i
-
-# target to preprocess a source file
-__/simulateur/src/executer.c.i:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer.c.i
-.PHONY : __/simulateur/src/executer.c.i
-
-__/simulateur/src/executer.s: __/simulateur/src/executer.c.s
-
-.PHONY : __/simulateur/src/executer.s
-
-# target to generate assembly for a file
-__/simulateur/src/executer.c.s:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer.c.s
-.PHONY : __/simulateur/src/executer.c.s
-
-__/simulateur/src/executer/executer_B.obj: __/simulateur/src/executer/executer_B.c.obj
-
-.PHONY : __/simulateur/src/executer/executer_B.obj
+.PHONY : __/simulateur/src/execute.obj
 
 # target to build an object file
-__/simulateur/src/executer/executer_B.c.obj:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_B.c.obj
-.PHONY : __/simulateur/src/executer/executer_B.c.obj
+__/simulateur/src/execute.c.obj:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute.c.obj
+.PHONY : __/simulateur/src/execute.c.obj
 
-__/simulateur/src/executer/executer_B.i: __/simulateur/src/executer/executer_B.c.i
+__/simulateur/src/execute.i: __/simulateur/src/execute.c.i
 
-.PHONY : __/simulateur/src/executer/executer_B.i
+.PHONY : __/simulateur/src/execute.i
 
 # target to preprocess a source file
-__/simulateur/src/executer/executer_B.c.i:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_B.c.i
-.PHONY : __/simulateur/src/executer/executer_B.c.i
+__/simulateur/src/execute.c.i:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute.c.i
+.PHONY : __/simulateur/src/execute.c.i
 
-__/simulateur/src/executer/executer_B.s: __/simulateur/src/executer/executer_B.c.s
+__/simulateur/src/execute.s: __/simulateur/src/execute.c.s
 
-.PHONY : __/simulateur/src/executer/executer_B.s
+.PHONY : __/simulateur/src/execute.s
 
 # target to generate assembly for a file
-__/simulateur/src/executer/executer_B.c.s:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_B.c.s
-.PHONY : __/simulateur/src/executer/executer_B.c.s
+__/simulateur/src/execute.c.s:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute.c.s
+.PHONY : __/simulateur/src/execute.c.s
 
-__/simulateur/src/executer/executer_I.obj: __/simulateur/src/executer/executer_I.c.obj
+__/simulateur/src/execute/execute_B.obj: __/simulateur/src/execute/execute_B.c.obj
 
-.PHONY : __/simulateur/src/executer/executer_I.obj
+.PHONY : __/simulateur/src/execute/execute_B.obj
 
 # target to build an object file
-__/simulateur/src/executer/executer_I.c.obj:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_I.c.obj
-.PHONY : __/simulateur/src/executer/executer_I.c.obj
+__/simulateur/src/execute/execute_B.c.obj:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_B.c.obj
+.PHONY : __/simulateur/src/execute/execute_B.c.obj
 
-__/simulateur/src/executer/executer_I.i: __/simulateur/src/executer/executer_I.c.i
+__/simulateur/src/execute/execute_B.i: __/simulateur/src/execute/execute_B.c.i
 
-.PHONY : __/simulateur/src/executer/executer_I.i
+.PHONY : __/simulateur/src/execute/execute_B.i
 
 # target to preprocess a source file
-__/simulateur/src/executer/executer_I.c.i:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_I.c.i
-.PHONY : __/simulateur/src/executer/executer_I.c.i
+__/simulateur/src/execute/execute_B.c.i:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_B.c.i
+.PHONY : __/simulateur/src/execute/execute_B.c.i
 
-__/simulateur/src/executer/executer_I.s: __/simulateur/src/executer/executer_I.c.s
+__/simulateur/src/execute/execute_B.s: __/simulateur/src/execute/execute_B.c.s
 
-.PHONY : __/simulateur/src/executer/executer_I.s
+.PHONY : __/simulateur/src/execute/execute_B.s
 
 # target to generate assembly for a file
-__/simulateur/src/executer/executer_I.c.s:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_I.c.s
-.PHONY : __/simulateur/src/executer/executer_I.c.s
+__/simulateur/src/execute/execute_B.c.s:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_B.c.s
+.PHONY : __/simulateur/src/execute/execute_B.c.s
 
-__/simulateur/src/executer/executer_J.obj: __/simulateur/src/executer/executer_J.c.obj
+__/simulateur/src/execute/execute_I.obj: __/simulateur/src/execute/execute_I.c.obj
 
-.PHONY : __/simulateur/src/executer/executer_J.obj
+.PHONY : __/simulateur/src/execute/execute_I.obj
 
 # target to build an object file
-__/simulateur/src/executer/executer_J.c.obj:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_J.c.obj
-.PHONY : __/simulateur/src/executer/executer_J.c.obj
+__/simulateur/src/execute/execute_I.c.obj:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_I.c.obj
+.PHONY : __/simulateur/src/execute/execute_I.c.obj
 
-__/simulateur/src/executer/executer_J.i: __/simulateur/src/executer/executer_J.c.i
+__/simulateur/src/execute/execute_I.i: __/simulateur/src/execute/execute_I.c.i
 
-.PHONY : __/simulateur/src/executer/executer_J.i
+.PHONY : __/simulateur/src/execute/execute_I.i
 
 # target to preprocess a source file
-__/simulateur/src/executer/executer_J.c.i:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_J.c.i
-.PHONY : __/simulateur/src/executer/executer_J.c.i
+__/simulateur/src/execute/execute_I.c.i:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_I.c.i
+.PHONY : __/simulateur/src/execute/execute_I.c.i
 
-__/simulateur/src/executer/executer_J.s: __/simulateur/src/executer/executer_J.c.s
+__/simulateur/src/execute/execute_I.s: __/simulateur/src/execute/execute_I.c.s
 
-.PHONY : __/simulateur/src/executer/executer_J.s
+.PHONY : __/simulateur/src/execute/execute_I.s
 
 # target to generate assembly for a file
-__/simulateur/src/executer/executer_J.c.s:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_J.c.s
-.PHONY : __/simulateur/src/executer/executer_J.c.s
+__/simulateur/src/execute/execute_I.c.s:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_I.c.s
+.PHONY : __/simulateur/src/execute/execute_I.c.s
 
-__/simulateur/src/executer/executer_R.obj: __/simulateur/src/executer/executer_R.c.obj
+__/simulateur/src/execute/execute_J.obj: __/simulateur/src/execute/execute_J.c.obj
 
-.PHONY : __/simulateur/src/executer/executer_R.obj
+.PHONY : __/simulateur/src/execute/execute_J.obj
 
 # target to build an object file
-__/simulateur/src/executer/executer_R.c.obj:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_R.c.obj
-.PHONY : __/simulateur/src/executer/executer_R.c.obj
+__/simulateur/src/execute/execute_J.c.obj:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_J.c.obj
+.PHONY : __/simulateur/src/execute/execute_J.c.obj
 
-__/simulateur/src/executer/executer_R.i: __/simulateur/src/executer/executer_R.c.i
+__/simulateur/src/execute/execute_J.i: __/simulateur/src/execute/execute_J.c.i
 
-.PHONY : __/simulateur/src/executer/executer_R.i
+.PHONY : __/simulateur/src/execute/execute_J.i
 
 # target to preprocess a source file
-__/simulateur/src/executer/executer_R.c.i:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_R.c.i
-.PHONY : __/simulateur/src/executer/executer_R.c.i
+__/simulateur/src/execute/execute_J.c.i:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_J.c.i
+.PHONY : __/simulateur/src/execute/execute_J.c.i
 
-__/simulateur/src/executer/executer_R.s: __/simulateur/src/executer/executer_R.c.s
+__/simulateur/src/execute/execute_J.s: __/simulateur/src/execute/execute_J.c.s
 
-.PHONY : __/simulateur/src/executer/executer_R.s
+.PHONY : __/simulateur/src/execute/execute_J.s
 
 # target to generate assembly for a file
-__/simulateur/src/executer/executer_R.c.s:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_R.c.s
-.PHONY : __/simulateur/src/executer/executer_R.c.s
+__/simulateur/src/execute/execute_J.c.s:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_J.c.s
+.PHONY : __/simulateur/src/execute/execute_J.c.s
 
-__/simulateur/src/executer/executer_S.obj: __/simulateur/src/executer/executer_S.c.obj
+__/simulateur/src/execute/execute_R.obj: __/simulateur/src/execute/execute_R.c.obj
 
-.PHONY : __/simulateur/src/executer/executer_S.obj
+.PHONY : __/simulateur/src/execute/execute_R.obj
 
 # target to build an object file
-__/simulateur/src/executer/executer_S.c.obj:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_S.c.obj
-.PHONY : __/simulateur/src/executer/executer_S.c.obj
+__/simulateur/src/execute/execute_R.c.obj:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_R.c.obj
+.PHONY : __/simulateur/src/execute/execute_R.c.obj
 
-__/simulateur/src/executer/executer_S.i: __/simulateur/src/executer/executer_S.c.i
+__/simulateur/src/execute/execute_R.i: __/simulateur/src/execute/execute_R.c.i
 
-.PHONY : __/simulateur/src/executer/executer_S.i
+.PHONY : __/simulateur/src/execute/execute_R.i
 
 # target to preprocess a source file
-__/simulateur/src/executer/executer_S.c.i:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_S.c.i
-.PHONY : __/simulateur/src/executer/executer_S.c.i
+__/simulateur/src/execute/execute_R.c.i:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_R.c.i
+.PHONY : __/simulateur/src/execute/execute_R.c.i
 
-__/simulateur/src/executer/executer_S.s: __/simulateur/src/executer/executer_S.c.s
+__/simulateur/src/execute/execute_R.s: __/simulateur/src/execute/execute_R.c.s
 
-.PHONY : __/simulateur/src/executer/executer_S.s
+.PHONY : __/simulateur/src/execute/execute_R.s
 
 # target to generate assembly for a file
-__/simulateur/src/executer/executer_S.c.s:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_S.c.s
-.PHONY : __/simulateur/src/executer/executer_S.c.s
+__/simulateur/src/execute/execute_R.c.s:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_R.c.s
+.PHONY : __/simulateur/src/execute/execute_R.c.s
 
-__/simulateur/src/executer/executer_U.obj: __/simulateur/src/executer/executer_U.c.obj
+__/simulateur/src/execute/execute_S.obj: __/simulateur/src/execute/execute_S.c.obj
 
-.PHONY : __/simulateur/src/executer/executer_U.obj
+.PHONY : __/simulateur/src/execute/execute_S.obj
 
 # target to build an object file
-__/simulateur/src/executer/executer_U.c.obj:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_U.c.obj
-.PHONY : __/simulateur/src/executer/executer_U.c.obj
+__/simulateur/src/execute/execute_S.c.obj:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_S.c.obj
+.PHONY : __/simulateur/src/execute/execute_S.c.obj
 
-__/simulateur/src/executer/executer_U.i: __/simulateur/src/executer/executer_U.c.i
+__/simulateur/src/execute/execute_S.i: __/simulateur/src/execute/execute_S.c.i
 
-.PHONY : __/simulateur/src/executer/executer_U.i
+.PHONY : __/simulateur/src/execute/execute_S.i
 
 # target to preprocess a source file
-__/simulateur/src/executer/executer_U.c.i:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_U.c.i
-.PHONY : __/simulateur/src/executer/executer_U.c.i
+__/simulateur/src/execute/execute_S.c.i:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_S.c.i
+.PHONY : __/simulateur/src/execute/execute_S.c.i
 
-__/simulateur/src/executer/executer_U.s: __/simulateur/src/executer/executer_U.c.s
+__/simulateur/src/execute/execute_S.s: __/simulateur/src/execute/execute_S.c.s
 
-.PHONY : __/simulateur/src/executer/executer_U.s
+.PHONY : __/simulateur/src/execute/execute_S.s
 
 # target to generate assembly for a file
-__/simulateur/src/executer/executer_U.c.s:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/executer/executer_U.c.s
-.PHONY : __/simulateur/src/executer/executer_U.c.s
+__/simulateur/src/execute/execute_S.c.s:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_S.c.s
+.PHONY : __/simulateur/src/execute/execute_S.c.s
+
+__/simulateur/src/execute/execute_U.obj: __/simulateur/src/execute/execute_U.c.obj
+
+.PHONY : __/simulateur/src/execute/execute_U.obj
+
+# target to build an object file
+__/simulateur/src/execute/execute_U.c.obj:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_U.c.obj
+.PHONY : __/simulateur/src/execute/execute_U.c.obj
+
+__/simulateur/src/execute/execute_U.i: __/simulateur/src/execute/execute_U.c.i
+
+.PHONY : __/simulateur/src/execute/execute_U.i
+
+# target to preprocess a source file
+__/simulateur/src/execute/execute_U.c.i:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_U.c.i
+.PHONY : __/simulateur/src/execute/execute_U.c.i
+
+__/simulateur/src/execute/execute_U.s: __/simulateur/src/execute/execute_U.c.s
+
+.PHONY : __/simulateur/src/execute/execute_U.s
+
+# target to generate assembly for a file
+__/simulateur/src/execute/execute_U.c.s:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_U.c.s
+.PHONY : __/simulateur/src/execute/execute_U.c.s
 
 __/simulateur/src/interface.obj: __/simulateur/src/interface.c.obj
 
@@ -448,32 +448,86 @@ decoder_test.c.s:
 	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/decoder_test.c.s
 .PHONY : decoder_test.c.s
 
-executer_test.obj: executer_test.c.obj
+execute_test.obj: execute_test.c.obj
 
-.PHONY : executer_test.obj
+.PHONY : execute_test.obj
 
 # target to build an object file
-executer_test.c.obj:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/executer_test.c.obj
-.PHONY : executer_test.c.obj
+execute_test.c.obj:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/execute_test.c.obj
+.PHONY : execute_test.c.obj
 
-executer_test.i: executer_test.c.i
+execute_test.i: execute_test.c.i
 
-.PHONY : executer_test.i
+.PHONY : execute_test.i
 
 # target to preprocess a source file
-executer_test.c.i:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/executer_test.c.i
-.PHONY : executer_test.c.i
+execute_test.c.i:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/execute_test.c.i
+.PHONY : execute_test.c.i
 
-executer_test.s: executer_test.c.s
+execute_test.s: execute_test.c.s
 
-.PHONY : executer_test.s
+.PHONY : execute_test.s
 
 # target to generate assembly for a file
-executer_test.c.s:
-	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/executer_test.c.s
-.PHONY : executer_test.c.s
+execute_test.c.s:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/execute_test.c.s
+.PHONY : execute_test.c.s
+
+execute_test/execute_I_test.obj: execute_test/execute_I_test.c.obj
+
+.PHONY : execute_test/execute_I_test.obj
+
+# target to build an object file
+execute_test/execute_I_test.c.obj:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/execute_test/execute_I_test.c.obj
+.PHONY : execute_test/execute_I_test.c.obj
+
+execute_test/execute_I_test.i: execute_test/execute_I_test.c.i
+
+.PHONY : execute_test/execute_I_test.i
+
+# target to preprocess a source file
+execute_test/execute_I_test.c.i:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/execute_test/execute_I_test.c.i
+.PHONY : execute_test/execute_I_test.c.i
+
+execute_test/execute_I_test.s: execute_test/execute_I_test.c.s
+
+.PHONY : execute_test/execute_I_test.s
+
+# target to generate assembly for a file
+execute_test/execute_I_test.c.s:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/execute_test/execute_I_test.c.s
+.PHONY : execute_test/execute_I_test.c.s
+
+execute_test/execute_J_test.obj: execute_test/execute_J_test.c.obj
+
+.PHONY : execute_test/execute_J_test.obj
+
+# target to build an object file
+execute_test/execute_J_test.c.obj:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/execute_test/execute_J_test.c.obj
+.PHONY : execute_test/execute_J_test.c.obj
+
+execute_test/execute_J_test.i: execute_test/execute_J_test.c.i
+
+.PHONY : execute_test/execute_J_test.i
+
+# target to preprocess a source file
+execute_test/execute_J_test.c.i:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/execute_test/execute_J_test.c.i
+.PHONY : execute_test/execute_J_test.c.i
+
+execute_test/execute_J_test.s: execute_test/execute_J_test.c.s
+
+.PHONY : execute_test/execute_J_test.s
+
+# target to generate assembly for a file
+execute_test/execute_J_test.c.s:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/execute_test/execute_J_test.c.s
+.PHONY : execute_test/execute_J_test.c.s
 
 main_test.obj: main_test.c.obj
 
@@ -568,27 +622,27 @@ help:
 	@echo ... __/simulateur/src/decoder.obj
 	@echo ... __/simulateur/src/decoder.i
 	@echo ... __/simulateur/src/decoder.s
-	@echo ... __/simulateur/src/executer.obj
-	@echo ... __/simulateur/src/executer.i
-	@echo ... __/simulateur/src/executer.s
-	@echo ... __/simulateur/src/executer/executer_B.obj
-	@echo ... __/simulateur/src/executer/executer_B.i
-	@echo ... __/simulateur/src/executer/executer_B.s
-	@echo ... __/simulateur/src/executer/executer_I.obj
-	@echo ... __/simulateur/src/executer/executer_I.i
-	@echo ... __/simulateur/src/executer/executer_I.s
-	@echo ... __/simulateur/src/executer/executer_J.obj
-	@echo ... __/simulateur/src/executer/executer_J.i
-	@echo ... __/simulateur/src/executer/executer_J.s
-	@echo ... __/simulateur/src/executer/executer_R.obj
-	@echo ... __/simulateur/src/executer/executer_R.i
-	@echo ... __/simulateur/src/executer/executer_R.s
-	@echo ... __/simulateur/src/executer/executer_S.obj
-	@echo ... __/simulateur/src/executer/executer_S.i
-	@echo ... __/simulateur/src/executer/executer_S.s
-	@echo ... __/simulateur/src/executer/executer_U.obj
-	@echo ... __/simulateur/src/executer/executer_U.i
-	@echo ... __/simulateur/src/executer/executer_U.s
+	@echo ... __/simulateur/src/execute.obj
+	@echo ... __/simulateur/src/execute.i
+	@echo ... __/simulateur/src/execute.s
+	@echo ... __/simulateur/src/execute/execute_B.obj
+	@echo ... __/simulateur/src/execute/execute_B.i
+	@echo ... __/simulateur/src/execute/execute_B.s
+	@echo ... __/simulateur/src/execute/execute_I.obj
+	@echo ... __/simulateur/src/execute/execute_I.i
+	@echo ... __/simulateur/src/execute/execute_I.s
+	@echo ... __/simulateur/src/execute/execute_J.obj
+	@echo ... __/simulateur/src/execute/execute_J.i
+	@echo ... __/simulateur/src/execute/execute_J.s
+	@echo ... __/simulateur/src/execute/execute_R.obj
+	@echo ... __/simulateur/src/execute/execute_R.i
+	@echo ... __/simulateur/src/execute/execute_R.s
+	@echo ... __/simulateur/src/execute/execute_S.obj
+	@echo ... __/simulateur/src/execute/execute_S.i
+	@echo ... __/simulateur/src/execute/execute_S.s
+	@echo ... __/simulateur/src/execute/execute_U.obj
+	@echo ... __/simulateur/src/execute/execute_U.i
+	@echo ... __/simulateur/src/execute/execute_U.s
 	@echo ... __/simulateur/src/interface.obj
 	@echo ... __/simulateur/src/interface.i
 	@echo ... __/simulateur/src/interface.s
@@ -601,9 +655,15 @@ help:
 	@echo ... decoder_test.obj
 	@echo ... decoder_test.i
 	@echo ... decoder_test.s
-	@echo ... executer_test.obj
-	@echo ... executer_test.i
-	@echo ... executer_test.s
+	@echo ... execute_test.obj
+	@echo ... execute_test.i
+	@echo ... execute_test.s
+	@echo ... execute_test/execute_I_test.obj
+	@echo ... execute_test/execute_I_test.i
+	@echo ... execute_test/execute_I_test.s
+	@echo ... execute_test/execute_J_test.obj
+	@echo ... execute_test/execute_J_test.i
+	@echo ... execute_test/execute_J_test.s
 	@echo ... main_test.obj
 	@echo ... main_test.i
 	@echo ... main_test.s

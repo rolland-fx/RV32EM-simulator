@@ -10,12 +10,12 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "executer/executer_R.h"
-#include "executer/executer_I.h"
-#include "executer/executer_S.h"
-#include "executer/executer_B.h"
-#include "executer/executer_U.h"
-#include "executer/executer_J.h"
+#include "execute/execute_R.h"
+#include "execute/execute_I.h"
+#include "execute/execute_S.h"
+#include "execute/execute_B.h"
+#include "execute/execute_U.h"
+#include "execute/execute_J.h"
 
 
 #include "decoder.h"

@@ -9,9 +9,10 @@
 #include <stdio.h>
 
 #define REGISTER_NUMBER 17
-#define PC 16
 
 #define MEMORY_SIZE     0x1000000
+
+extern uint32_t PC;
 
 extern uint32_t Register[REGISTER_NUMBER];
 extern uint32_t Memory[MEMORY_SIZE];
