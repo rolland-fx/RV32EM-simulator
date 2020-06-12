@@ -4,14 +4,71 @@
 
 #include "execute_R.h"
 
+uint8_t execute_type_R_ADD(struct_R* ptr_struct) {
+    uint8_t return_val = 0;
+
+    if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
+        Register[ptr_struct->rd] = Register[ptr_struct->rs1] + Register[ptr_struct->rs2];
+        PC = PC + 4;
+    }
+    else{
+        return_val = 1;
+    }
+
+    return return_val;
+}
+
+uint8_t execute_type_R_SUB(struct_R* ptr_struct) {
+    uint8_t return_val = 0;
+
+    if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
+        Register[ptr_struct->rd] = Register[ptr_struct->rs2] - Register[ptr_struct->rs1];
+        PC = PC + 4;
+    }
+    else{
+        return_val = 1;
+    }
+
+    return return_val;
+}
+
+uint8_t execute_type_R_SLL(struct_R* ptr_struct) {
+    uint8_t return_val = 0;
+
+    if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
+        Register[ptr_struct->rd] = Register[ptr_struct->rs1] << Register[ptr_struct->rs2];
+        PC = PC + 4;
+    }
+    else{
+        return_val = 1;
+    }
+
+    return return_val;
+}
+
+uint8_t execute_type_R_SRL(struct_R* ptr_struct) {
+    uint8_t return_val = 0;
+
+    if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
+        Register[ptr_struct->rd] = Register[ptr_struct->rs1] >> Register[ptr_struct->rs2];
+        PC = PC + 4;
+    }
+    else{
+        return_val = 1;
+    }
+
+    return return_val;
+}
 
 uint8_t execute_type_R_GENERAL(struct_R* ptr_struct) {
     uint8_t return_val = 0;
 
     switch(ptr_struct->func3){
-        case ADD_FUNCT3: //ADD
+        case ADD_FUNCT3:
+            return_val = execute_type_R_ADD(ptr_struct);
             break;
-        case SLL_FUNCT3: //SLL
+        case SLL_FUNCT3:
+            return_val = execute_type_R_SLL(ptr_struct);
             break;
         case SLT_FUNCT3: //SLT
             break;
@@ -19,7 +76,8 @@ uint8_t execute_type_R_GENERAL(struct_R* ptr_struct) {
             break;
         case XOR_FUNCT3: //XOR
             break;
-        case SRL_FUNCT3: //SRL
+        case SRL_FUNCT3:
+            return_val = execute_type_R_SRL(ptr_struct);
             break;
         case OR_FUNCT3: //OR
             break;
@@ -37,7 +95,8 @@ uint8_t execute_type_R_SUBSRA(struct_R* ptr_struct) {
     uint8_t return_val = 0;
 
     switch(ptr_struct->func3){
-        case SUB_FUNCT3: //SUB
+        case SUB_FUNCT3:
+            return_val = execute_type_R_SUB(ptr_struct);
             break;
         case SRA_FUNCT3: //SRA
             break;
