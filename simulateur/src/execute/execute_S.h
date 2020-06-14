@@ -13,4 +13,10 @@
 #include "../decoder.h"
 #include "../memory.h"
 
+#define STORE_8bits (0x0)
+#define STORE_16bits (0x1)
+#define STORE_32bits (0x2)
+
+uint8_t execute_type_S(struct_S* ptr_struct);
+
 #endif //RV32EM_SIMULATOR_EXECUTER_S_H

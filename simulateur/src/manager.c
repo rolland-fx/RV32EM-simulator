@@ -48,18 +48,9 @@ char CodeRun() {
 
 char RunNextInstruction(void)
 {
-    ManageRegisterPC(0);
     return 0;
 }
-char ManageRegisterPC(char NextInstructionExist_PC)
-{
-    if (NextInstructionExist_PC >= 0)
-    {
-        Register[PC] += NextInstructionExist_PC;
-        return NextInstructionExist_PC;
-    }
-    return -1;
-}
+
 void MemoryChoice(void)
 {
     printf("Choix de l'adresse memoire a afficher. Format : FFFFFF \n");

@@ -4,19 +4,27 @@
 
 #include "execute_U.h"
 
-char executer_type_U(uint32_t instruction, struct_U* ptr_struct) {
-    char decode_return;
-    switch (ptr_struct->opcode) {
-        case 0x17: //LUI
-            Register[ptr_struct->rd] = ((ptr_struct->imm << 12) | 0b000000000000);
-            decode_return = 1;
+uint8_t executer_type_U(uint32_t instruction, struct_U* ptr_struct) {
+    uint8_t retVal = 0;
+    if(ptr_struct->rd < 16)
+    {
+        switch (ptr_struct->opcode)
+        {
+            case 0x17: //LUI
+                Register[ptr_struct->rd] = ((ptr_struct->imm << 12) | 0b000000000000);
             break;
-        case 0x37: //AUIPC
-            Register[ptr_struct->rd] = (((ptr_struct->imm << 12) | 0b000000000000) + Register[PC]);
-            decode_return = 2;
+            case 0x37: //AUIPC
+                Register[ptr_struct->rd] = (((ptr_struct->imm << 12) | 0b000000000000) + PC);
             break;
-        default :
-            decode_return = 0;
+            default :
+            retVal = 1;
             break;
+        }
+        PC += 4;
     }
+    else
+    {
+        retVal = 1;
+    }
+    return retVal;
 }
