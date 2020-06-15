@@ -246,6 +246,4 @@ void RUN_TEST_execute_type_I_SLTI(){
     RUN_TEST(execute_type_I_SLTI_should_place_0_in_rd_if_rs1_smaller_than_imm);
     RUN_TEST(execute_type_I_SLTI_should_place_0_in_rd_if_rs1_equal_to_imm);
     RUN_TEST(execute_type_I_SLTI_should_add_4_to_PC);
-
-
 }

@@ -90,6 +90,7 @@ test/CMakeFiles/test.dir/execute_test.c.obj: ../test/execute_test.c
 test/CMakeFiles/test.dir/execute_test.c.obj: ../test/execute_test.h
 test/CMakeFiles/test.dir/execute_test.c.obj: ../test/execute_test/execute_I_test.h
 test/CMakeFiles/test.dir/execute_test.c.obj: ../test/execute_test/execute_J_test.h
+test/CMakeFiles/test.dir/execute_test.c.obj: ../test/main_test.h
 test/CMakeFiles/test.dir/execute_test.c.obj: ../test/unity/unity.h
 test/CMakeFiles/test.dir/execute_test.c.obj: ../test/unity/unity_internals.h
 
@@ -126,6 +127,7 @@ test/CMakeFiles/test.dir/main_test.c.obj: ../test/execute_test.h
 test/CMakeFiles/test.dir/main_test.c.obj: ../test/execute_test/execute_I_test.h
 test/CMakeFiles/test.dir/main_test.c.obj: ../test/execute_test/execute_J_test.h
 test/CMakeFiles/test.dir/main_test.c.obj: ../test/main_test.c
+test/CMakeFiles/test.dir/main_test.c.obj: ../test/main_test.h
 test/CMakeFiles/test.dir/main_test.c.obj: ../test/manager_test.h
 test/CMakeFiles/test.dir/main_test.c.obj: ../test/memory_test.h
 test/CMakeFiles/test.dir/main_test.c.obj: ../test/unity/unity.h
@@ -140,6 +142,7 @@ test/CMakeFiles/test.dir/manager_test.c.obj: ../test/unity/unity.h
 test/CMakeFiles/test.dir/manager_test.c.obj: ../test/unity/unity_internals.h
 
 test/CMakeFiles/test.dir/memory_test.c.obj: ../simulateur/src/memory.h
+test/CMakeFiles/test.dir/memory_test.c.obj: ../test/main_test.h
 test/CMakeFiles/test.dir/memory_test.c.obj: ../test/memory_test.c
 test/CMakeFiles/test.dir/memory_test.c.obj: ../test/memory_test.h
 test/CMakeFiles/test.dir/memory_test.c.obj: ../test/unity/unity.h

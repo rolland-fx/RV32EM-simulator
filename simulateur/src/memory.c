@@ -17,13 +17,13 @@ uint32_t userMemorySize = 0;
 
 //extern uint32_t Memory[MEMORY_SIZE];
 //extern uint32_t *userMemory;
-//extern uint32_t userMemorySize;
 
 uint8_t loadProgramToMemory(char * file){
     uint8_t retVal = 0;
     uint8_t buffer[10];
     uint32_t count = 0;
     uint32_t hex = 0;
+    uint32_t temp;
 
     FILE* program;
 
@@ -34,10 +34,11 @@ uint8_t loadProgramToMemory(char * file){
     }
     else {
         while (fgets(buffer, 10, program) && !retVal) {
-            if (stringToHex(buffer, &Memory[count])) {
+            if (stringToHex(buffer, &temp)) {
                 retVal = 1;
             } else {
-                count++;
+                memory_save_word(count, temp);
+                count += 4;
             }
         }
         if (!retVal) {

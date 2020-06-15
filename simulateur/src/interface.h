@@ -9,8 +9,8 @@
 #include <stdio.h>
 #include "memory.h"
 
-extern uint32_t Register[REGISTER_NUMBER];
-extern uint32_t Memory[MEMORY_SIZE];
+//extern uint32_t Register[REGISTER_NUMBER];
+//extern uint32_t Memory[MEMORY_SIZE];
 
 /**
  * Affiche les informations générale au lancement du programme

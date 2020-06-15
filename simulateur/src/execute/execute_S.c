@@ -36,26 +36,31 @@ uint8_t execute_type_S(struct_S* ptr_struct)
             bit7 = value & 0x10u;
             if (bit7 =='1')
             {
-                userMemory[address] = 0xFFFFFF00u | value;
+                //userMemory[address] = 0xFFFFFF00u | value;
+                user_memory_save_byte(address, value);
             }
             else
             {
-                userMemory[address] = 0x00000000u | value;
+                //userMemory[address] = 0x00000000u | value;
+                user_memory_save_byte(address, 0x00000000u | value);
             }
         break;
         case STORE_16bits:
             bit15 = value & 0x1000u;
             if (bit15 =='1')
             {
-                userMemory[address] = 0xFFFF0000u | value;
+                //userMemory[address] = 0xFFFF0000u | value;
+                user_memory_save_half_word(address, 0xFFFF0000u | value);
             }
             else
             {
-                userMemory[address] = 0x00000000u | value;
+                //userMemory[address] = 0x00000000u | value;
+                user_memory_save_half_word(address, 0x00000000u | value);
             }
         break;
         case STORE_32bits:
-            userMemory[address] = value;
+            //userMemory[address] = value;
+            user_memory_save_word(address, value);
         break;
         default:
         return_val = 1;

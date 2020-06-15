@@ -15,6 +15,7 @@
 extern uint32_t PC;
 
 extern uint32_t Register[REGISTER_NUMBER];
+extern uint32_t userMemorySize;
 
 /**
  * Place les instructions contenu dans le fichier passée en entrée dans la mémoire et initialise les variables globales

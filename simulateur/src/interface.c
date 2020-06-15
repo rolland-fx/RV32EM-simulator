@@ -28,11 +28,12 @@ void PrintCurrentState()
 void PrintSliceofMemory(uint32_t address, uint8_t MemoryCaseToShow)
 {
     printf("contenu memoire :\n");
-    for (uint32_t i = address; i < (uint32_t) address + MemoryCaseToShow; i++)
+    for (uint32_t i = address; i < (uint32_t) address + MemoryCaseToShow; i+=4)
     {
         if(i < MEMORY_SIZE)
         {
-            printf("0x%08x : 0x%08x\n",i,Memory[i]);
+            //printf("0x%08x : 0x%08x\n",i,Memory[i]);
+            printf("0x%08x : 0x%08x\n",i,user_memory_get_word(i));
         }
     }
     printf("\n\n");

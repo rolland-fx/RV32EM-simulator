@@ -3,6 +3,9 @@
 //
 
 #include "memory_test.h"
+#include "main_test.h"
+
+
 
 void loadProgramToMemory_should_return_non_zero_on_missing_file()
 {

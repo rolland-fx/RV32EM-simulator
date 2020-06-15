@@ -6,6 +6,7 @@
 #define RV32EM_SIMULATOR_EXECUTER_TEST_H
 
 #include "unity/unity.h"
+#include "main_test.h"
 #include "../simulateur/RV32EM.h"
 
 #include "execute_test/execute_J_test.h"

@@ -4,6 +4,7 @@
 
 #include "unity/unity.h"
 #include "../simulateur/RV32EM.h"
+#include "main_test.h"
 #include "memory_test.h"
 #include "decoder_test.h"
 #include "execute_test.h"
