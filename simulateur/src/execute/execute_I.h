@@ -20,9 +20,11 @@
 #define ECALL_OPCODE (0x73)
 
 #define ADDI_FUNCT3 (0x00)
+#define SLLI_FUNCT3 (0x01)
 #define SLTI_FUNCT3 (0x02)
 #define SLTIU_FUNCT3 (0x03)
 #define XORI_FUNCT3 (0x04)
+#define SRLI_FUNCT3 (0x05)
 #define ORI_FUNCT3 (0x06)
 #define ANDI_FUNCT3 (0x07)
 
