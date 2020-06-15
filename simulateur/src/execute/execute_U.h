@@ -18,6 +18,6 @@
  * @param instruction
  * @param ptr_struct
  */
-char executer_type_U(uint32_t instruction, struct_U* ptr_struct);
+uint8_t executer_type_U(uint32_t instruction, struct_U* ptr_struct);
 
 #endif //RV32EM_SIMULATOR_EXECUTER_U_H
