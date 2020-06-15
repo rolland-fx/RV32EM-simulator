@@ -2,6 +2,7 @@
 
 int main(int argc, char *argv[] ) {
     char FileName[30];
+    setbuf(stdout,0);
     InitialPrint();
     if (argv[1] == NULL)
     {

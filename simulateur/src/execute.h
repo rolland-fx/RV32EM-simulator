@@ -21,4 +21,6 @@
 #include "decoder.h"
 #include "memory.h"
 
+uint8_t execute_instruction(void* ptr_struct, const type_t* instruction_type);
+
 #endif //RV32EM_SIMULATOR_EXECUTER_H

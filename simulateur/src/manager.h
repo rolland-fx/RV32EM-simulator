@@ -12,6 +12,7 @@
 #include "memory.h"
 #include "interface.h"
 #include "decoder.h"
+#include "execute.h"
 
 extern uint32_t Register[REGISTER_NUMBER];
 char NextInstructionExist;

@@ -4,6 +4,7 @@
 
 #include "manager.h"
 
+
 char CodeRun() {
     char Selection = 's';
     char InstructionCounter = 0;
@@ -49,9 +50,11 @@ char RunNextInstruction(void)
 {
     char ret_val = 0;
     type_t *NextInstructionType;
+    void* ptr_struct;
     if (PC <= (MEMORY_SIZE - userMemorySize))
     {
-        decoder_instruction(memory_get_word(PC),NextInstructionType);
+        ptr_struct = decoder_instruction(memory_get_word(PC),NextInstructionType);
+        execute_instruction(ptr_struct,NextInstructionType);
         ret_val = 1;
     }
     return ret_val;
