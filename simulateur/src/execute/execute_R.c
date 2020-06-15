@@ -34,9 +34,10 @@ uint8_t execute_type_R_SUB(struct_R* ptr_struct) {
 
 uint8_t execute_type_R_SLL(struct_R* ptr_struct) {
     uint8_t return_val = 0;
+    uint8_t shift_amount = Register[ptr_struct->rs2] & 0b011111;
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
-        Register[ptr_struct->rd] = Register[ptr_struct->rs1] << Register[ptr_struct->rs2];
+        Register[ptr_struct->rd] = Register[ptr_struct->rs1] << shift_amount;
         PC = PC + 4;
     }
     else{
@@ -48,9 +49,108 @@ uint8_t execute_type_R_SLL(struct_R* ptr_struct) {
 
 uint8_t execute_type_R_SRL(struct_R* ptr_struct) {
     uint8_t return_val = 0;
+    uint8_t shift_amount = Register[ptr_struct->rs2] & 0b011111;
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
-        Register[ptr_struct->rd] = Register[ptr_struct->rs1] >> Register[ptr_struct->rs2];
+        Register[ptr_struct->rd] = Register[ptr_struct->rs1] >> shift_amount;
+        PC = PC + 4;
+    }
+    else{
+        return_val = 1;
+    }
+
+    return return_val;
+}
+
+uint8_t execute_type_R_SRA(struct_R* ptr_struct) {
+    uint8_t return_val = 0;
+    uint8_t shift_amount = Register[ptr_struct->rs2] & 0b011111;
+    uint8_t first_bit_mask = Register[ptr_struct->rs1] & 0x80000000;
+
+    if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
+        Register[ptr_struct->rd] = first_bit_mask | (Register[ptr_struct->rs1] >> shift_amount);
+        PC = PC + 4;
+    }
+    else{
+        return_val = 1;
+    }
+
+    return return_val;
+}
+
+uint8_t execute_type_R_XOR(struct_R* ptr_struct) {
+    uint8_t return_val = 0;
+
+    if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
+        Register[ptr_struct->rd] = Register[ptr_struct->rs1] ^ Register[ptr_struct->rs2];
+        PC = PC + 4;
+    }
+    else{
+        return_val = 1;
+    }
+
+    return return_val;
+}
+
+uint8_t execute_type_R_OR(struct_R* ptr_struct) {
+    uint8_t return_val = 0;
+
+    if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
+        Register[ptr_struct->rd] = Register[ptr_struct->rs1] | Register[ptr_struct->rs2];
+        PC = PC + 4;
+    }
+    else{
+        return_val = 1;
+    }
+
+    return return_val;
+}
+
+uint8_t execute_type_R_AND(struct_R* ptr_struct) {
+    uint8_t return_val = 0;
+
+    if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
+        Register[ptr_struct->rd] = Register[ptr_struct->rs1] & Register[ptr_struct->rs2];
+        PC = PC + 4;
+    }
+    else{
+        return_val = 1;
+    }
+
+    return return_val;
+}
+
+uint8_t execute_type_R_SLT(struct_R* ptr_struct){
+    uint8_t return_val = 0;
+    int32_t rs1 = Register[ptr_struct->rs1];
+    int32_t rs2 = Register[ptr_struct->rs2];
+
+    if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
+        if(rs1 < rs2){
+            Register[ptr_struct->rd] = 1;
+        }
+        else{
+            Register[ptr_struct->rd] = 0;
+        }
+        PC = PC + 4;
+    }
+    else{
+        return_val = 1;
+    }
+
+    return return_val;
+}
+
+uint8_t execute_type_R_SLTU(struct_R* ptr_struct){
+    uint8_t return_val = 0;
+
+    if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
+        if(Register[ptr_struct->rs1] < Register[ptr_struct->rs2]){
+            Register[ptr_struct->rd] = 1;
+        }
+        else{
+            Register[ptr_struct->rd] = 0;
+        }
         PC = PC + 4;
     }
     else{
@@ -70,18 +170,23 @@ uint8_t execute_type_R_GENERAL(struct_R* ptr_struct) {
         case SLL_FUNCT3:
             return_val = execute_type_R_SLL(ptr_struct);
             break;
-        case SLT_FUNCT3: //SLT
+        case SLT_FUNCT3:
+            return_val = execute_type_R_SLT(ptr_struct);
             break;
-        case SLTU_FUNCT3: //SLTU
+        case SLTU_FUNCT3:
+            return_val = execute_type_R_SLTU(ptr_struct);
             break;
-        case XOR_FUNCT3: //XOR
+        case XOR_FUNCT3:
+            return_val = execute_type_R_XOR(ptr_struct);
             break;
         case SRL_FUNCT3:
             return_val = execute_type_R_SRL(ptr_struct);
             break;
-        case OR_FUNCT3: //OR
+        case OR_FUNCT3:
+            return_val = execute_type_R_OR(ptr_struct);
             break;
-        case AND_FUNCT3: //AND
+        case AND_FUNCT3:
+            return_val = execute_type_R_AND(ptr_struct);
             break;
         default:
             return_val = 1;
@@ -98,7 +203,8 @@ uint8_t execute_type_R_SUBSRA(struct_R* ptr_struct) {
         case SUB_FUNCT3:
             return_val = execute_type_R_SUB(ptr_struct);
             break;
-        case SRA_FUNCT3: //SRA
+        case SRA_FUNCT3:
+            return_val = execute_type_R_SRA(ptr_struct);
             break;
         default:
             return_val = 1;
