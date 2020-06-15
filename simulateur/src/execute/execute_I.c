@@ -6,12 +6,19 @@
 // A Verifier pour le signe extend ! (Sur tout les Load)
 uint8_t execute_type_I_LB(struct_I* ptr_struct){
     uint8_t retVal = 0;
+    uint32_t offset = (uint32_t)ptr_struct->imm_11_0;
+
+    if (offset & 0x00000800u)
+    {
+        offset = 0xFFFFF000u | offset;
+    }
+    else
+    {
+        offset = 0x00000000u | offset;
+    }
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        if (ptr_struct->imm_11_0 & 0x40u)
-            Register[ptr_struct->rd] = 0xFFFFFF00u | userMemory[ptr_struct->rs1 + ptr_struct->imm_11_0] & 0xFFu;
-        else
-            Register[ptr_struct->rd] = userMemory[ptr_struct->rs1 + ptr_struct->imm_11_0] & 0xFFu;
+        Register[ptr_struct->rd] = userMemory[Register[ptr_struct->rs1] + offset] & 0xFFu;
         PC += 4;
     }
     else{
@@ -23,12 +30,19 @@ uint8_t execute_type_I_LB(struct_I* ptr_struct){
 
 uint8_t execute_type_I_LH(struct_I* ptr_struct){
     uint8_t retVal = 0;
+    uint32_t offset = (uint32_t)ptr_struct->imm_11_0;
+    if (offset & 0x00000800u)
+    {
+        offset = 0xFFFFF000u | offset;
+    }
+    else
+    {
+        offset = 0x00000000u | offset;
+    }
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        if (ptr_struct->imm_11_0 & 0x4000u)
-            Register[ptr_struct->rd] = 0xFFFF0000u | userMemory[ptr_struct->rs1 + ptr_struct->imm_11_0] & 0xFFFFu;
-        else
-            Register[ptr_struct->rd] = userMemory[ptr_struct->rs1 + ptr_struct->imm_11_0] & 0xFFFFu;
+            Register[ptr_struct->rd] = userMemory[Register[ptr_struct->rs1] + offset] & 0xFFFFu;
+
         PC += 4;
     }
     else{
@@ -40,9 +54,19 @@ uint8_t execute_type_I_LH(struct_I* ptr_struct){
 
 uint8_t execute_type_I_LW(struct_I* ptr_struct){
     uint8_t retVal = 0;
+    uint32_t offset = (uint32_t)ptr_struct->imm_11_0;
+
+    if (offset & 0x00000800u)
+    {
+        offset = 0xFFFFF000u | offset;
+    }
+    else
+    {
+        offset = 0x00000000u | offset;
+    }
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        Register[ptr_struct->rd] = userMemory[ptr_struct->rs1 + ptr_struct->imm_11_0];
+        Register[ptr_struct->rd] = userMemory[Register[ptr_struct->rs1] + offset];
         PC += 4;
     }
     else{
@@ -54,9 +78,10 @@ uint8_t execute_type_I_LW(struct_I* ptr_struct){
 
 uint8_t execute_type_I_LBU(struct_I* ptr_struct){
     uint8_t retVal = 0;
+    uint32_t offset = (uint32_t)ptr_struct->imm_11_0;
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        Register[ptr_struct->rd] = userMemory[ptr_struct->rs1 + ptr_struct->imm_11_0] & 0xFFu;
+        Register[ptr_struct->rd] = userMemory[Register[ptr_struct->rs1] + offset] & 0xFFu;
         PC += 4;
     }
     else{
@@ -68,9 +93,10 @@ uint8_t execute_type_I_LBU(struct_I* ptr_struct){
 
 uint8_t execute_type_I_LHU(struct_I* ptr_struct){
     uint8_t retVal = 0;
+    uint32_t offset = (uint32_t)ptr_struct->imm_11_0;
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        Register[ptr_struct->rd] = userMemory[ptr_struct->rs1 + ptr_struct->imm_11_0] & 0xFFFFu;
+        Register[ptr_struct->rd] = userMemory[Register[ptr_struct->rs1] + offset] & 0xFFFFu;
         PC += 4;
     }
     else{
@@ -142,15 +168,18 @@ uint8_t execute_type_I_SLTI(struct_I* ptr_struct){
 
 uint8_t execute_type_I_SLTIU(struct_I* ptr_struct){
     uint8_t retVal = 0;
-    uint32_t imm;
+    uint32_t imm = (uint32_t)ptr_struct->imm_11_0;
+
+    if (imm & 0x00000800u)
+    {
+        imm = 0xFFFFF000u | imm;
+    }
+    else
+    {
+        imm = 0x00000000u | imm;
+    }
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        if(ptr_struct->imm_11_0 & 0x400u){
-                imm = 0xFFFFF000u | ptr_struct->imm_11_0;
-        }
-        else{
-                imm = 0x00000000u | ptr_struct->imm_11_0;
-        }
 
         if(imm == 1){
             Register[ptr_struct->rd] = 1;
@@ -175,20 +204,23 @@ uint8_t execute_type_I_SLTIU(struct_I* ptr_struct){
 
 uint8_t execute_type_I_XORI(struct_I* ptr_struct){
     uint8_t retVal = 0;
-    uint32_t imm;
+    uint32_t imm = (uint32_t)ptr_struct->imm_11_0;
+
+    if (imm & 0x00000800u)
+    {
+        imm = 0xFFFFF000u | imm;
+    }
+    else
+    {
+        imm = 0x00000000u | imm;
+    }
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        if(ptr_struct->imm_11_0 & 0x400u){
-            imm = 0xFFFFF000u | ptr_struct->imm_11_0;
+        if(imm == 0xFFFFFFFFu){
+            Register[ptr_struct->rd] = ~Register[ptr_struct->rs1];
         }
         else{
-            imm = 0x00000000u | ptr_struct->imm_11_0;
-        }
-        if(imm == 0xFFFFFFFF){
-            Register[ptr_struct->rd] = ~userMemory[ptr_struct->rs1];
-        }
-        else{
-            Register[ptr_struct->rd] = userMemory[ptr_struct->rs1] ^ imm;
+            Register[ptr_struct->rd] = Register[ptr_struct->rs1] ^ imm;
             PC += 4;
         }
     }
@@ -201,16 +233,19 @@ uint8_t execute_type_I_XORI(struct_I* ptr_struct){
 
 uint8_t execute_type_I_ORI(struct_I* ptr_struct){
     uint8_t retVal = 0;
-    uint32_t imm;
+    uint32_t imm = (uint32_t)ptr_struct->imm_11_0;
+
+    if (imm & 0x00000800u)
+    {
+        imm = 0xFFFFF000u | imm;
+    }
+    else
+    {
+        imm = 0x00000000u | imm;
+    }
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        if(ptr_struct->imm_11_0 & 0x400u){
-            imm = 0xFFFFF000u | ptr_struct->imm_11_0;
-        }
-        else{
-            imm = 0x00000000u | ptr_struct->imm_11_0;
-        }
-        Register[ptr_struct->rd] = userMemory[ptr_struct->rs1] | imm;
+        Register[ptr_struct->rd] = Register[ptr_struct->rs1] | imm;
         PC += 4;
     }
     else{
@@ -222,16 +257,19 @@ uint8_t execute_type_I_ORI(struct_I* ptr_struct){
 
 uint8_t execute_type_I_ANDI(struct_I* ptr_struct){
     uint8_t retVal = 0;
-    uint32_t imm;
+    uint32_t imm = (uint32_t)ptr_struct->imm_11_0;
+
+    if (imm & 0x00000800u)
+    {
+        imm = 0xFFFFF000u | imm;
+    }
+    else
+    {
+        imm = 0x00000000u | imm;
+    }
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        if(ptr_struct->imm_11_0 & 0x400u){
-            imm = 0xFFFFF000u | ptr_struct->imm_11_0;
-        }
-        else{
-            imm = 0x00000000u | ptr_struct->imm_11_0;
-        }
-        Register[ptr_struct->rd] = userMemory[ptr_struct->rs1] & imm;
+        Register[ptr_struct->rd] = Register[ptr_struct->rs1] & imm;
         PC += 4;
     }
     else{
