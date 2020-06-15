@@ -18,7 +18,7 @@ uint8_t execute_type_I_LB(struct_I* ptr_struct){
     }
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        Register[ptr_struct->rd] = userMemory[Register[ptr_struct->rs1] + offset] & 0xFFu;
+        Register[ptr_struct->rd] = user_memory_get_byte(Register[ptr_struct->rs1] + offset);
         PC += 4;
     }
     else{
@@ -41,7 +41,7 @@ uint8_t execute_type_I_LH(struct_I* ptr_struct){
     }
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-            Register[ptr_struct->rd] = userMemory[Register[ptr_struct->rs1] + offset] & 0xFFFFu;
+            Register[ptr_struct->rd] = user_memory_get_half_word(Register[ptr_struct->rs1] + offset);
 
         PC += 4;
     }
@@ -66,7 +66,7 @@ uint8_t execute_type_I_LW(struct_I* ptr_struct){
     }
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        Register[ptr_struct->rd] = userMemory[Register[ptr_struct->rs1] + offset];
+        Register[ptr_struct->rd] = user_memory_get_word(Register[ptr_struct->rs1] + offset);
         PC += 4;
     }
     else{
@@ -81,7 +81,7 @@ uint8_t execute_type_I_LBU(struct_I* ptr_struct){
     uint32_t offset = (uint32_t)ptr_struct->imm_11_0;
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        Register[ptr_struct->rd] = userMemory[Register[ptr_struct->rs1] + offset] & 0xFFu;
+        Register[ptr_struct->rd] = user_memory_get_byte(Register[ptr_struct->rs1] + offset);
         PC += 4;
     }
     else{
@@ -96,7 +96,7 @@ uint8_t execute_type_I_LHU(struct_I* ptr_struct){
     uint32_t offset = (uint32_t)ptr_struct->imm_11_0;
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        Register[ptr_struct->rd] = userMemory[Register[ptr_struct->rs1] + offset] & 0xFFFFu;
+        Register[ptr_struct->rd] = user_memory_get_half_word(Register[ptr_struct->rs1] + offset);
         PC += 4;
     }
     else{
@@ -278,13 +278,13 @@ uint8_t execute_type_I_ANDI(struct_I* ptr_struct){
 
     return retVal;
 }
-// A regarder !
+
 uint8_t execute_type_I_SLLI(struct_I* ptr_struct){
     uint8_t retVal = 0;
     uint8_t shamt = ptr_struct->imm_11_0 & 0x01Fu;
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        Register[ptr_struct->rd] = userMemory[ptr_struct->rs1] << shamt; // Zeros are shifted into the lower bits ???
+        Register[ptr_struct->rd] = Register[ptr_struct->rs1] << shamt;
         PC += 4;
     }
     else{
@@ -293,17 +293,21 @@ uint8_t execute_type_I_SLLI(struct_I* ptr_struct){
 
     return retVal;
 }
-// A regarder !
+
 uint8_t execute_type_I_SRLI(struct_I* ptr_struct){
     uint8_t retVal = 0;
     uint8_t shamt = ptr_struct->imm_11_0 & 0x01Fu;
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
         if(ptr_struct->imm_11_0 && 0x400u){
-            Register[ptr_struct->rd] = userMemory[ptr_struct->rs1] >> shamt; //  original sign bit is copied into the vacated upper bits ???
+            Register[ptr_struct->rd] = Register[ptr_struct->rs1] >> shamt; //  original sign bit is copied into the vacated upper bits ???
+            for(;;)
+            {
+
+            }
         }
         else{
-            Register[ptr_struct->rd] = userMemory[ptr_struct->rs1] >> shamt; // Zeros are shifted into the upper bits ???
+            Register[ptr_struct->rd] = Register[ptr_struct->rs1] >> shamt; // Zeros are shifted into the upper bits ???
         }
         PC += 4;
     }
