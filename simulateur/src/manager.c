@@ -35,8 +35,7 @@ char CodeRun() {
             PrintCurrentState();
         }
         InstructionCounter++;
-        //NEXT FUNCTION TO FINISH TO MAKE THE PROGRAM DO SOMEHTING !
-        //NextInstructionExist = RunNextInstruction();
+        NextInstructionExist = RunNextInstruction();
     }
     if (Selection == 'c')
     {
@@ -48,7 +47,15 @@ char CodeRun() {
 
 char RunNextInstruction(void)
 {
-    return 0;
+    char ret_val = 0;
+    type_t *NextInstructionType;
+    if (PC <= (MEMORY_SIZE - userMemorySize))
+    {
+        decoder_instruction(memory_get_word(PC),NextInstructionType);
+        ret_val = 1;
+    }
+    return ret_val;
+
 }
 
 void MemoryChoice(void)
