@@ -4,7 +4,7 @@
 
 #include "execute_U.h"
 
-uint8_t executer_type_U(uint32_t instruction, struct_U* ptr_struct) {
+uint8_t execute_type_U(struct_U* ptr_struct) {
     uint8_t retVal = 0;
     if(ptr_struct->rd < 16)
     {

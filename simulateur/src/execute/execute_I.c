@@ -3,7 +3,7 @@
 //
 
 #include "execute_I.h"
-// A Verifier pour le signe extend ! (Sur tout les Load)
+
 uint8_t execute_type_I_LB(struct_I* ptr_struct){
     uint8_t retVal = 0;
     uint32_t offset = (uint32_t)ptr_struct->imm_11_0;
@@ -125,7 +125,7 @@ uint8_t execute_type_I_ADDI(struct_I* ptr_struct){
     uint8_t retVal = 0;
     uint32_t imm = ptr_struct->imm_11_0;
 
-    if(ptr_struct->imm_11_0 & 0x00000800) {
+    if(ptr_struct->imm_11_0 & 0x00000800u) {
         imm |= 0xfffff000;
     }
 
@@ -143,12 +143,10 @@ uint8_t execute_type_I_ADDI(struct_I* ptr_struct){
 uint8_t execute_type_I_SLTI(struct_I* ptr_struct){
     uint8_t retVal = 0;
 
-    int16_t imm = (ptr_struct->imm_11_0);
-    if(imm & 0x00000800){
-        imm |= 0xfffff000;
+    uint16_t imm = (ptr_struct->imm_11_0);
+    if(imm & 0x00000800u){
+        imm |= 0xfffff000u;
     }
-
-    int32_t rs1 = (Register[ptr_struct->rs1]);
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
         if(Register[ptr_struct->rs1] < imm){
@@ -181,13 +179,7 @@ uint8_t execute_type_I_SLTIU(struct_I* ptr_struct){
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
 
-        if(imm == 1){
-            Register[ptr_struct->rd] = 1;
-        }
-        else if(imm == 0){
-            Register[ptr_struct->rd] = 0;
-        }
-        else if(Register[ptr_struct->rs1] < imm){
+        if((imm == 1) || (Register[ptr_struct->rs1] < imm)){
             Register[ptr_struct->rd] = 1;
         }
         else{
@@ -297,17 +289,29 @@ uint8_t execute_type_I_SLLI(struct_I* ptr_struct){
 uint8_t execute_type_I_SRLI(struct_I* ptr_struct){
     uint8_t retVal = 0;
     uint8_t shamt = ptr_struct->imm_11_0 & 0x01Fu;
+    uint32_t mask = 0x80000000;
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        if(ptr_struct->imm_11_0 && 0x400u){
-            Register[ptr_struct->rd] = Register[ptr_struct->rs1] >> shamt; //  original sign bit is copied into the vacated upper bits ???
-            for(;;)
+        if(ptr_struct->imm_11_0 & 0x400u){
+            if(Register[ptr_struct->rs1] & 0x80000000)
             {
-
+                if(shamt == 0)
+                {
+                    mask = 0x00000000;
+                } else{
+                    for(uint8_t i = 1; i >= shamt; i++)
+                    {
+                        mask = (mask >> 1u) & 0x80000000;
+                    }
+                }
             }
+            else{
+                mask = 0x00000000;
+            }
+            Register[ptr_struct->rd] = (Register[ptr_struct->rs1] >> shamt) | mask;
         }
         else{
-            Register[ptr_struct->rd] = Register[ptr_struct->rs1] >> shamt; // Zeros are shifted into the upper bits ???
+            Register[ptr_struct->rd] = Register[ptr_struct->rs1] >> shamt;
         }
         PC += 4;
     }
@@ -366,7 +370,7 @@ uint8_t execute_type_I(struct_I* ptr_struct) {
 
     switch (ptr_struct->opcode) {
         case LOAD_OPCODE:  //LB,LH,LW,LBU,LHU
-            execute_type_I_LOAD(ptr_struct);
+            retVal = execute_type_I_LOAD(ptr_struct);
             break;
         case FENCE_OPCODE:  //FENCE
             break;
