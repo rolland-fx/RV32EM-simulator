@@ -10,8 +10,8 @@ uint8_t stringToHex(char* string, uint32_t* hex);
 uint32_t PC = 0;
 
 uint32_t Register[REGISTER_NUMBER];
-uint32_t Memory[MEMORY_SIZE];
-uint32_t *userMemory;
+uint8_t Memory[MEMORY_SIZE];
+uint8_t *userMemory;
 uint32_t userMemorySize = 0;
 
 
@@ -91,25 +91,77 @@ uint8_t stringToHex(char* string, uint32_t* hex){
     return retVal;
 }
 
-{
+uint8_t memory_get_byte(uint32_t addr){
+    addr &= 0x00ffffff;
 
+    return Memory[addr];
 }
 
 uint16_t memory_get_half_word(uint32_t addr){
+    addr &= 0x00ffffff;
 
+    return (memory_get_byte(addr + 1) << 8) | memory_get_byte(addr);
 }
 
 uint32_t memory_get_word(uint32_t addr){
+    addr &= 0x00ffffff;
+
+    return (memory_get_half_word(addr + 1) << 16) | memory_get_half_word(addr);
 
 }
 
 void memory_save_byte(uint32_t addr, uint8_t value){
+    addr &= 0x00ffffff;
 
+    Memory[addr] = value;
 }
 void memory_save_half_word(uint32_t addr, uint16_t value){
+    addr &= 0x00ffffff;
 
+    memory_save_byte(addr + 1, (value >> 8) & 0x00ff);
+    memory_save_byte(addr, value & 0x0ff);
 }
 void memory_save_word(uint32_t addr, uint32_t value){
+    addr &= 0x00ffffff;
 
+    memory_save_half_word(addr + 1, (value >> 16) & 0x0000ffff);
+    memory_save_half_word(addr, value & 0x0000ffff);
+}
+
+uint8_t user_memory_get_byte(uint32_t addr){
+    addr &= 0x00ffffff;
+
+    return userMemory[addr];
+}
+
+uint16_t user_memory_get_half_word(uint32_t addr){
+    addr &= 0x00ffffff;
+
+    return (user_memory_get_byte(addr + 1) << 8) | user_memory_get_byte(addr);
+}
+
+uint32_t user_memory_get_word(uint32_t addr){
+    addr &= 0x00ffffff;
+
+    return (user_memory_get_half_word(addr + 1) << 16) | user_memory_get_half_word(addr);
+
+}
+
+void user_memory_save_byte(uint32_t addr, uint8_t value){
+    addr &= 0x00ffffff;
+
+    userMemory[addr] = value;
+}
+void user_memory_save_half_word(uint32_t addr, uint16_t value){
+    addr &= 0x00ffffff;
+
+    user_memory_save_byte(addr + 1, (value >> 8) & 0x00ff);
+    user_memory_save_byte(addr, value & 0x0ff);
+}
+void user_memory_save_word(uint32_t addr, uint32_t value){
+    addr &= 0x00ffffff;
+
+    user_memory_save_half_word(addr + 1, (value >> 16) & 0x0000ffff);
+    user_memory_save_half_word(addr, value & 0x0000ffff);
 }
 

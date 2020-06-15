@@ -32,5 +32,13 @@ void memory_save_byte(uint32_t addr, uint8_t value);
 void memory_save_half_word(uint32_t addr, uint16_t value);
 void memory_save_word(uint32_t addr, uint32_t value);
 
+uint8_t user_memory_get_byte(uint32_t addr);
+uint16_t user_memory_get_half_word(uint32_t addr);
+uint32_t user_memory_get_word(uint32_t addr);
+
+void user_memory_save_byte(uint32_t addr, uint8_t value);
+void user_memory_save_half_word(uint32_t addr, uint16_t value);
+void user_memory_save_word(uint32_t addr, uint32_t value);
+
 
 #endif //RV32EM_SIMULATOR_MEMORY_H
