@@ -14,6 +14,11 @@ uint32_t Memory[MEMORY_SIZE];
 uint32_t *userMemory;
 uint32_t userMemorySize = 0;
 
+
+//extern uint32_t Memory[MEMORY_SIZE];
+//extern uint32_t *userMemory;
+//extern uint32_t userMemorySize;
+
 uint8_t loadProgramToMemory(char * file){
     uint8_t retVal = 0;
     uint8_t buffer[10];
@@ -84,5 +89,27 @@ uint8_t stringToHex(char* string, uint32_t* hex){
     }
 
     return retVal;
+}
+
+{
+
+}
+
+uint16_t memory_get_half_word(uint32_t addr){
+
+}
+
+uint32_t memory_get_word(uint32_t addr){
+
+}
+
+void memory_save_byte(uint32_t addr, uint8_t value){
+
+}
+void memory_save_half_word(uint32_t addr, uint16_t value){
+
+}
+void memory_save_word(uint32_t addr, uint32_t value){
+
 }
 

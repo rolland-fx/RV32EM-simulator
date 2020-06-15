@@ -15,9 +15,7 @@
 extern uint32_t PC;
 
 extern uint32_t Register[REGISTER_NUMBER];
-extern uint32_t Memory[MEMORY_SIZE];
-extern uint32_t *userMemory;
-extern uint32_t userMemorySize;
+
 /**
  * Place les instructions contenu dans le fichier passée en entrée dans la mémoire et initialise les variables globales
  * userMemory et userMemorySize.
@@ -25,6 +23,14 @@ extern uint32_t userMemorySize;
  * @return Différent de 0 s'il y a un erreur.
  */
 uint8_t loadProgramToMemory(char * file);
+
+uint8_t memory_get_byte(uint32_t addr);
+uint16_t memory_get_half_word(uint32_t addr);
+uint32_t memory_get_word(uint32_t addr);
+
+void memory_save_byte(uint32_t addr, uint8_t value);
+void memory_save_half_word(uint32_t addr, uint16_t value);
+void memory_save_word(uint32_t addr, uint32_t value);
 
 
 #endif //RV32EM_SIMULATOR_MEMORY_H
