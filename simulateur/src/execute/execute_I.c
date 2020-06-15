@@ -3,7 +3,7 @@
 //
 
 #include "execute_I.h"
-
+// A Verifier pour le signe extend ! (Sur tout les Load)
 uint8_t execute_type_I_LB(struct_I* ptr_struct){
     uint8_t retVal = 0;
 
