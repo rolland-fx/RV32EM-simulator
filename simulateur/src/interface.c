@@ -5,6 +5,7 @@
 
 void InitialPrint()
 {
+    setbuf(stdout,0);
     printf("Simulateur RISC-V RV32E par :\n");
     printf("- Alexandre Viau\n");
     printf("- Filipe Andres\n");
