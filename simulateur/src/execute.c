@@ -3,10 +3,10 @@
 //
 #include "execute.h"
 
-uint8_t execute_instruction(void* ptr_struct, const type_t* instruction_type){
+uint8_t execute_instruction(void* ptr_struct, const type_t instruction_type){
     uint8_t retVal = 0;
 
-    switch (*instruction_type){
+    switch (instruction_type){
         case R_type:
             retVal = execute_type_R((struct_R*) ptr_struct);
             break;

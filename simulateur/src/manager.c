@@ -7,8 +7,8 @@
 
 char CodeRun() {
     char Selection = 's';
-    char InstructionCounter = 0;
     NextInstructionExist = 1;
+    char InstructionCounter = 0;
     while (NextInstructionExist)
     {
         if (Selection != 'c') {
@@ -30,13 +30,13 @@ char CodeRun() {
             default:
                 break;
         }
+        NextInstructionExist = RunNextInstruction();
+        InstructionCounter++;
         if (Selection != 'c')
         {
             PrintInstruction();
             PrintCurrentState();
         }
-        InstructionCounter++;
-        NextInstructionExist = RunNextInstruction();
     }
     if (Selection == 'c')
     {
@@ -49,12 +49,12 @@ char CodeRun() {
 char RunNextInstruction(void)
 {
     char ret_val = 0;
-    type_t *NextInstructionType;
+    type_t NextInstructionType;
     void* ptr_struct;
     if (PC <= (MEMORY_SIZE - userMemorySize))
     {
-        ptr_struct = decoder_instruction(memory_get_word(PC),NextInstructionType);
-        execute_instruction(ptr_struct,NextInstructionType);
+        ptr_struct = decoder_instruction(memory_get_word(PC),&NextInstructionType);
+        execute_instruction(ptr_struct, NextInstructionType);
         ret_val = 1;
     }
     return ret_val;
