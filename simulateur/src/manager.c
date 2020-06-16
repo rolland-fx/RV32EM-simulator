@@ -7,8 +7,8 @@
 
 char CodeRun() {
     char Selection = 's';
-    char InstructionCounter = 0;
     NextInstructionExist = 1;
+    char InstructionCounter = 0;
     while (NextInstructionExist)
     {
         if (Selection != 'c') {
@@ -30,13 +30,13 @@ char CodeRun() {
             default:
                 break;
         }
+        NextInstructionExist = RunNextInstruction();
+        InstructionCounter++;
         if (Selection != 'c')
         {
             PrintInstruction();
             PrintCurrentState();
         }
-        InstructionCounter++;
-        NextInstructionExist = RunNextInstruction();
     }
     if (Selection == 'c')
     {
