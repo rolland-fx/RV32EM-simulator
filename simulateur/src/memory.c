@@ -173,7 +173,6 @@ void user_memory_save_word(uint32_t addr, uint32_t value){
 
     //user_memory_save_half_word(addr, (value >> 16) & 0x0000ffff);
     //user_memory_save_half_word(addr + 2, value & 0x0000ffff);
-    *((uint32_t*)(((uint8_t*)userMemory)[addr])) = value;
 
     *((uint32_t*)(&userMemory[addr])) = value;
 }
