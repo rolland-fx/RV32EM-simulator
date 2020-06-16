@@ -168,39 +168,51 @@
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_B.c">
+			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_B.h">
+			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_I.c">
+			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_I.h">
+			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_J.c">
+			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_J.h">
+			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_R.c">
+			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_R.h">
+			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_S.c">
+			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_S.h">
+			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_U.c">
+			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/execute/execute_U.h">
+			<Option target="simulateur"/>
 			<Option target="test"/>
 		</Unit>
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/simulateur/src/interface.c">
