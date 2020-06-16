@@ -22,7 +22,6 @@ uint8_t execute_type_U(struct_U* ptr_struct) {
             retVal = 1;
             break;
         }
-        PC += 4;
     }
     else
     {
