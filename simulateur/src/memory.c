@@ -47,7 +47,7 @@ uint8_t loadProgramToMemory(char * file){
         }
         fclose(program);
     }
-
+    
     return retVal;
 }
 
@@ -96,7 +96,7 @@ uint8_t memory_get_byte(uint32_t addr){
     addr &= 0x00ffffff;
 
     //return Memory[addr];
-    return *((uint8_t*)(Memory[addr]));
+    return *((uint8_t*)(&Memory[addr]));
 }
 
 uint16_t memory_get_half_word(uint32_t addr){

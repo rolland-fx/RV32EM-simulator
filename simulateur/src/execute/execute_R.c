@@ -214,17 +214,105 @@ uint8_t execute_type_R_SUBSRA(struct_R* ptr_struct) {
     return return_val;
 }
 
+uint8_t execute_type_R_MUL(struct_R* ptr_struct){
+    uint8_t retVal = 0;
+    uint32_t multiplier;
+    uint32_t multiplicand;
+    uint64_t result;
+
+    if(ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
+        multiplier = (uint32_t)(Register[ptr_struct->rs2]);
+        multiplicand = (uint32_t)(Register[ptr_struct->rs1]);
+
+        result = multiplier * multiplicand;
+
+        Register[ptr_struct->rd] = (uint32_t)(result & 0x00000000ffffffff);
+    }
+    else{
+        retVal = 1;
+    }
+
+    return retVal;
+}
+
+uint8_t execute_type_R_MULH(struct_R* ptr_struct){
+    uint8_t retVal = 0;
+    int32_t multiplier;
+    int32_t multiplicand;
+    uint64_t result;
+
+    if(ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
+        multiplier = (int32_t)(Register[ptr_struct->rs2]);
+        multiplicand = (int32_t)(Register[ptr_struct->rs1]);
+
+        result = multiplier * multiplicand;
+
+        Register[ptr_struct->rd] = (uint32_t)(result & 0xffffffff00000000);
+    }
+    else{
+        retVal = 1;
+    }
+
+    return retVal;
+}
+
+uint8_t execute_type_R_MULHU(struct_R* ptr_struct){
+    uint8_t retVal = 0;
+    uint32_t multiplier;
+    uint32_t multiplicand;
+    uint64_t result;
+
+    if(ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
+        multiplier = (uint32_t)(Register[ptr_struct->rs2]);
+        multiplicand = (uint32_t)(Register[ptr_struct->rs1]);
+
+        result = multiplier * multiplicand;
+
+        Register[ptr_struct->rd] = (uint32_t)(result & 0xffffffff00000000);
+    }
+    else{
+        retVal = 1;
+    }
+
+    return retVal;
+}
+
+uint8_t execute_type_R_MULHSU(struct_R* ptr_struct){
+    uint8_t retVal = 0;
+    uint32_t multiplier;
+    int32_t multiplicand;
+    uint64_t result;
+
+    if(ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
+        multiplier = (uint32_t)(Register[ptr_struct->rs2]);
+        multiplicand = (int32_t)(Register[ptr_struct->rs1]);
+
+        result = multiplier * multiplicand;
+
+        Register[ptr_struct->rd] = (uint32_t)(result & 0xffffffff00000000);
+    }
+    else{
+        retVal = 1;
+    }
+
+    return retVal;
+}
+
 uint8_t execute_type_R_MULDIV(struct_R* ptr_struct) {
     uint8_t return_val = 0;
 
     switch(ptr_struct->func3){
         case MUL_FUNCT3: //MUL
+            return_val = execute_type_R_MUL(ptr_struct);
             break;
         case MULH_FUNCT3: //MULH
+            return_val = execute_type_R_MULH(ptr_struct);
             break;
         case MULHSU_FUNCT3: //MULHSU
+            return_val = execute_type_R_MULHSU(ptr_struct);
             break;
         case MULHU_FUNCT3: //MULHU
+            return_val = execute_type_R_MULHU(ptr_struct);
             break;
         case DIV_FUNCT3: //DIV
             break;
