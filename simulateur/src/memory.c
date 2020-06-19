@@ -9,8 +9,8 @@ uint8_t stringToHex(char* string, uint32_t* hex);
 
 uint32_t PC = 0;
 
-uint32_t Register[REGISTER_NUMBER];
-uint8_t Memory[MEMORY_SIZE];
+uint32_t Register[REGISTER_NUMBER] = {0};
+uint8_t Memory[MEMORY_SIZE] = {0};
 uint8_t *userMemory;
 uint32_t userMemorySize = 0;
 
