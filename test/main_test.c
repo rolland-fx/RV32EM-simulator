@@ -42,6 +42,7 @@ int main(void)
     RUN_TEST_executer_type_I_JALR();
     RUN_TEST_execute_type_I_ADDI();
     RUN_TEST_execute_type_I_SLTI();
+    RUN_TEST_execute_R();
     return UNITY_END();
 }
 

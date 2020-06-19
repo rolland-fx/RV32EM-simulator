@@ -6,7 +6,6 @@
 #define RV32EM_SIMULATOR_EXECUTE_I_TEST_H
 
 #include "../../simulateur/src/execute/execute_I.h"
-
 #include "../unity/unity.h"
 
 /**

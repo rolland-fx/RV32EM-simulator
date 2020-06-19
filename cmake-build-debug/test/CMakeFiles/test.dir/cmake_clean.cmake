@@ -14,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/execute_test.c.obj"
   "CMakeFiles/test.dir/execute_test/execute_I_test.c.obj"
   "CMakeFiles/test.dir/execute_test/execute_J_test.c.obj"
+  "CMakeFiles/test.dir/execute_test/execute_R_test.c.obj"
   "CMakeFiles/test.dir/main_test.c.obj"
   "CMakeFiles/test.dir/manager_test.c.obj"
   "CMakeFiles/test.dir/memory_test.c.obj"
