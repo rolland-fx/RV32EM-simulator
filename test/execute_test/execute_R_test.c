@@ -1611,6 +1611,426 @@ void RUN_TEST_execute_R_MULHSU(){
     RUN_TEST(execute_type_R_MULHSU_should_add_4_to_PC);
 }
 
+/*******************************************************************************
+ * Test pour l'instruction DIV
+ ******************************************************************************/
+
+void execute_type_R_DIV_should_return_non_zero_on_rs1_greater_than_15(){
+    struct_R Struct_R;
+
+    Struct_R.rs1 = 16;
+    Struct_R.rs2 = 0;
+    Struct_R.rd = 1;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = DIV_FUNCT3;
+
+    TEST_ASSERT_NOT_EQUAL(0, execute_type_R(&Struct_R));
+}
+
+void execute_type_R_DIV_should_return_non_zero_on_rs2_greater_than_15(){
+    struct_R Struct_R;
+
+    Struct_R.rs1 = 0;
+    Struct_R.rs2 = 16;
+    Struct_R.rd = 1;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = DIV_FUNCT3;
+
+    TEST_ASSERT_NOT_EQUAL(0, execute_type_R(&Struct_R));
+}
+
+void execute_type_R_DIV_should_return_non_zero_on_rd_greater_than_15(){
+    struct_R Struct_R;
+
+    Struct_R.rs1 = 0;
+    Struct_R.rs2 = 0;
+    Struct_R.rd = 16;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = DIV_FUNCT3;
+
+    TEST_ASSERT_NOT_EQUAL(0, execute_type_R(&Struct_R));
+}
+
+void execute_type_R_DIV_should_not_modify_x0(){
+    struct_R Struct_R;
+
+    Register[1] = 100;
+    Register[2] = 50;
+
+    Struct_R.rs1 = 1;
+    Struct_R.rs2 = 2;
+    Struct_R.rd = 0;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = DIV_FUNCT3;
+
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_R(&Struct_R));
+    TEST_ASSERT_EQUAL_UINT32(0, Register[0]);
+}
+
+void execute_type_R_DIV_should_place_result_in_rd(){
+    struct_R Struct_R;
+
+    int32_t rs1 = -123456;
+    uint32_t rs2 = 53;
+
+    Register[1] = (uint32_t)rs1;
+    Register[2] = (uint32_t)rs2;
+
+    Struct_R.rs1 = 1;
+    Struct_R.rs2 = 2;
+    Struct_R.rd = 3;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = DIV_FUNCT3;
+
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_R(&Struct_R));
+    TEST_ASSERT_EQUAL_UINT32((-2329), Register[3]);
+}
+
+void execute_type_R_DIV_should_add_4_to_PC(){
+    struct_R Struct_R;
+
+    int32_t rs1 = -123456;
+    uint32_t rs2 = 53;
+
+    PC = 100;
+
+    Register[1] = (uint32_t)rs1;
+    Register[2] = (uint32_t)rs2;
+
+    Struct_R.rs1 = 1;
+    Struct_R.rs2 = 2;
+    Struct_R.rd = 3;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = DIV_FUNCT3;
+
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_R(&Struct_R));
+    TEST_ASSERT_EQUAL_UINT32(104, PC);
+}
+
+void RUN_TEST_execute_R_DIV(){
+    RUN_TEST(execute_type_R_DIV_should_return_non_zero_on_rs1_greater_than_15);
+    RUN_TEST(execute_type_R_DIV_should_return_non_zero_on_rs2_greater_than_15);
+    RUN_TEST(execute_type_R_DIV_should_return_non_zero_on_rd_greater_than_15);
+    RUN_TEST(execute_type_R_DIV_should_not_modify_x0);
+    RUN_TEST(execute_type_R_DIV_should_place_result_in_rd);
+    RUN_TEST(execute_type_R_DIV_should_add_4_to_PC);
+}
+
+/*******************************************************************************
+ * Test pour l'instruction DIVU
+ ******************************************************************************/
+
+void execute_type_R_DIVU_should_return_non_zero_on_rs1_greater_than_15(){
+    struct_R Struct_R;
+
+    Struct_R.rs1 = 16;
+    Struct_R.rs2 = 0;
+    Struct_R.rd = 1;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = DIVU_FUNCT3;
+
+    TEST_ASSERT_NOT_EQUAL(0, execute_type_R(&Struct_R));
+}
+
+void execute_type_R_DIVU_should_return_non_zero_on_rs2_greater_than_15(){
+    struct_R Struct_R;
+
+    Struct_R.rs1 = 0;
+    Struct_R.rs2 = 16;
+    Struct_R.rd = 1;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = DIVU_FUNCT3;
+
+    TEST_ASSERT_NOT_EQUAL(0, execute_type_R(&Struct_R));
+}
+
+void execute_type_R_DIVU_should_return_non_zero_on_rd_greater_than_15(){
+    struct_R Struct_R;
+
+    Struct_R.rs1 = 0;
+    Struct_R.rs2 = 0;
+    Struct_R.rd = 16;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = DIVU_FUNCT3;
+
+    TEST_ASSERT_NOT_EQUAL(0, execute_type_R(&Struct_R));
+}
+
+void execute_type_R_DIVU_should_not_modify_x0(){
+    struct_R Struct_R;
+
+    Register[1] = 100;
+    Register[2] = 50;
+
+    Struct_R.rs1 = 1;
+    Struct_R.rs2 = 2;
+    Struct_R.rd = 0;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = DIVU_FUNCT3;
+
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_R(&Struct_R));
+    TEST_ASSERT_EQUAL_UINT32(0, Register[0]);
+}
+
+void execute_type_R_DIVU_should_place_result_in_rd(){
+    struct_R Struct_R;
+
+    uint32_t rs1 = 123456;
+    uint32_t rs2 = 53;
+
+    Register[1] = (uint32_t)rs1;
+    Register[2] = (uint32_t)rs2;
+
+    Struct_R.rs1 = 1;
+    Struct_R.rs2 = 2;
+    Struct_R.rd = 3;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = DIVU_FUNCT3;
+
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_R(&Struct_R));
+    TEST_ASSERT_EQUAL_UINT32((2329), Register[3]);
+}
+
+void execute_type_R_DIVU_should_add_4_to_PC(){
+    struct_R Struct_R;
+
+    uint32_t rs1 = 123456;
+    uint32_t rs2 = 53;
+
+    PC = 100;
+
+    Register[1] = (uint32_t)rs1;
+    Register[2] = (uint32_t)rs2;
+
+    Struct_R.rs1 = 1;
+    Struct_R.rs2 = 2;
+    Struct_R.rd = 3;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = DIVU_FUNCT3;
+
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_R(&Struct_R));
+    TEST_ASSERT_EQUAL_UINT32(104, PC);
+}
+
+void RUN_TEST_execute_R_DIVU(){
+    RUN_TEST(execute_type_R_DIVU_should_return_non_zero_on_rs1_greater_than_15);
+    RUN_TEST(execute_type_R_DIVU_should_return_non_zero_on_rs2_greater_than_15);
+    RUN_TEST(execute_type_R_DIVU_should_return_non_zero_on_rd_greater_than_15);
+    RUN_TEST(execute_type_R_DIVU_should_not_modify_x0);
+    RUN_TEST(execute_type_R_DIVU_should_place_result_in_rd);
+    RUN_TEST(execute_type_R_DIVU_should_add_4_to_PC);
+}
+
+/*******************************************************************************
+ * Test pour l'instruction REM
+ ******************************************************************************/
+
+void execute_type_R_REM_should_return_non_zero_on_rs1_greater_than_15(){
+    struct_R Struct_R;
+
+    Struct_R.rs1 = 16;
+    Struct_R.rs2 = 0;
+    Struct_R.rd = 1;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = REM_FUNCT3;
+
+    TEST_ASSERT_NOT_EQUAL(0, execute_type_R(&Struct_R));
+}
+
+void execute_type_R_REM_should_return_non_zero_on_rs2_greater_than_15(){
+    struct_R Struct_R;
+
+    Struct_R.rs1 = 0;
+    Struct_R.rs2 = 16;
+    Struct_R.rd = 1;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = REM_FUNCT3;
+
+    TEST_ASSERT_NOT_EQUAL(0, execute_type_R(&Struct_R));
+}
+
+void execute_type_R_REM_should_return_non_zero_on_rd_greater_than_15(){
+    struct_R Struct_R;
+
+    Struct_R.rs1 = 0;
+    Struct_R.rs2 = 0;
+    Struct_R.rd = 16;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = REM_FUNCT3;
+
+    TEST_ASSERT_NOT_EQUAL(0, execute_type_R(&Struct_R));
+}
+
+void execute_type_R_REM_should_not_modify_x0(){
+    struct_R Struct_R;
+
+    Register[1] = 100;
+    Register[2] = 55;
+
+    Struct_R.rs1 = 1;
+    Struct_R.rs2 = 2;
+    Struct_R.rd = 0;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = REM_FUNCT3;
+
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_R(&Struct_R));
+    TEST_ASSERT_EQUAL_UINT32(0, Register[0]);
+}
+
+void execute_type_R_REM_should_place_result_in_rd(){
+    struct_R Struct_R;
+
+    int32_t rs1 = -123456;
+    uint32_t rs2 = 53;
+
+    Register[1] = (uint32_t)rs1;
+    Register[2] = (uint32_t)rs2;
+
+    Struct_R.rs1 = 1;
+    Struct_R.rs2 = 2;
+    Struct_R.rd = 3;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = REM_FUNCT3;
+
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_R(&Struct_R));
+    TEST_ASSERT_EQUAL_UINT32((-19), Register[3]);
+}
+
+void execute_type_R_REM_should_add_4_to_PC(){
+    struct_R Struct_R;
+
+    int32_t rs1 = -123456;
+    uint32_t rs2 = 53;
+
+    PC = 100;
+
+    Register[1] = (uint32_t)rs1;
+    Register[2] = (uint32_t)rs2;
+
+    Struct_R.rs1 = 1;
+    Struct_R.rs2 = 2;
+    Struct_R.rd = 3;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = REM_FUNCT3;
+
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_R(&Struct_R));
+    TEST_ASSERT_EQUAL_UINT32(104, PC);
+}
+
+void RUN_TEST_execute_R_REM(){
+    RUN_TEST(execute_type_R_REM_should_return_non_zero_on_rs1_greater_than_15);
+    RUN_TEST(execute_type_R_REM_should_return_non_zero_on_rs2_greater_than_15);
+    RUN_TEST(execute_type_R_REM_should_return_non_zero_on_rd_greater_than_15);
+    RUN_TEST(execute_type_R_REM_should_not_modify_x0);
+    RUN_TEST(execute_type_R_REM_should_place_result_in_rd);
+    RUN_TEST(execute_type_R_REM_should_add_4_to_PC);
+}
+
+/*******************************************************************************
+ * Test pour l'instruction REM
+ ******************************************************************************/
+
+void execute_type_R_REMU_should_return_non_zero_on_rs1_greater_than_15(){
+    struct_R Struct_R;
+
+    Struct_R.rs1 = 16;
+    Struct_R.rs2 = 0;
+    Struct_R.rd = 1;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = REMU_FUNCT3;
+
+    TEST_ASSERT_NOT_EQUAL(0, execute_type_R(&Struct_R));
+}
+
+void execute_type_R_REMU_should_return_non_zero_on_rs2_greater_than_15(){
+    struct_R Struct_R;
+
+    Struct_R.rs1 = 0;
+    Struct_R.rs2 = 16;
+    Struct_R.rd = 1;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = REMU_FUNCT3;
+
+    TEST_ASSERT_NOT_EQUAL(0, execute_type_R(&Struct_R));
+}
+
+void execute_type_R_REMU_should_return_non_zero_on_rd_greater_than_15(){
+    struct_R Struct_R;
+
+    Struct_R.rs1 = 0;
+    Struct_R.rs2 = 0;
+    Struct_R.rd = 16;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = REMU_FUNCT3;
+
+    TEST_ASSERT_NOT_EQUAL(0, execute_type_R(&Struct_R));
+}
+
+void execute_type_R_REMU_should_not_modify_x0(){
+    struct_R Struct_R;
+
+    Register[1] = 100;
+    Register[2] = 55;
+
+    Struct_R.rs1 = 1;
+    Struct_R.rs2 = 2;
+    Struct_R.rd = 0;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = REMU_FUNCT3;
+
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_R(&Struct_R));
+    TEST_ASSERT_EQUAL_UINT32(0, Register[0]);
+}
+
+void execute_type_R_REMU_should_place_result_in_rd(){
+    struct_R Struct_R;
+
+    uint32_t rs1 = 123456;
+    uint32_t rs2 = 53;
+
+    Register[1] = (uint32_t)rs1;
+    Register[2] = (uint32_t)rs2;
+
+    Struct_R.rs1 = 1;
+    Struct_R.rs2 = 2;
+    Struct_R.rd = 3;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = REMU_FUNCT3;
+
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_R(&Struct_R));
+    TEST_ASSERT_EQUAL_UINT32((19), Register[3]);
+}
+
+void execute_type_R_REMU_should_add_4_to_PC(){
+    struct_R Struct_R;
+
+    uint32_t rs1 = 123456;
+    uint32_t rs2 = 53;
+
+    PC = 100;
+
+    Register[1] = (uint32_t)rs1;
+    Register[2] = (uint32_t)rs2;
+
+    Struct_R.rs1 = 1;
+    Struct_R.rs2 = 2;
+    Struct_R.rd = 3;
+    Struct_R.funct7 = MUL_DIV_FUNCT7;
+    Struct_R.func3 = REMU_FUNCT3;
+
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_R(&Struct_R));
+    TEST_ASSERT_EQUAL_UINT32(104, PC);
+}
+
+void RUN_TEST_execute_R_REMU(){
+    RUN_TEST(execute_type_R_REMU_should_return_non_zero_on_rs1_greater_than_15);
+    RUN_TEST(execute_type_R_REMU_should_return_non_zero_on_rs2_greater_than_15);
+    RUN_TEST(execute_type_R_REMU_should_return_non_zero_on_rd_greater_than_15);
+    RUN_TEST(execute_type_R_REMU_should_not_modify_x0);
+    RUN_TEST(execute_type_R_REMU_should_place_result_in_rd);
+    RUN_TEST(execute_type_R_REMU_should_add_4_to_PC);
+}
+
 void RUN_TEST_execute_R(){
     RUN_TEST_execute_R_ADD();
     RUN_TEST_execute_R_SUB();
@@ -1626,4 +2046,8 @@ void RUN_TEST_execute_R(){
     RUN_TEST_execute_R_MULH();
     RUN_TEST_execute_R_MULHU();
     RUN_TEST_execute_R_MULHSU();
+    RUN_TEST_execute_R_DIV();
+    RUN_TEST_execute_R_DIVU();
+    RUN_TEST_execute_R_REM();
+    RUN_TEST_execute_R_REMU();
 }

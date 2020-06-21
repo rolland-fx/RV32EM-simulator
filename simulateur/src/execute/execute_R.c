@@ -315,6 +315,93 @@ uint8_t execute_type_R_MULHSU(struct_R *ptr_struct) {
     return retVal;
 }
 
+uint8_t execute_type_R_DIV(struct_R *ptr_struct) {
+    uint8_t return_val = 0;
+    int32_t dividend;
+    int32_t divisor;
+
+    if (ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16 && ptr_struct->rd < 16) {
+        if(ptr_struct->rd != 0) {
+            dividend = (int32_t) (Register[ptr_struct->rs1]);
+            divisor = (int32_t) (Register[ptr_struct->rs2]);
+
+            Register[ptr_struct->rd] = (uint32_t) (dividend / divisor);
+        }
+        PC = PC + 4;
+    } else {
+        return_val = 1;
+    }
+
+    return return_val;
+}
+
+uint8_t execute_type_R_DIVU(struct_R *ptr_struct) {
+    uint8_t return_val = 0;
+    uint32_t dividend;
+    uint32_t divisor;
+
+    if (ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16 && ptr_struct->rd < 16) {
+        if(ptr_struct->rd != 0) {
+            dividend = (uint32_t) (Register[ptr_struct->rs1]);
+            divisor = (uint32_t) (Register[ptr_struct->rs2]);
+
+            Register[ptr_struct->rd] = (uint32_t) (dividend / divisor);
+        }
+        PC = PC + 4;
+    } else {
+        return_val = 1;
+    }
+
+    return return_val;
+}
+
+uint8_t execute_type_R_REM(struct_R *ptr_struct) {
+    uint8_t return_val = 0;
+    int32_t dividend;
+    int32_t divisor;
+    int32_t result;
+
+    if (ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16 && ptr_struct->rd < 16) {
+        if(ptr_struct->rd != 0) {
+            dividend = (int32_t) (Register[ptr_struct->rs1]);
+            divisor = (int32_t) (Register[ptr_struct->rs2]);
+
+            result = (int32_t) (dividend % divisor);
+
+            if (((dividend >> 31) & 1) == 1){
+                Register[ptr_struct->rd] = 0x80000000 | ((uint32_t) result);
+            } else {
+                Register[ptr_struct->rd] = 0x7fffffff & ((uint32_t) result);
+            }
+        }
+        PC = PC + 4;
+    } else {
+        return_val = 1;
+    }
+
+    return return_val;
+}
+
+uint8_t execute_type_R_REMU(struct_R *ptr_struct) {
+    uint8_t return_val = 0;
+    uint32_t dividend;
+    uint32_t divisor;
+
+    if (ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16 && ptr_struct->rd < 16) {
+        if(ptr_struct->rd != 0) {
+            dividend = (uint32_t) (Register[ptr_struct->rs1]);
+            divisor = (uint32_t) (Register[ptr_struct->rs2]);
+
+            Register[ptr_struct->rd] = (uint32_t) (dividend % divisor);
+        }
+        PC = PC + 4;
+    } else {
+        return_val = 1;
+    }
+
+    return return_val;
+}
+
 uint8_t execute_type_R_MULDIV(struct_R *ptr_struct) {
     uint8_t return_val = 0;
 
@@ -332,12 +419,16 @@ uint8_t execute_type_R_MULDIV(struct_R *ptr_struct) {
             return_val = execute_type_R_MULHU(ptr_struct);
             break;
         case DIV_FUNCT3: //DIV
+            return_val = execute_type_R_DIV(ptr_struct);
             break;
         case DIVU_FUNCT3: //DIVU
+            return_val = execute_type_R_DIVU(ptr_struct);
             break;
         case REM_FUNCT3: //REM
+            return_val = execute_type_R_REM(ptr_struct);
             break;
         case REMU_FUNCT3: //REMU
+            return_val = execute_type_R_REMU(ptr_struct);
             break;
         default:
             return_val = 1;
