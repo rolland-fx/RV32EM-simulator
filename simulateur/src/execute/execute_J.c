@@ -11,7 +11,7 @@ uint8_t execute_type_J_JAL(struct_J* ptr_struct){
                      ((ptr_struct->imm_11 << 10) & 0x00400) | ((ptr_struct->imm_10_1 << 0) & 0x003ff);
 
     imm = imm << 12;
-    imm = imm >> 12
+    imm = imm >> 12;
 
 
     if(ptr_struct->rd < 16) {

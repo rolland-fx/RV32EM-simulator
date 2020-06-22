@@ -382,6 +382,7 @@ uint8_t execute_type_I(struct_I* ptr_struct) {
             retVal = execute_type_I_LOAD(ptr_struct);
             break;
         case FENCE_OPCODE:  //FENCE
+            PC += 4;
             break;
         case ARMT_OPCODE:  //ADDI,SLTI,SLTIU,XORI,ORI,ANDI,SLLI,SRLI,SRAI
             retVal = execute_type_I_ARMT(ptr_struct);
@@ -390,6 +391,7 @@ uint8_t execute_type_I(struct_I* ptr_struct) {
             retVal = execute_type_I_JALR(ptr_struct);
             break;
         case ECALL_OPCODE:  //ECALL
+            PC += 4;
             break;
         default :
             break;
