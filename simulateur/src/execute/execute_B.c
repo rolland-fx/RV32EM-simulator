@@ -77,7 +77,7 @@ uint8_t execute_type_B_BLT(struct_B* ptr_struct){
     }
 
     if(ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
-        if((uint32_t)Register[ptr_struct->rs1] < (uint32_t)Register[ptr_struct->rs2])
+        if((int32_t)Register[ptr_struct->rs1] < (int32_t)Register[ptr_struct->rs2])
         {
             PC += imm;
         } else{
@@ -106,7 +106,7 @@ uint8_t execute_type_B_BGE(struct_B* ptr_struct){
     }
 
     if(ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
-        if((uint32_t)Register[ptr_struct->rs1] >= (uint32_t)Register[ptr_struct->rs2])
+        if((int32_t)Register[ptr_struct->rs1] >= (int32_t)Register[ptr_struct->rs2])
         {
             PC += imm;
         } else{
