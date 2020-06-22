@@ -96,12 +96,21 @@ test/CMakeFiles/test.dir/execute_test.c.obj: ../simulateur/src/manager.h
 test/CMakeFiles/test.dir/execute_test.c.obj: ../simulateur/src/memory.h
 test/CMakeFiles/test.dir/execute_test.c.obj: ../test/execute_test.c
 test/CMakeFiles/test.dir/execute_test.c.obj: ../test/execute_test.h
+test/CMakeFiles/test.dir/execute_test.c.obj: ../test/execute_test/execute_B_test.h
 test/CMakeFiles/test.dir/execute_test.c.obj: ../test/execute_test/execute_I_test.h
 test/CMakeFiles/test.dir/execute_test.c.obj: ../test/execute_test/execute_J_test.h
 test/CMakeFiles/test.dir/execute_test.c.obj: ../test/execute_test/execute_R_test.h
 test/CMakeFiles/test.dir/execute_test.c.obj: ../test/main_test.h
 test/CMakeFiles/test.dir/execute_test.c.obj: ../test/unity/unity.h
 test/CMakeFiles/test.dir/execute_test.c.obj: ../test/unity/unity_internals.h
+
+test/CMakeFiles/test.dir/execute_test/execute_B_test.c.obj: ../simulateur/src/decoder.h
+test/CMakeFiles/test.dir/execute_test/execute_B_test.c.obj: ../simulateur/src/execute/execute_B.h
+test/CMakeFiles/test.dir/execute_test/execute_B_test.c.obj: ../simulateur/src/memory.h
+test/CMakeFiles/test.dir/execute_test/execute_B_test.c.obj: ../test/execute_test/execute_B_test.c
+test/CMakeFiles/test.dir/execute_test/execute_B_test.c.obj: ../test/execute_test/execute_B_test.h
+test/CMakeFiles/test.dir/execute_test/execute_B_test.c.obj: ../test/unity/unity.h
+test/CMakeFiles/test.dir/execute_test/execute_B_test.c.obj: ../test/unity/unity_internals.h
 
 test/CMakeFiles/test.dir/execute_test/execute_I_test.c.obj: ../simulateur/src/decoder.h
 test/CMakeFiles/test.dir/execute_test/execute_I_test.c.obj: ../simulateur/src/execute/execute_I.h
@@ -141,6 +150,7 @@ test/CMakeFiles/test.dir/main_test.c.obj: ../simulateur/src/manager.h
 test/CMakeFiles/test.dir/main_test.c.obj: ../simulateur/src/memory.h
 test/CMakeFiles/test.dir/main_test.c.obj: ../test/decoder_test.h
 test/CMakeFiles/test.dir/main_test.c.obj: ../test/execute_test.h
+test/CMakeFiles/test.dir/main_test.c.obj: ../test/execute_test/execute_B_test.h
 test/CMakeFiles/test.dir/main_test.c.obj: ../test/execute_test/execute_I_test.h
 test/CMakeFiles/test.dir/main_test.c.obj: ../test/execute_test/execute_J_test.h
 test/CMakeFiles/test.dir/main_test.c.obj: ../test/execute_test/execute_R_test.h

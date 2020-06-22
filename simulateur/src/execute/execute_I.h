@@ -28,6 +28,13 @@
 #define ORI_FUNCT3 (0x06)
 #define ANDI_FUNCT3 (0x07)
 
+#define LB_FUNCT3 (0x00)
+#define LH_FUNCT3 (0x01)
+#define LW_FUNCT3 (0x02)
+#define LBU_FUNCT3 (0x04)
+#define LHU_FUNCT3 (0x05)
+
+
 /**
  *
  * @param ptr_struct

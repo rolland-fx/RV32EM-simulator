@@ -13,6 +13,8 @@
 #include "../decoder.h"
 #include "../memory.h"
 
+#define BRANCH_OPCODE (0x63)
+
 #define BEQ_FUNCT3 (0x00)
 #define BNE_FUNCT3 (0x01)
 #define BLT_FUNCT3 (0x04)
