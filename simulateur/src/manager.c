@@ -9,6 +9,7 @@ char CodeRun() {
     char Selection = 's';
     NextInstructionExist = 1;
     char InstructionCounter = 0;
+    uint32_t CurrentCodedInstruction;
     while (NextInstructionExist)
     {
         if (Selection != 'c') {
@@ -30,17 +31,18 @@ char CodeRun() {
             default:
                 break;
         }
+        CurrentCodedInstruction = memory_get_word(PC);
         NextInstructionExist = RunNextInstruction();
         InstructionCounter++;
         if (Selection != 'c')
         {
-            PrintInstruction();
+            PrintInstruction(CurrentCodedInstruction);
             PrintCurrentState();
         }
     }
     if (Selection == 'c')
     {
-        PrintInstruction();
+        PrintInstruction(CurrentCodedInstruction);
         PrintCurrentState();
     }
     return InstructionCounter;

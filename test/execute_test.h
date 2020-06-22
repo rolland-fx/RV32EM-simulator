@@ -11,5 +11,6 @@
 
 #include "execute_test/execute_J_test.h"
 #include "execute_test/execute_I_test.h"
+#include "execute_test/execute_R_test.h"
 
 #endif //RV32EM_SIMULATOR_EXECUTER_TEST_H

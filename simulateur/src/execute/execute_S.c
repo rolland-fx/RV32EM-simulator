@@ -4,13 +4,6 @@
 
 #include "execute_S.h"
 
-
-
-
-
-
-
-
 uint8_t execute_type_S(struct_S* ptr_struct)
 {
     uint8_t return_val = 0;
@@ -44,6 +37,7 @@ uint8_t execute_type_S(struct_S* ptr_struct)
                 //userMemory[address] = 0x00000000u | value;
                 user_memory_save_byte(address, 0x00000000u | value);
             }
+            PC += 4;
         break;
         case STORE_16bits:
             bit15 = value & 0x1000u;
@@ -57,10 +51,12 @@ uint8_t execute_type_S(struct_S* ptr_struct)
                 //userMemory[address] = 0x00000000u | value;
                 user_memory_save_half_word(address, 0x00000000u | value);
             }
+            PC += 4;
         break;
         case STORE_32bits:
             //userMemory[address] = value;
             user_memory_save_word(address, value);
+            PC += 4;
         break;
         default:
         return_val = 1;

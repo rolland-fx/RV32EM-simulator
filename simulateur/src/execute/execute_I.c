@@ -109,7 +109,7 @@ uint8_t execute_type_I_LHU(struct_I* ptr_struct){
 uint8_t execute_type_I_JALR(struct_I* ptr_struct){
     uint8_t retVal = 0;
 
-    if(ptr_struct->rd < 16) {
+    if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16) {
         if(ptr_struct->rd != 0)
             Register[ptr_struct->rd] = PC + 4;
         PC += (ptr_struct->imm_11_0 + Register[ptr_struct->rs1]);
@@ -130,7 +130,9 @@ uint8_t execute_type_I_ADDI(struct_I* ptr_struct){
     }
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        Register[ptr_struct->rd] = Register[ptr_struct->rs1] + imm;
+        if(ptr_struct->rd != 0)
+            Register[ptr_struct->rd] = Register[ptr_struct->rs1] + imm;
+
         PC += 4;
     }
     else{
@@ -148,13 +150,15 @@ uint8_t execute_type_I_SLTI(struct_I* ptr_struct){
         imm |= 0xfffff000u;
     }
 
-    if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        if(Register[ptr_struct->rs1] < imm){
-            Register[ptr_struct->rd] = 1;
+    if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16) {
+        if (ptr_struct->rd != 0) {
+            if (Register[ptr_struct->rs1] < imm) {
+                Register[ptr_struct->rd] = 1;
+            } else {
+                Register[ptr_struct->rd] = 0;
+            }
         }
-        else{
-            Register[ptr_struct->rd] = 0;
-        }
+
         PC += 4;
     }
     else{

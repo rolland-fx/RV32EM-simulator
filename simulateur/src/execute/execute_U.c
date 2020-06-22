@@ -12,17 +12,16 @@ uint8_t execute_type_U(struct_U* ptr_struct) {
         {
             case 0x17: //LUI
                 Register[ptr_struct->rd] = ((ptr_struct->imm << 12) | 0b000000000000);
-                PC = +4;
+                PC += 4;
             break;
             case 0x37: //AUIPC
                 Register[ptr_struct->rd] = (((ptr_struct->imm << 12) | 0b000000000000) + PC);
-                PC = +4;
+                PC += 4;
             break;
             default :
             retVal = 1;
             break;
         }
-        PC += 4;
     }
     else
     {
