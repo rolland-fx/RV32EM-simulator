@@ -13,6 +13,8 @@ uint32_t instruction_type_S   = 0x00a12023;
 uint32_t instruction_type_J   = 0xfddff0ef;
 uint32_t instruction_type_U_1 = 0x00001097;
 uint32_t instruction_type_U_2 = 0x000010b7;
+uint32_t instruction_type_R   = 0x023170B3;
+uint32_t instruction_type_B   = 0x0E3105E3;
 /**
  * Change the value here to test different instruction.
  * Instruction are decoded manually here to provide a comparaison for the function to test.
@@ -71,8 +73,32 @@ struct_U init_struct_U_2(){
 
     return expected_struct_U;
 }
+struct_R init_struct_R(){
 
+    struct_R expected_struct_R;
+    expected_struct_R.opcode      = 0x33;
+    expected_struct_R.rd          = 0x01;
+    expected_struct_R.func3       = 0x07;
+    expected_struct_R.rs1         = 0x02;
+    expected_struct_R.rs2         = 0x03;
+    expected_struct_R.funct7      = 0x01;
 
+    return expected_struct_R;
+}
+struct_B init_struct_B(){
+
+    struct_B expected_struct_B;
+    expected_struct_B.opcode      = 0x63;
+    expected_struct_B.imm_11      = 0x01;
+    expected_struct_B.imm_4_1     = 0x05;
+    expected_struct_B.func3       = 0x00;
+    expected_struct_B.rs1         = 0x02;
+    expected_struct_B.rs2         = 0x03;
+    expected_struct_B.imm_10_5    = 0x07;
+    expected_struct_B.imm_12      = 0x00;
+
+    return expected_struct_B;
+}
 
 /**
  * Following tests are for testing the decoding of Instruction of Type 'I'.
@@ -267,4 +293,142 @@ void run_test_all_type_U()
 {
     RUN_TEST(test_decoder_type_U_17);
     RUN_TEST(test_decoder_type_U_37);
+}
+
+/**
+ * Following tests are for testing the decoding of Instruction of Type 'R'.
+ */
+void test_decoder_type_R_opcode()
+{
+    struct_R actual_struct_R;
+    struct_R expected_struct_R = init_struct_R();
+    decoder_type_R(instruction_type_R,&actual_struct_R);
+
+    TEST_ASSERT_EQUAL_HEX (expected_struct_R.opcode, actual_struct_R.opcode);
+}
+void test_decoder_type_R_rd()
+{
+    struct_R actual_struct_R;
+    struct_R expected_struct_R = init_struct_R();
+    decoder_type_R(instruction_type_R,&actual_struct_R);
+
+    TEST_ASSERT_EQUAL_HEX (expected_struct_R.rd, actual_struct_R.rd);
+}
+void test_decoder_type_R_func3()
+{
+    struct_R actual_struct_R;
+    struct_R expected_struct_R = init_struct_R();
+    decoder_type_R(instruction_type_R,&actual_struct_R);
+
+    TEST_ASSERT_EQUAL_HEX (expected_struct_R.func3, actual_struct_R.func3);
+}
+void test_decoder_type_R_rs1()
+{
+    struct_R actual_struct_R;
+    struct_R expected_struct_R = init_struct_R();
+    decoder_type_R(instruction_type_R,&actual_struct_R);
+
+    TEST_ASSERT_EQUAL_HEX (expected_struct_R.rs1, actual_struct_R.rs1);
+}
+void test_decoder_type_R_rs2()
+{
+    struct_R actual_struct_R;
+    struct_R expected_struct_R = init_struct_R();
+    decoder_type_R(instruction_type_R,&actual_struct_R);
+
+    TEST_ASSERT_EQUAL_HEX (expected_struct_R.rs2, actual_struct_R.rs2);
+}
+void test_decoder_type_R_func7()
+{
+    struct_R actual_struct_R;
+    struct_R expected_struct_R = init_struct_R();
+    decoder_type_R(instruction_type_R,&actual_struct_R);
+
+    TEST_ASSERT_EQUAL_HEX (expected_struct_R.funct7, actual_struct_R.funct7);
+}
+void run_test_all_type_R(){
+    RUN_TEST(test_decoder_type_R_opcode);
+    RUN_TEST(test_decoder_type_R_rd);
+    RUN_TEST(test_decoder_type_R_func3);
+    RUN_TEST(test_decoder_type_R_rs1);
+    RUN_TEST(test_decoder_type_R_rs2);
+    RUN_TEST(test_decoder_type_R_func7);
+}
+
+/**
+ * Following tests are for testing the decoding of Instruction of Type 'B'.
+ */
+void test_decoder_type_B_opcode()
+{
+    struct_B actual_struct_B;
+    struct_B expected_struct_B = init_struct_B();
+    decoder_type_B(instruction_type_B,&actual_struct_B);
+
+    TEST_ASSERT_EQUAL_HEX (expected_struct_B.opcode, actual_struct_B.opcode);
+}
+void test_decoder_type_B_imm_11()
+{
+    struct_B actual_struct_B;
+    struct_B expected_struct_B = init_struct_B();
+    decoder_type_B(instruction_type_B,&actual_struct_B);
+
+    TEST_ASSERT_EQUAL_HEX (expected_struct_B.imm_11, actual_struct_B.imm_11);
+}
+void test_decoder_type_B_imm_4_1()
+{
+    struct_B actual_struct_B;
+    struct_B expected_struct_B = init_struct_B();
+    decoder_type_B(instruction_type_B,&actual_struct_B);
+
+    TEST_ASSERT_EQUAL_HEX (expected_struct_B.imm_4_1, actual_struct_B.imm_4_1);
+}
+void test_decoder_type_B_func3()
+{
+    struct_B actual_struct_B;
+    struct_B expected_struct_B = init_struct_B();
+    decoder_type_B(instruction_type_B,&actual_struct_B);
+
+    TEST_ASSERT_EQUAL_HEX (expected_struct_B.func3, actual_struct_B.func3);
+}
+void test_decoder_type_B_rs1()
+{
+    struct_B actual_struct_B;
+    struct_B expected_struct_B = init_struct_B();
+    decoder_type_B(instruction_type_B,&actual_struct_B);
+
+    TEST_ASSERT_EQUAL_HEX (expected_struct_B.rs1, actual_struct_B.rs1);
+}
+void test_decoder_type_B_rs2()
+{
+    struct_B actual_struct_B;
+    struct_B expected_struct_B = init_struct_B();
+    decoder_type_B(instruction_type_B,&actual_struct_B);
+
+    TEST_ASSERT_EQUAL_HEX (expected_struct_B.rs2, actual_struct_B.rs2);
+}
+void test_decoder_type_B_imm_10_5()
+{
+    struct_B actual_struct_B;
+    struct_B expected_struct_B = init_struct_B();
+    decoder_type_B(instruction_type_B,&actual_struct_B);
+
+    TEST_ASSERT_EQUAL_HEX (expected_struct_B.imm_10_5, actual_struct_B.imm_10_5);
+}
+void test_decoder_type_B_imm_12()
+{
+    struct_B actual_struct_B;
+    struct_B expected_struct_B = init_struct_B();
+    decoder_type_B(instruction_type_B,&actual_struct_B);
+
+    TEST_ASSERT_EQUAL_HEX (expected_struct_B.imm_12, actual_struct_B.imm_12);
+}
+void run_test_all_type_B(){
+    RUN_TEST(test_decoder_type_B_opcode);
+    RUN_TEST(test_decoder_type_B_imm_11);
+    RUN_TEST(test_decoder_type_B_imm_4_1);
+    RUN_TEST(test_decoder_type_B_func3);
+    RUN_TEST(test_decoder_type_B_rs1);
+    RUN_TEST(test_decoder_type_B_rs2);
+    RUN_TEST(test_decoder_type_B_imm_10_5);
+    RUN_TEST(test_decoder_type_B_imm_12);
 }

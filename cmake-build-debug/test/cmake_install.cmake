@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/jeanp/Documents/Ecole/ELE749/RV32EM-Simulateur/test
+# Install script for directory: C:/Users/filip/CLionProjects/RV32EM-simulator/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,6 +34,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/jeanp/Documents/Ecole/ELE749/RV32EM-Simulateur/cmake-build-debug/test/unity/cmake_install.cmake")
+  include("C:/Users/filip/CLionProjects/RV32EM-simulator/cmake-build-debug/test/unity/cmake_install.cmake")
 endif()
 
