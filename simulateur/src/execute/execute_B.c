@@ -91,6 +91,35 @@ uint8_t execute_type_B_BLT(struct_B* ptr_struct){
     return retVal;
 }
 
+uint8_t execute_type_B_BGE(struct_B* ptr_struct){
+    uint8_t retVal = 0;
+    uint32_t imm = (ptr_struct->imm_4_1 << 1u) | (ptr_struct->imm_10_5 << 5u)
+                   | (ptr_struct->imm_11 << 11u) | (ptr_struct->imm_12 << 12u);
+
+    if (imm & 0x00001000u)
+    {
+        imm = 0xFFFFE000u | imm;
+    }
+    else
+    {
+        imm = 0x00000000u | imm;
+    }
+
+    if(ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
+        if((uint32_t)Register[ptr_struct->rs1] >= (uint32_t)Register[ptr_struct->rs2])
+        {
+            PC += imm;
+        } else{
+            PC += 4;
+        }
+    }
+    else{
+        retVal = 1;
+    }
+
+    return retVal;
+}
+
 uint8_t execute_type_B(struct_B* ptr_struct) {
     uint8_t return_val = 0;
 
@@ -105,6 +134,7 @@ uint8_t execute_type_B(struct_B* ptr_struct) {
             return_val = execute_type_B_BLT(ptr_struct);
             break;
         case BGE_FUNCT3: //BGE
+            return_val = execute_type_B_BGE(ptr_struct);
             break;
         case BLTU_FUNCT3: //BLTU
             break;
