@@ -42,10 +42,10 @@ RM = "C:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\filip\CLionProjects\RV32EM-simulator
+CMAKE_SOURCE_DIR = C:\Users\alexa\CLionProjects\RV32EM-simulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include test/CMakeFiles/test.dir/depend.make
@@ -58,263 +58,263 @@ include test/CMakeFiles/test.dir/flags.make
 
 test/CMakeFiles/test.dir/__/simulateur/src/decoder.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/__/simulateur/src/decoder.c.obj: ../simulateur/src/decoder.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/decoder.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\decoder.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\decoder.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/decoder.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\decoder.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\decoder.c
 
 test/CMakeFiles/test.dir/__/simulateur/src/decoder.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/__/simulateur/src/decoder.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\decoder.c > CMakeFiles\test.dir\__\simulateur\src\decoder.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\decoder.c > CMakeFiles\test.dir\__\simulateur\src\decoder.c.i
 
 test/CMakeFiles/test.dir/__/simulateur/src/decoder.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/__/simulateur/src/decoder.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\decoder.c -o CMakeFiles\test.dir\__\simulateur\src\decoder.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\decoder.c -o CMakeFiles\test.dir\__\simulateur\src\decoder.c.s
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/__/simulateur/src/execute.c.obj: ../simulateur/src/execute.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/execute.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\execute.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/execute.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\execute.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute.c
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/__/simulateur/src/execute.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute.c > CMakeFiles\test.dir\__\simulateur\src\execute.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute.c > CMakeFiles\test.dir\__\simulateur\src\execute.c.i
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/__/simulateur/src/execute.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute.c -o CMakeFiles\test.dir\__\simulateur\src\execute.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute.c -o CMakeFiles\test.dir\__\simulateur\src\execute.c.s
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_B.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_B.c.obj: ../simulateur/src/execute/execute_B.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_B.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_B.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_B.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_B.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_B.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_B.c
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_B.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/__/simulateur/src/execute/execute_B.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_B.c > CMakeFiles\test.dir\__\simulateur\src\execute\execute_B.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_B.c > CMakeFiles\test.dir\__\simulateur\src\execute\execute_B.c.i
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_B.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/__/simulateur/src/execute/execute_B.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_B.c -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_B.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_B.c -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_B.c.s
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_I.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_I.c.obj: ../simulateur/src/execute/execute_I.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_I.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_I.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_I.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_I.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_I.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_I.c
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_I.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/__/simulateur/src/execute/execute_I.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_I.c > CMakeFiles\test.dir\__\simulateur\src\execute\execute_I.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_I.c > CMakeFiles\test.dir\__\simulateur\src\execute\execute_I.c.i
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_I.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/__/simulateur/src/execute/execute_I.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_I.c -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_I.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_I.c -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_I.c.s
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_J.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_J.c.obj: ../simulateur/src/execute/execute_J.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_J.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_J.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_J.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_J.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_J.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_J.c
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_J.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/__/simulateur/src/execute/execute_J.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_J.c > CMakeFiles\test.dir\__\simulateur\src\execute\execute_J.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_J.c > CMakeFiles\test.dir\__\simulateur\src\execute\execute_J.c.i
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_J.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/__/simulateur/src/execute/execute_J.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_J.c -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_J.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_J.c -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_J.c.s
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_R.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_R.c.obj: ../simulateur/src/execute/execute_R.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_R.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_R.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_R.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_R.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_R.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_R.c
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_R.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/__/simulateur/src/execute/execute_R.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_R.c > CMakeFiles\test.dir\__\simulateur\src\execute\execute_R.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_R.c > CMakeFiles\test.dir\__\simulateur\src\execute\execute_R.c.i
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_R.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/__/simulateur/src/execute/execute_R.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_R.c -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_R.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_R.c -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_R.c.s
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_S.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_S.c.obj: ../simulateur/src/execute/execute_S.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_S.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_S.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_S.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_S.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_S.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_S.c
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_S.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/__/simulateur/src/execute/execute_S.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_S.c > CMakeFiles\test.dir\__\simulateur\src\execute\execute_S.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_S.c > CMakeFiles\test.dir\__\simulateur\src\execute\execute_S.c.i
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_S.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/__/simulateur/src/execute/execute_S.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_S.c -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_S.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_S.c -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_S.c.s
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_U.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_U.c.obj: ../simulateur/src/execute/execute_U.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_U.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_U.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_U.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_U.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_U.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_U.c
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_U.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/__/simulateur/src/execute/execute_U.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_U.c > CMakeFiles\test.dir\__\simulateur\src\execute\execute_U.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_U.c > CMakeFiles\test.dir\__\simulateur\src\execute\execute_U.c.i
 
 test/CMakeFiles/test.dir/__/simulateur/src/execute/execute_U.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/__/simulateur/src/execute/execute_U.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_U.c -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_U.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\execute\execute_U.c -o CMakeFiles\test.dir\__\simulateur\src\execute\execute_U.c.s
 
 test/CMakeFiles/test.dir/__/simulateur/src/interface.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/__/simulateur/src/interface.c.obj: ../simulateur/src/interface.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/interface.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\interface.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\interface.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/interface.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\interface.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\interface.c
 
 test/CMakeFiles/test.dir/__/simulateur/src/interface.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/__/simulateur/src/interface.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\interface.c > CMakeFiles\test.dir\__\simulateur\src\interface.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\interface.c > CMakeFiles\test.dir\__\simulateur\src\interface.c.i
 
 test/CMakeFiles/test.dir/__/simulateur/src/interface.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/__/simulateur/src/interface.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\interface.c -o CMakeFiles\test.dir\__\simulateur\src\interface.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\interface.c -o CMakeFiles\test.dir\__\simulateur\src\interface.c.s
 
 test/CMakeFiles/test.dir/__/simulateur/src/manager.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/__/simulateur/src/manager.c.obj: ../simulateur/src/manager.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/manager.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\manager.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\manager.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/manager.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\manager.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\manager.c
 
 test/CMakeFiles/test.dir/__/simulateur/src/manager.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/__/simulateur/src/manager.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\manager.c > CMakeFiles\test.dir\__\simulateur\src\manager.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\manager.c > CMakeFiles\test.dir\__\simulateur\src\manager.c.i
 
 test/CMakeFiles/test.dir/__/simulateur/src/manager.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/__/simulateur/src/manager.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\manager.c -o CMakeFiles\test.dir\__\simulateur\src\manager.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\manager.c -o CMakeFiles\test.dir\__\simulateur\src\manager.c.s
 
 test/CMakeFiles/test.dir/__/simulateur/src/memory.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/__/simulateur/src/memory.c.obj: ../simulateur/src/memory.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/memory.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\memory.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\memory.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object test/CMakeFiles/test.dir/__/simulateur/src/memory.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\__\simulateur\src\memory.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\memory.c
 
 test/CMakeFiles/test.dir/__/simulateur/src/memory.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/__/simulateur/src/memory.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\memory.c > CMakeFiles\test.dir\__\simulateur\src\memory.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\memory.c > CMakeFiles\test.dir\__\simulateur\src\memory.c.i
 
 test/CMakeFiles/test.dir/__/simulateur/src/memory.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/__/simulateur/src/memory.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\simulateur\src\memory.c -o CMakeFiles\test.dir\__\simulateur\src\memory.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\simulateur\src\memory.c -o CMakeFiles\test.dir\__\simulateur\src\memory.c.s
 
 test/CMakeFiles/test.dir/decoder_test.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/decoder_test.c.obj: ../test/decoder_test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object test/CMakeFiles/test.dir/decoder_test.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\decoder_test.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\test\decoder_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object test/CMakeFiles/test.dir/decoder_test.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\decoder_test.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\test\decoder_test.c
 
 test/CMakeFiles/test.dir/decoder_test.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/decoder_test.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\test\decoder_test.c > CMakeFiles\test.dir\decoder_test.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\test\decoder_test.c > CMakeFiles\test.dir\decoder_test.c.i
 
 test/CMakeFiles/test.dir/decoder_test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/decoder_test.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\test\decoder_test.c -o CMakeFiles\test.dir\decoder_test.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\test\decoder_test.c -o CMakeFiles\test.dir\decoder_test.c.s
 
 test/CMakeFiles/test.dir/execute_test.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/execute_test.c.obj: ../test/execute_test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object test/CMakeFiles/test.dir/execute_test.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\execute_test.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\test\execute_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object test/CMakeFiles/test.dir/execute_test.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\execute_test.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test.c
 
 test/CMakeFiles/test.dir/execute_test.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/execute_test.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\test\execute_test.c > CMakeFiles\test.dir\execute_test.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test.c > CMakeFiles\test.dir\execute_test.c.i
 
 test/CMakeFiles/test.dir/execute_test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/execute_test.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\test\execute_test.c -o CMakeFiles\test.dir\execute_test.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test.c -o CMakeFiles\test.dir\execute_test.c.s
 
 test/CMakeFiles/test.dir/main_test.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/main_test.c.obj: ../test/main_test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object test/CMakeFiles/test.dir/main_test.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\main_test.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\test\main_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object test/CMakeFiles/test.dir/main_test.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\main_test.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\test\main_test.c
 
 test/CMakeFiles/test.dir/main_test.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/main_test.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\test\main_test.c > CMakeFiles\test.dir\main_test.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\test\main_test.c > CMakeFiles\test.dir\main_test.c.i
 
 test/CMakeFiles/test.dir/main_test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/main_test.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\test\main_test.c -o CMakeFiles\test.dir\main_test.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\test\main_test.c -o CMakeFiles\test.dir\main_test.c.s
 
 test/CMakeFiles/test.dir/manager_test.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/manager_test.c.obj: ../test/manager_test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object test/CMakeFiles/test.dir/manager_test.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\manager_test.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\test\manager_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object test/CMakeFiles/test.dir/manager_test.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\manager_test.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\test\manager_test.c
 
 test/CMakeFiles/test.dir/manager_test.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/manager_test.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\test\manager_test.c > CMakeFiles\test.dir\manager_test.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\test\manager_test.c > CMakeFiles\test.dir\manager_test.c.i
 
 test/CMakeFiles/test.dir/manager_test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/manager_test.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\test\manager_test.c -o CMakeFiles\test.dir\manager_test.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\test\manager_test.c -o CMakeFiles\test.dir\manager_test.c.s
 
 test/CMakeFiles/test.dir/memory_test.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/memory_test.c.obj: ../test/memory_test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object test/CMakeFiles/test.dir/memory_test.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\memory_test.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\test\memory_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object test/CMakeFiles/test.dir/memory_test.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\memory_test.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\test\memory_test.c
 
 test/CMakeFiles/test.dir/memory_test.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/memory_test.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\test\memory_test.c > CMakeFiles\test.dir\memory_test.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\test\memory_test.c > CMakeFiles\test.dir\memory_test.c.i
 
 test/CMakeFiles/test.dir/memory_test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/memory_test.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\test\memory_test.c -o CMakeFiles\test.dir\memory_test.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\test\memory_test.c -o CMakeFiles\test.dir\memory_test.c.s
 
 test/CMakeFiles/test.dir/execute_test/execute_B_test.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/execute_test/execute_B_test.c.obj: ../test/execute_test/execute_B_test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object test/CMakeFiles/test.dir/execute_test/execute_B_test.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\execute_test\execute_B_test.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\test\execute_test\execute_B_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object test/CMakeFiles/test.dir/execute_test/execute_B_test.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\execute_test\execute_B_test.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_B_test.c
 
 test/CMakeFiles/test.dir/execute_test/execute_B_test.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/execute_test/execute_B_test.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\test\execute_test\execute_B_test.c > CMakeFiles\test.dir\execute_test\execute_B_test.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_B_test.c > CMakeFiles\test.dir\execute_test\execute_B_test.c.i
 
 test/CMakeFiles/test.dir/execute_test/execute_B_test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/execute_test/execute_B_test.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\test\execute_test\execute_B_test.c -o CMakeFiles\test.dir\execute_test\execute_B_test.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_B_test.c -o CMakeFiles\test.dir\execute_test\execute_B_test.c.s
 
 test/CMakeFiles/test.dir/execute_test/execute_I_test.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/execute_test/execute_I_test.c.obj: ../test/execute_test/execute_I_test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object test/CMakeFiles/test.dir/execute_test/execute_I_test.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\execute_test\execute_I_test.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\test\execute_test\execute_I_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object test/CMakeFiles/test.dir/execute_test/execute_I_test.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\execute_test\execute_I_test.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_I_test.c
 
 test/CMakeFiles/test.dir/execute_test/execute_I_test.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/execute_test/execute_I_test.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\test\execute_test\execute_I_test.c > CMakeFiles\test.dir\execute_test\execute_I_test.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_I_test.c > CMakeFiles\test.dir\execute_test\execute_I_test.c.i
 
 test/CMakeFiles/test.dir/execute_test/execute_I_test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/execute_test/execute_I_test.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\test\execute_test\execute_I_test.c -o CMakeFiles\test.dir\execute_test\execute_I_test.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_I_test.c -o CMakeFiles\test.dir\execute_test\execute_I_test.c.s
 
 test/CMakeFiles/test.dir/execute_test/execute_J_test.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/execute_test/execute_J_test.c.obj: ../test/execute_test/execute_J_test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object test/CMakeFiles/test.dir/execute_test/execute_J_test.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\execute_test\execute_J_test.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\test\execute_test\execute_J_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object test/CMakeFiles/test.dir/execute_test/execute_J_test.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\execute_test\execute_J_test.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_J_test.c
 
 test/CMakeFiles/test.dir/execute_test/execute_J_test.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/execute_test/execute_J_test.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\test\execute_test\execute_J_test.c > CMakeFiles\test.dir\execute_test\execute_J_test.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_J_test.c > CMakeFiles\test.dir\execute_test\execute_J_test.c.i
 
 test/CMakeFiles/test.dir/execute_test/execute_J_test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/execute_test/execute_J_test.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\test\execute_test\execute_J_test.c -o CMakeFiles\test.dir\execute_test\execute_J_test.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_J_test.c -o CMakeFiles\test.dir\execute_test\execute_J_test.c.s
 
 test/CMakeFiles/test.dir/execute_test/execute_R_test.c.obj: test/CMakeFiles/test.dir/flags.make
 test/CMakeFiles/test.dir/execute_test/execute_R_test.c.obj: ../test/execute_test/execute_R_test.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object test/CMakeFiles/test.dir/execute_test/execute_R_test.c.obj"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\execute_test\execute_R_test.c.obj   -c C:\Users\filip\CLionProjects\RV32EM-simulator\test\execute_test\execute_R_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object test/CMakeFiles/test.dir/execute_test/execute_R_test.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\execute_test\execute_R_test.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_R_test.c
 
 test/CMakeFiles/test.dir/execute_test/execute_R_test.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/execute_test/execute_R_test.c.i"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\filip\CLionProjects\RV32EM-simulator\test\execute_test\execute_R_test.c > CMakeFiles\test.dir\execute_test\execute_R_test.c.i
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_R_test.c > CMakeFiles\test.dir\execute_test\execute_R_test.c.i
 
 test/CMakeFiles/test.dir/execute_test/execute_R_test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/execute_test/execute_R_test.c.s"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\filip\CLionProjects\RV32EM-simulator\test\execute_test\execute_R_test.c -o CMakeFiles\test.dir\execute_test\execute_R_test.c.s
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_R_test.c -o CMakeFiles\test.dir\execute_test\execute_R_test.c.s
 
 # Object files for target test
 test_OBJECTS = \
@@ -367,8 +367,8 @@ test/test.exe: test/unity/libunity.a
 test/test.exe: test/CMakeFiles/test.dir/linklibs.rsp
 test/test.exe: test/CMakeFiles/test.dir/objects1.rsp
 test/test.exe: test/CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking C executable test.exe"
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\test.dir\link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Linking C executable test.exe"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\test.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 test/CMakeFiles/test.dir/build: test/test.exe
@@ -376,10 +376,10 @@ test/CMakeFiles/test.dir/build: test/test.exe
 .PHONY : test/CMakeFiles/test.dir/build
 
 test/CMakeFiles/test.dir/clean:
-	cd /d C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test && $(CMAKE_COMMAND) -P CMakeFiles\test.dir\cmake_clean.cmake
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && $(CMAKE_COMMAND) -P CMakeFiles\test.dir\cmake_clean.cmake
 .PHONY : test/CMakeFiles/test.dir/clean
 
 test/CMakeFiles/test.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\filip\CLionProjects\RV32EM-simulator C:\Users\filip\CLionProjects\RV32EM-simulator\test C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test C:\Users\filip\CLionProjects\RV32EM-simulator\cmake-build-debug\test\CMakeFiles\test.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\alexa\CLionProjects\RV32EM-simulator C:\Users\alexa\CLionProjects\RV32EM-simulator\test C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test\CMakeFiles\test.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : test/CMakeFiles/test.dir/depend
 
