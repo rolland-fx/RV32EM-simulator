@@ -25,6 +25,12 @@ extern uint32_t userMemorySize;
  */
 uint8_t loadProgramToMemory(char * file);
 
+/**
+ * Test if the simulation have reach the end of the program
+ * @return 1 if end of program is reach
+ */
+uint8_t is_end_of_program(void);
+
 uint8_t memory_get_byte(uint32_t addr);
 uint16_t memory_get_half_word(uint32_t addr);
 uint32_t memory_get_word(uint32_t addr);

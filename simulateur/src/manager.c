@@ -41,7 +41,6 @@ char CodeRun() {
     }
     if (Selection == 'c')
     {
-        PrintInstruction(buffer);
         PrintCurrentState();
     }
     return InstructionCounter;
@@ -52,12 +51,15 @@ char RunNextInstruction(char* buffer)
     char ret_val = 0;
     type_t NextInstructionType;
     void* ptr_struct;
-    if (PC <= (MEMORY_SIZE - userMemorySize))
+    if (PC < (MEMORY_SIZE - userMemorySize))
     {
         ptr_struct = decoder_instruction(memory_get_word(PC),&NextInstructionType);
         create_string_instruction(NextInstructionType, ptr_struct,memory_get_word(PC), buffer);
         execute_instruction(ptr_struct, NextInstructionType);
         ret_val = 1;
+    }
+    else{
+        ret_val = 0;
     }
     return ret_val;
 

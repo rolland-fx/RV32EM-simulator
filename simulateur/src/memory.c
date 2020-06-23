@@ -177,3 +177,11 @@ void user_memory_save_word(uint32_t addr, uint32_t value){
     *((uint32_t*)(&userMemory[addr])) = value;
 }
 
+uint8_t is_end_of_program(void){
+    if(&Memory[PC] == userMemory){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}

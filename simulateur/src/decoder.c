@@ -5,6 +5,12 @@
 #include "decoder.h"
 
 
+struct_I Struct_I;
+struct_B Struct_B;
+struct_J Struct_J;
+struct_R Struct_R;
+struct_S Struct_S;
+struct_U Struct_U;
 /**
  * Decodes the instruction of type R and puts every parts inside a structure
  * @param instruction
@@ -116,27 +122,27 @@ void* decoder_instruction(uint32_t instruction, type_t* instruction_type){
     }
     switch (*instruction_type) {
         case R_type:
-            retVal = malloc(sizeof(struct_R));
+            retVal = (void*)&Struct_R;
             decoder_type_R(instruction,(struct_R*)(retVal));
             break;
         case I_type:
-            retVal = malloc(sizeof(struct_I));
+            retVal = (void*)&Struct_I;
             decoder_type_I(instruction,(struct_I*)(retVal));
             break;
         case S_type:
-            retVal = malloc(sizeof(struct_S));
+            retVal = (void*)&Struct_S;
             decoder_type_S(instruction,(struct_S*)(retVal));
             break;
         case B_type:
-            retVal = malloc(sizeof(struct_B));
+            retVal = (void*)&Struct_B;
             decoder_type_B(instruction,(struct_B*)(retVal));
             break;
         case U_type:
-            retVal = malloc(sizeof(struct_U));
+            retVal = (void*)&Struct_U;
             decoder_type_U(instruction,(struct_U*)(retVal));
             break;
         case J_type:
-            retVal = malloc(sizeof(struct_J));
+            retVal = (void*)&Struct_J;
             decoder_type_J(instruction,(struct_J*)(retVal));
             break;
         default:    break;
