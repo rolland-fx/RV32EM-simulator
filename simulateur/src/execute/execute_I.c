@@ -118,10 +118,14 @@ uint8_t execute_type_I_LHU(struct_I* ptr_struct){
 uint8_t execute_type_I_JALR(struct_I* ptr_struct){
     uint8_t retVal = 0;
 
+    int16_t imm = ptr_struct->imm_11_0;
+    imm = imm << 4;
+    imm = imm >> 4;
+
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16) {
         if(ptr_struct->rd != 0)
             Register[ptr_struct->rd] = PC + 4;
-        PC += (ptr_struct->imm_11_0 + Register[ptr_struct->rs1]);
+        PC = (imm + Register[ptr_struct->rs1]) & 0xfffe;
     }
     else{
         retVal = 1;
@@ -154,7 +158,7 @@ uint8_t execute_type_I_ADDI(struct_I* ptr_struct){
 uint8_t execute_type_I_SLTI(struct_I* ptr_struct){
     uint8_t retVal = 0;
 
-    uint16_t imm = (ptr_struct->imm_11_0);
+    int16_t imm = (ptr_struct->imm_11_0);
     if(imm & 0x00000800u){
         imm |= 0xfffff000u;
     }
@@ -378,6 +382,7 @@ uint8_t execute_type_I(struct_I* ptr_struct) {
             retVal = execute_type_I_LOAD(ptr_struct);
             break;
         case FENCE_OPCODE:  //FENCE
+            PC += 4;
             break;
         case ARMT_OPCODE:  //ADDI,SLTI,SLTIU,XORI,ORI,ANDI,SLLI,SRLI,SRAI
             retVal = execute_type_I_ARMT(ptr_struct);
@@ -386,6 +391,7 @@ uint8_t execute_type_I(struct_I* ptr_struct) {
             retVal = execute_type_I_JALR(ptr_struct);
             break;
         case ECALL_OPCODE:  //ECALL
+            PC += 4;
             break;
         default :
             break;
