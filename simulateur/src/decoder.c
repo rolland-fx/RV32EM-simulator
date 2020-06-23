@@ -4,6 +4,7 @@
 
 #include "decoder.h"
 
+
 /**
  * Decodes the instruction of type R and puts every parts inside a structure
  * @param instruction
@@ -83,6 +84,7 @@ void decoder_type_U(uint32_t instruction, struct_U* ptr_struct) {
     ptr_struct->opcode      =   (instruction & 0x0000007Fu);
     ptr_struct->rd          =   (instruction & 0x00000F80u) >> 07u;
     ptr_struct->imm         =   (instruction & 0xFFFFF000u) >> 12u;
+
 }
 
 

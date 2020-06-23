@@ -13,9 +13,9 @@ void InitialPrint()
     printf("- F-X Rolland\n");
     printf("2020\n");
 }
-void PrintInstruction(uint32_t CurrentCodedInstruction)
+void PrintInstruction(char* buffer)
 {
-    printf("Instruction : 0x%08X [xxxxxxxxxxxxxxx]\n",CurrentCodedInstruction);
+    printf("%s\n",buffer);
 }
 
 void PrintCurrentState()

@@ -37,6 +37,7 @@ void run_test_all_type_J();
 void test_decoder_type_U_17();
 void test_decoder_type_U_37();
 void run_test_all_type_U();
+void run_test_all_type_R();
 
 
 #endif //RV32EM_SIMULATOR_DECODER_TEST_H

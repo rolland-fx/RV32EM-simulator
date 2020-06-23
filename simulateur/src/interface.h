@@ -23,7 +23,7 @@ void InitialPrint(void);
  * @param None
  * @return None
  */
-void PrintInstruction(uint32_t CurrentCodedInstruction);
+void PrintInstruction(char* buffer);
 /**
  * Affiche l'état courant des registres
  * @param None

@@ -1466,18 +1466,18 @@ void RUN_TEST_execute_type_I_SRLI(){
 }
 
 void RUN_TEST_execute_type_I(){
-    RUN_TEST_executer_type_I_JALR();
-    RUN_TEST_execute_type_I_ADDI();
-    RUN_TEST_execute_type_I_SLTI();
-    //RUN_TEST_execute_type_I_LB(); // marche pas avec le usermemory
+    //RUN_TEST_executer_type_I_JALR();
+    //RUN_TEST_execute_type_I_ADDI();
+    //RUN_TEST_execute_type_I_SLTI();
+    RUN_TEST_execute_type_I_LB(); // marche pas avec le usermemory
     //RUN_TEST_execute_type_I_LH(); // marche pas avec le usermemory
     //RUN_TEST_execute_type_I_LW(); // marche pas avec le usermemory
     //RUN_TEST_execute_type_I_LBU(); // marche pas avec le usermemory
     //RUN_TEST_execute_type_I_LHU(); // marche pas avec le usermemory
-    RUN_TEST_execute_type_I_SLTIU();
-    RUN_TEST_execute_type_I_XORI();
-    RUN_TEST_execute_type_I_ORI();
-    RUN_TEST_execute_type_I_ANDI();
-    RUN_TEST_execute_type_I_SLLI();
-    RUN_TEST_execute_type_I_SRLI();
+    //RUN_TEST_execute_type_I_SLTIU();
+    //RUN_TEST_execute_type_I_XORI();
+    //RUN_TEST_execute_type_I_ORI();
+    //RUN_TEST_execute_type_I_ANDI();
+    //RUN_TEST_execute_type_I_SLLI();
+    //RUN_TEST_execute_type_I_SRLI();
 }

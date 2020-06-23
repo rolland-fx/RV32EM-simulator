@@ -13,6 +13,7 @@
 #include "interface.h"
 #include "decoder.h"
 #include "execute.h"
+#include "string_decode.h"
 
 extern uint32_t Register[REGISTER_NUMBER];
 char NextInstructionExist;
@@ -24,7 +25,7 @@ uint8_t MemoryCaseToShow;
 
 char CodeRun(void);
 void MemoryChoice(void);
-char RunNextInstruction(void);
+char RunNextInstruction(char* buffer);
 char ManageRegisterPC(char NextInstructionExist_PC);
 
 #endif //RV32EM_SIMULATOR_MANAGER_H

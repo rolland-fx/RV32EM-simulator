@@ -83,6 +83,7 @@ struct_R init_struct_R(){
     expected_struct_R.rs2         = 0x03;
     expected_struct_R.funct7      = 0x01;
 
+
     return expected_struct_R;
 }
 struct_B init_struct_B(){

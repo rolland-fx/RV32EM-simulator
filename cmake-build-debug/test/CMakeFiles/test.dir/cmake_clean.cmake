@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.dir/__/simulateur/src/interface.c.obj"
   "CMakeFiles/test.dir/__/simulateur/src/manager.c.obj"
   "CMakeFiles/test.dir/__/simulateur/src/memory.c.obj"
+  "CMakeFiles/test.dir/__/simulateur/src/string_decode.c.obj"
   "CMakeFiles/test.dir/decoder_test.c.obj"
   "CMakeFiles/test.dir/execute_test.c.obj"
   "CMakeFiles/test.dir/execute_test/execute_B_test.c.obj"

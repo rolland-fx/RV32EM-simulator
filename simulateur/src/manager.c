@@ -6,10 +6,10 @@
 
 
 char CodeRun() {
+    char buffer[1024];
     char Selection = 's';
     NextInstructionExist = 1;
     char InstructionCounter = 0;
-    uint32_t CurrentCodedInstruction;
     while (NextInstructionExist)
     {
         if (Selection != 'c') {
@@ -31,24 +31,23 @@ char CodeRun() {
             default:
                 break;
         }
-        CurrentCodedInstruction = memory_get_word(PC);
-        NextInstructionExist = RunNextInstruction();
+        NextInstructionExist = RunNextInstruction(buffer);
         InstructionCounter++;
         if (Selection != 'c')
         {
-            PrintInstruction(CurrentCodedInstruction);
+            PrintInstruction(buffer);
             PrintCurrentState();
         }
     }
     if (Selection == 'c')
     {
-        PrintInstruction(CurrentCodedInstruction);
+        PrintInstruction(buffer);
         PrintCurrentState();
     }
     return InstructionCounter;
 }
 
-char RunNextInstruction(void)
+char RunNextInstruction(char* buffer)
 {
     char ret_val = 0;
     type_t NextInstructionType;
@@ -56,6 +55,7 @@ char RunNextInstruction(void)
     if (PC <= (MEMORY_SIZE - userMemorySize))
     {
         ptr_struct = decoder_instruction(memory_get_word(PC),&NextInstructionType);
+        create_string_instruction(NextInstructionType, ptr_struct,memory_get_word(PC), buffer);
         execute_instruction(ptr_struct, NextInstructionType);
         ret_val = 1;
     }
