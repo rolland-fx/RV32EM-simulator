@@ -6,7 +6,7 @@
 
 
 char CodeRun() {
-    char buffer[1024];
+    char buffer[4096];
     char Selection = 's';
     NextInstructionExist = 1;
     char InstructionCounter = 0;

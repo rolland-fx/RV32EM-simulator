@@ -12,6 +12,8 @@
 
 #include "execute.h"
 
+#define buffer_length 1024
+
 void create_string_instruction(type_t instruction_type, void* ptr_struct, uint32_t instruction, char* buffer);
 
 #endif //RV32EM_SIMULATOR_STRING_DECODE_H

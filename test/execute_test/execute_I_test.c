@@ -120,7 +120,7 @@ void execute_type_I_ADDI_should_not_modify_x0(){
     Struct_I.rd = 0;
     Struct_I.rs1 = 1;
 
-    TEST_ASSERT_EQUAL_UINT8(0, execute_ristype_I(&Struct_I));
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_I(&Struct_I));
     TEST_ASSERT_EQUAL_UINT32(0, Register[0]);
 }
 
