@@ -20,19 +20,19 @@ char CodeRun() {
         }
         switch (Selection)
         {
-            case 'm':
-                MemoryChoice();
-                NextInstructionExist = 1; //for whatever reason, without this, it exit the switch
-                break;
             case 'q':
                 NextInstructionExist = 0;
-                //ClearMemory();
+                break;
+            case 'm':
+                MemoryChoice();
+                NextInstructionExist = 1;
                 break;
             default:
+                NextInstructionExist = RunNextInstruction(buffer);
+                InstructionCounter++;
                 break;
         }
-        NextInstructionExist = RunNextInstruction(buffer);
-        InstructionCounter++;
+
         if (Selection != 'c')
         {
             PrintInstruction(buffer);

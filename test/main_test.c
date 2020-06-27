@@ -39,12 +39,12 @@ int main(void)
     //RUN_TEST(run_test_all_type_J);
     //RUN_TEST(run_test_all_type_U);
 
-    //RUN_TEST_execute_type_B();
-    //RUN_TEST_execute_type_I();
-    //RUN_TEST_executer_type_J();
-    //RUN_TEST_execute_type_I();
-    //RUN_TEST_execute_R();
-    //RUN_TEST_execute_type_S();
+    RUN_TEST_execute_type_B();
+    RUN_TEST_execute_type_I();
+    RUN_TEST_executer_type_J();
+    RUN_TEST_execute_type_I();
+    RUN_TEST_execute_R();
+    RUN_TEST_execute_type_S();
     RUN_TEST_execute_type_U();
 
     return UNITY_END();
