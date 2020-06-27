@@ -30,7 +30,7 @@ void execute_type_J_JAL_should_add_offset_to_PC(){
 
 
     TEST_ASSERT_EQUAL_UINT8(0, execute_type_J(&Struct_J));
-    TEST_ASSERT_EQUAL_UINT32(start_PC + ((imm << 1) & 0x1111e), PC);
+    TEST_ASSERT_EQUAL_UINT32(start_PC + ((imm << 1) & 0xffffe), PC);
 }
 
 void execute_type_J_JAL_should_place_PC_plus_4_in_rd(){
@@ -46,8 +46,26 @@ void execute_type_J_JAL_should_place_PC_plus_4_in_rd(){
     TEST_ASSERT_EQUAL_UINT32(start_PC + 4, Register[Struct_J.rd]);
 }
 
+void execute_type_J_JAL_should_should_not_modify_x0(){
+    struct_J Struct_J;
+    uint32_t start_PC = 100;
+
+    PC = start_PC;
+
+    Struct_J.rd = 0;
+    Struct_J.opcode = JAL_OPCODE;
+
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_J(&Struct_J));
+    TEST_ASSERT_EQUAL_UINT32(0, Register[0]);
+}
+
 void RUN_TEST_executer_type_J_JAL(){
     RUN_TEST(excute_type_J_JAL_should_return_non_zero_on_rd_greater_than_15);
     RUN_TEST(execute_type_J_JAL_should_add_offset_to_PC);
     RUN_TEST(execute_type_J_JAL_should_place_PC_plus_4_in_rd);
+    RUN_TEST(execute_type_J_JAL_should_should_not_modify_x0);
+}
+
+void RUN_TEST_executer_type_J(){
+    RUN_TEST_executer_type_J_JAL();
 }

@@ -153,7 +153,7 @@ void create_string_type_I_ARMT(struct_I* ptr_struct, uint32_t instruction,  char
         case SLLI_FUNCT3:
             snprintf(buffer, buffer_length, "Instruction : 0x%08X [SLLI x%d x%d 0x%X]", instruction, ptr_struct->rd,
                      ptr_struct->rs1, ptr_struct->imm_11_0);   break;
-        case SRLI_FUNCT3:
+        case SRxI_FUNCT3:
             snprintf(buffer, buffer_length, "Instruction : 0x%08X [SRLI x%d x%d 0x%X]", instruction, ptr_struct->rd,
                      ptr_struct->rs1, ptr_struct->imm_11_0);   break;
     }

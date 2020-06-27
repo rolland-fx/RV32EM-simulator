@@ -297,26 +297,10 @@ uint8_t execute_type_I_SLLI(struct_I* ptr_struct){
 uint8_t execute_type_I_SRLI(struct_I* ptr_struct){
     uint8_t retVal = 0;
     uint8_t shamt = ptr_struct->imm_11_0 & 0x01Fu;
-    uint32_t mask = 0x80000000;
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
         if (ptr_struct->rd != 0) {
-            if (ptr_struct->imm_11_0 & 0x400u) {
-                if (Register[ptr_struct->rs1] & 0x80000000) {
-                    if (shamt == 0) {
-                        mask = 0x00000000;
-                    } else {
-                        for (uint8_t i = 1; i < shamt; i++) {
-                            mask = (mask >> 1u) | 0x80000000;
-                        }
-                    }
-                } else {
-                    mask = 0x00000000;
-                }
-                Register[ptr_struct->rd] = (Register[ptr_struct->rs1] >> shamt) | mask;
-            } else {
-                Register[ptr_struct->rd] = Register[ptr_struct->rs1] >> shamt;
-            }
+            Register[ptr_struct->rd] = Register[ptr_struct->rs1] >> shamt;
         }
         PC += 4;
 
@@ -331,8 +315,48 @@ uint8_t execute_type_I_SRLI(struct_I* ptr_struct){
     return retVal;
 }
 
-uint8_t execute_type_I_ARMT(struct_I* ptr_struct){
+uint8_t execute_type_I_SRAI(struct_I* ptr_struct){
     uint8_t retVal = 0;
+    uint8_t shamt = ptr_struct->imm_11_0 & 0x01Fu;
+
+    if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
+        if (ptr_struct->rd != 0) {
+            Register[ptr_struct->rd] = (uint32_t)(((int32_t)Register[ptr_struct->rs1]) >> shamt);
+        }
+        PC += 4;
+
+    }
+
+    else{
+
+        retVal = 1;
+
+    }
+
+    return retVal;
+}
+
+uint8_t execute_type_I_SRxI(struct_I* ptr_struct){
+    uint8_t retVal = 0;
+    uint8_t funct7 = (ptr_struct->imm_11_0 >> 5) & 0x007f;
+
+    switch(funct7){
+        case SRLI_FUNCT7:
+            retVal = execute_type_I_SRLI(ptr_struct);
+            break;
+        case SRAI_FUNCT7:
+            retVal = execute_type_I_SRAI(ptr_struct);
+            break;
+        default: retVal = 1; break;
+    }
+
+    return retVal;
+}
+
+
+
+uint8_t execute_type_I_ARMT(struct_I* ptr_struct){
+    uint8_t retVal = 1;
 
     switch(ptr_struct->func3){
         case ADDI_FUNCT3:
@@ -349,15 +373,16 @@ uint8_t execute_type_I_ARMT(struct_I* ptr_struct){
             retVal = execute_type_I_ANDI(ptr_struct);   break;
         case SLLI_FUNCT3:
             retVal = execute_type_I_SLLI(ptr_struct);   break;
-        case SRLI_FUNCT3:
-            retVal = execute_type_I_SRLI(ptr_struct);   break;
+        case SRxI_FUNCT3:
+            retVal = execute_type_I_SRxI(ptr_struct);   break;
+        default: retVal = 1; break;
     }
 
     return retVal;
 }
 
 uint8_t execute_type_I_LOAD(struct_I* ptr_struct){
-    uint8_t retVal = 0;
+    uint8_t retVal = 1;
 
     switch (ptr_struct->func3){
         case 0x0:   //LB
@@ -370,6 +395,7 @@ uint8_t execute_type_I_LOAD(struct_I* ptr_struct){
             retVal = execute_type_I_LBU(ptr_struct);   break;
         case 0x5:   //LHU
             retVal = execute_type_I_LHU(ptr_struct);   break;
+        default: retVal = 1; break;
     }
     return retVal;
 }

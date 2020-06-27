@@ -32,17 +32,18 @@ void tearDown(void)
 int main(void)
 {
     UNITY_BEGIN();
+    //RUN_TEST_loadProgramToMemory(); //Doit être exécuter pour pouvoir exé
     //RUN_TEST(test_decoder_instruction);
     //RUN_TEST(run_test_all_type_I);
     //RUN_TEST(run_test_all_type_S);
     //RUN_TEST(run_test_all_type_J);
     //RUN_TEST(run_test_all_type_U);
-    //RUN_TEST_loadProgramToMemory();
-    //RUN_TEST_executer_type_J_JAL();
-    //RUN_TEST_execute_type_I();
-    //RUN_TEST_execute_R();
+
     //RUN_TEST_execute_type_B();
-    run_test_all_type_R();
+    //RUN_TEST_execute_type_I();
+    //RUN_TEST_executer_type_J();
+    //RUN_TEST_execute_type_I();
+    RUN_TEST_execute_R();
 
     return UNITY_END();
 }

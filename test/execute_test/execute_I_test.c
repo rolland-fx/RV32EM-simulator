@@ -59,7 +59,7 @@ void execute_type_I_JALR_should_add_imm_plus_rs1_to_PC(){
 
 
     TEST_ASSERT_EQUAL_UINT8(0, execute_type_I(&Struct_I));
-    TEST_ASSERT_EQUAL_UINT32(start_PC + imm + Register[rs1], PC);
+    TEST_ASSERT_EQUAL_UINT32((imm + Register[rs1]) & 0xfffffffe, PC);
 }
 
 void execute_type_I_JALR_should_place_PC_plus_4_in_rd(){
@@ -1357,9 +1357,10 @@ void execute_type_I_SRLI_should_return_non_zero_on_rs1_greater_than_15(){
     struct_I Struct_I;
 
     Struct_I.opcode = ARMT_OPCODE;
-    Struct_I.func3 = SRLI_FUNCT3;
+    Struct_I.func3 = SRxI_FUNCT3;
     Struct_I.rd = 1;
     Struct_I.rs1 = 16;
+    Struct_I.imm_11_0 = SRLI_FUNCT7 << 5;
 
     TEST_ASSERT_NOT_EQUAL(0, execute_type_I(&Struct_I));
 }
@@ -1368,9 +1369,10 @@ void execute_type_I_SRLI_should_return_non_zero_on_rd_greater_than_15(){
     struct_I Struct_I;
 
     Struct_I.opcode = ARMT_OPCODE;
-    Struct_I.func3 = SRLI_FUNCT3;
+    Struct_I.func3 = SRxI_FUNCT3;
     Struct_I.rd = 16;
     Struct_I.rs1 = 0;
+    Struct_I.imm_11_0 = SRLI_FUNCT7 << 5;
 
     TEST_ASSERT_NOT_EQUAL(0, execute_type_I(&Struct_I));
 }
@@ -1381,9 +1383,10 @@ void execute_type_I_SRLI_should_not_modify_x0(){
     Register[1] = 100;
 
     Struct_I.opcode = ARMT_OPCODE;
-    Struct_I.func3 = SRLI_FUNCT3;
+    Struct_I.func3 = SRxI_FUNCT3;
     Struct_I.rd = 0;
     Struct_I.rs1 = 1;
+    Struct_I.imm_11_0 = SRLI_FUNCT7 << 5;
 
     TEST_ASSERT_EQUAL_UINT8(0, execute_type_I(&Struct_I));
     TEST_ASSERT_EQUAL_UINT32(0, Register[0]);
@@ -1395,61 +1398,39 @@ void execute_type_I_SRLI_should_right_shift_rs1_in_rd_from_shamt(){
     uint8_t rs1 = 1;
     uint8_t rd = 2;
 
-    int32_t rs1_value = 12;
-    int16_t imm = 2;
+    uint32_t rs1_value = 12;
+    uint16_t imm = 2;
 
     Register[rs1] = rs1_value;
 
     Struct_I.opcode = ARMT_OPCODE;
-    Struct_I.func3 = SRLI_FUNCT3;
+    Struct_I.func3 = SRxI_FUNCT3;
     Struct_I.rs1 = rs1;
-    Struct_I.imm_11_0 = imm;
+    Struct_I.imm_11_0 = (SRLI_FUNCT7 << 5) | imm;
     Struct_I.rd = rd;
 
     TEST_ASSERT_EQUAL_UINT8(0, execute_type_I(&Struct_I));
     TEST_ASSERT_EQUAL_UINT32(3, Register[rd]);
 }
 
-void execute_type_I_SRLI_should_right_shift_rs1_in_rd_from_shamt_and_sign_extend(){
-    struct_I Struct_I;
-
-    uint8_t rs1 = 1;
-    uint8_t rd = 2;
-
-    int32_t rs1_value = 0x8000000C;
-    int16_t imm = 1026;
-
-    Register[rs1] = rs1_value;
-
-    Struct_I.opcode = ARMT_OPCODE;
-    Struct_I.func3 = SRLI_FUNCT3;
-    Struct_I.rs1 = rs1;
-    Struct_I.imm_11_0 = imm;
-    Struct_I.rd = rd;
-
-    TEST_ASSERT_EQUAL_UINT8(0, execute_type_I(&Struct_I));
-    TEST_ASSERT_EQUAL_UINT32(0xE0000003, Register[rd]);
-}
-
 void execute_type_I_SRLI_should_add_4_to_PC(){
     struct_I Struct_I;
-
     uint32_t start_PC = 100;
-
-    uint8_t rs1 = 1;
-    uint8_t rd = 2;
-
-    uint32_t rs1_value = -100;
-    uint16_t imm = 200;
-
-    Register[rs1] = rs1_value;
 
     PC = start_PC;
 
+    uint8_t rs1 = 1;
+    uint8_t rd = 2;
+
+    uint32_t rs1_value = 12;
+    uint16_t imm = 2;
+
+    Register[rs1] = rs1_value;
+
     Struct_I.opcode = ARMT_OPCODE;
-    Struct_I.func3 = SRLI_FUNCT3;
+    Struct_I.func3 = SRxI_FUNCT3;
     Struct_I.rs1 = rs1;
-    Struct_I.imm_11_0 = imm;
+    Struct_I.imm_11_0 = (SRLI_FUNCT7 << 5) | imm;
     Struct_I.rd = rd;
 
     TEST_ASSERT_EQUAL_UINT8(0, execute_type_I(&Struct_I));
@@ -1461,23 +1442,141 @@ void RUN_TEST_execute_type_I_SRLI(){
     RUN_TEST(execute_type_I_SRLI_should_return_non_zero_on_rd_greater_than_15);
     RUN_TEST(execute_type_I_SRLI_should_not_modify_x0);
     RUN_TEST(execute_type_I_SRLI_should_right_shift_rs1_in_rd_from_shamt);
-    RUN_TEST(execute_type_I_SRLI_should_right_shift_rs1_in_rd_from_shamt_and_sign_extend);
     RUN_TEST(execute_type_I_SRLI_should_add_4_to_PC);
 }
 
+/*******************************************************************************
+ * Test pour l'instruction SRAI
+ ******************************************************************************/
+
+void execute_type_I_SRAI_should_return_non_zero_on_rs1_greater_than_15(){
+    struct_I Struct_I;
+
+    Struct_I.opcode = ARMT_OPCODE;
+    Struct_I.func3 = SRxI_FUNCT3;
+    Struct_I.rd = 1;
+    Struct_I.rs1 = 16;
+    Struct_I.imm_11_0 = SRAI_FUNCT7 << 5;
+
+    TEST_ASSERT_NOT_EQUAL(0, execute_type_I(&Struct_I));
+}
+
+void execute_type_I_SRAI_should_return_non_zero_on_rd_greater_than_15(){
+    struct_I Struct_I;
+
+    Struct_I.opcode = ARMT_OPCODE;
+    Struct_I.func3 = SRxI_FUNCT3;
+    Struct_I.rd = 16;
+    Struct_I.rs1 = 0;
+    Struct_I.imm_11_0 = SRAI_FUNCT7 << 5;
+
+    TEST_ASSERT_NOT_EQUAL(0, execute_type_I(&Struct_I));
+}
+
+void execute_type_I_SRAI_should_not_modify_x0(){
+    struct_I Struct_I;
+
+    Register[1] = 100;
+
+    Struct_I.opcode = ARMT_OPCODE;
+    Struct_I.func3 = SRxI_FUNCT3;
+    Struct_I.rd = 0;
+    Struct_I.rs1 = 1;
+    Struct_I.imm_11_0 = SRAI_FUNCT7 << 5;
+
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_I(&Struct_I));
+    TEST_ASSERT_EQUAL_UINT32(0, Register[0]);
+}
+
+void execute_type_I_SRAI_should_right_shift_rs1_in_rd_from_shamt_positive(){
+    struct_I Struct_I;
+
+    uint8_t rs1 = 1;
+    uint8_t rd = 2;
+
+    uint32_t rs1_value = 12;
+    uint16_t imm = 2;
+
+    Register[rs1] = rs1_value;
+
+    Struct_I.opcode = ARMT_OPCODE;
+    Struct_I.func3 = SRxI_FUNCT3;
+    Struct_I.rs1 = rs1;
+    Struct_I.imm_11_0 = (SRAI_FUNCT7 << 5) | imm;
+    Struct_I.rd = rd;
+
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_I(&Struct_I));
+    TEST_ASSERT_EQUAL_UINT32(3, Register[rd]);
+}
+
+void execute_type_I_SRAI_should_right_shift_rs1_in_rd_from_shamt_negative(){
+    struct_I Struct_I;
+
+    uint8_t rs1 = 1;
+    uint8_t rd = 2;
+
+    uint32_t rs1_value = (int32_t)-12;
+    uint16_t imm = 2;
+
+    Register[rs1] = rs1_value;
+
+    Struct_I.opcode = ARMT_OPCODE;
+    Struct_I.func3 = SRxI_FUNCT3;
+    Struct_I.rs1 = rs1;
+    Struct_I.imm_11_0 = (SRAI_FUNCT7 << 5) | imm;
+    Struct_I.rd = rd;
+
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_I(&Struct_I));
+    TEST_ASSERT_EQUAL_INT32(-3, (int32_t)Register[rd]);
+}
+
+void execute_type_I_SRAI_should_add_4_to_PC(){
+    struct_I Struct_I;
+    uint32_t start_PC = 100;
+
+    PC = start_PC;
+
+    uint8_t rs1 = 1;
+    uint8_t rd = 2;
+
+    uint32_t rs1_value = 12;
+    uint16_t imm = 2;
+
+    Register[rs1] = rs1_value;
+
+    Struct_I.opcode = ARMT_OPCODE;
+    Struct_I.func3 = SRxI_FUNCT3;
+    Struct_I.rs1 = rs1;
+    Struct_I.imm_11_0 = (SRAI_FUNCT7 << 5) | imm;
+    Struct_I.rd = rd;
+
+    TEST_ASSERT_EQUAL_UINT8(0, execute_type_I(&Struct_I));
+    TEST_ASSERT_EQUAL_UINT32(start_PC + 4, PC);
+}
+
+void RUN_TEST_execute_type_I_SRAI(){
+    RUN_TEST(execute_type_I_SRAI_should_return_non_zero_on_rs1_greater_than_15);
+    RUN_TEST(execute_type_I_SRAI_should_return_non_zero_on_rd_greater_than_15);
+    RUN_TEST(execute_type_I_SRAI_should_not_modify_x0);
+    RUN_TEST(execute_type_I_SRAI_should_right_shift_rs1_in_rd_from_shamt_positive);
+    RUN_TEST(execute_type_I_SRAI_should_right_shift_rs1_in_rd_from_shamt_negative);
+    RUN_TEST(execute_type_I_SRAI_should_add_4_to_PC);
+}
+
 void RUN_TEST_execute_type_I(){
-    //RUN_TEST_executer_type_I_JALR();
-    //RUN_TEST_execute_type_I_ADDI();
-    //RUN_TEST_execute_type_I_SLTI();
+    RUN_TEST_executer_type_I_JALR();
+    RUN_TEST_execute_type_I_ADDI();
+    RUN_TEST_execute_type_I_SLTI();
     RUN_TEST_execute_type_I_LB(); // marche pas avec le usermemory
-    //RUN_TEST_execute_type_I_LH(); // marche pas avec le usermemory
-    //RUN_TEST_execute_type_I_LW(); // marche pas avec le usermemory
-    //RUN_TEST_execute_type_I_LBU(); // marche pas avec le usermemory
-    //RUN_TEST_execute_type_I_LHU(); // marche pas avec le usermemory
-    //RUN_TEST_execute_type_I_SLTIU();
-    //RUN_TEST_execute_type_I_XORI();
-    //RUN_TEST_execute_type_I_ORI();
-    //RUN_TEST_execute_type_I_ANDI();
-    //RUN_TEST_execute_type_I_SLLI();
-    //RUN_TEST_execute_type_I_SRLI();
+    RUN_TEST_execute_type_I_LH(); // marche pas avec le usermemory
+    RUN_TEST_execute_type_I_LW(); // marche pas avec le usermemory
+    RUN_TEST_execute_type_I_LBU(); // marche pas avec le usermemory
+    RUN_TEST_execute_type_I_LHU(); // marche pas avec le usermemory
+    RUN_TEST_execute_type_I_SLTIU();
+    RUN_TEST_execute_type_I_XORI();
+    RUN_TEST_execute_type_I_ORI();
+    RUN_TEST_execute_type_I_ANDI();
+    RUN_TEST_execute_type_I_SLLI();
+    RUN_TEST_execute_type_I_SRLI();
+    RUN_TEST_execute_type_I_SRAI();
 }

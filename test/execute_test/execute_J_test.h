@@ -10,8 +10,8 @@
 #include "../unity/unity.h"
 
 /**
- * Run all test for instruction JAL
+ * Run all test for type J
  */
-void RUN_TEST_executer_type_J_JAL();
+void RUN_TEST_executer_type_J();
 
 #endif //RV32EM_SIMULATOR_EXECUTER_J_TEST_H

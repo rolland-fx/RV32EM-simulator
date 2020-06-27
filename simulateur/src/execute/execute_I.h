@@ -24,7 +24,7 @@
 #define SLTI_FUNCT3 (0x02)
 #define SLTIU_FUNCT3 (0x03)
 #define XORI_FUNCT3 (0x04)
-#define SRLI_FUNCT3 (0x05)
+#define SRxI_FUNCT3 (0x05)
 #define ORI_FUNCT3 (0x06)
 #define ANDI_FUNCT3 (0x07)
 
@@ -33,6 +33,9 @@
 #define LW_FUNCT3 (0x02)
 #define LBU_FUNCT3 (0x04)
 #define LHU_FUNCT3 (0x05)
+
+#define SRLI_FUNCT7 (0x00)
+#define SRAI_FUNCT7 (0x20)
 
 
 /**
