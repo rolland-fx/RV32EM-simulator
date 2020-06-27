@@ -44,7 +44,8 @@ int main(void)
     //RUN_TEST_executer_type_J();
     //RUN_TEST_execute_type_I();
     //RUN_TEST_execute_R();
-    RUN_TEST_execute_type_S();
+    //RUN_TEST_execute_type_S();
+    RUN_TEST_execute_type_U();
 
     return UNITY_END();
 }
