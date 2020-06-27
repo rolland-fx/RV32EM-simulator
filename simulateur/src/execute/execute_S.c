@@ -6,7 +6,7 @@
 
 uint8_t execute_type_S(struct_S* ptr_struct)
 {
-    uint8_t return_val = 0;
+    uint8_t return_val = 1;
     uint32_t value;
     uint32_t address;
     uint8_t bit7;
@@ -24,43 +24,48 @@ uint8_t execute_type_S(struct_S* ptr_struct)
     }
     address = Register[ptr_struct->rs1] + offset;
     value = Register[ptr_struct->rs2];
-    switch(ptr_struct->func3){
-        case STORE_8bits: //SB
-            bit7 = value & 0x10u;
-            if (bit7 =='1')
-            {
-                //userMemory[address] = 0xFFFFFF00u | value;
-                user_memory_save_byte(address, value);
-            }
-            else
-            {
-                //userMemory[address] = 0x00000000u | value;
-                user_memory_save_byte(address, 0x00000000u | value);
-            }
-            PC += 4;
-        break;
-        case STORE_16bits:
-            bit15 = value & 0x1000u;
-            if (bit15 =='1')
-            {
-                //userMemory[address] = 0xFFFF0000u | value;
-                user_memory_save_half_word(address, 0xFFFF0000u | value);
-            }
-            else
-            {
-                //userMemory[address] = 0x00000000u | value;
-                user_memory_save_half_word(address, 0x00000000u | value);
-            }
-            PC += 4;
-        break;
-        case STORE_32bits:
-            //userMemory[address] = value;
-            user_memory_save_word(address, value);
-            PC += 4;
-        break;
-        default:
-        return_val = 1;
-        break;
+    if(ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16){
+        switch(ptr_struct->func3){
+            case STORE_8bits: //SB
+                bit7 = value & 0x10u;
+                if (bit7 =='1')
+                {
+                    //userMemory[address] = 0xFFFFFF00u | value;
+                    user_memory_save_byte(address, value);
+                }
+                else
+                {
+                    //userMemory[address] = 0x00000000u | value;
+                    user_memory_save_byte(address, 0x00000000u | value);
+                }
+                PC += 4;
+                return_val = 0;
+                break;
+            case STORE_16bits:
+                bit15 = value & 0x1000u;
+                if (bit15 =='1')
+                {
+                    //userMemory[address] = 0xFFFF0000u | value;
+                    user_memory_save_half_word(address, 0xFFFF0000u | value);
+                }
+                else
+                {
+                    //userMemory[address] = 0x00000000u | value;
+                    user_memory_save_half_word(address, 0x00000000u | value);
+                }
+                PC += 4;
+                return_val = 0;
+                break;
+            case STORE_32bits:
+                //userMemory[address] = value;
+                user_memory_save_word(address, value);
+                return_val = 0;
+                PC += 4;
+                break;
+            default:
+                break;
+        }
     }
+
     return return_val;
 }
