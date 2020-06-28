@@ -65,53 +65,53 @@ typedef struct{
 }struct_J;
 
 /**
- * Decode l'instruction reçu, alloue de l'espace mémoire pour la structure reliée à ce type d'instruction et retourne
- * le type d'linstruction
- * @param instruction
- * @param return_struct
- * @return type de la structure contenu par le void* return_struct
+ * Decode the instructions, then alloc the memory needed for the struct of this type of
+ * instruction
+ * @param instruction : hexa format extracted from memory
+ * @param return_struct : struct to fill with decoded instruction
+ * @return type of struct of the void* return_struct
  */
 void* decoder_instruction(uint32_t instruction, type_t* instruction_type);
 
 /**
- * Decode l'instruction passé en paramètre et place les information de celle-ci dans ptr_struct
- * @param instruction
- * @param ptr_struct
+ * Decode the specific type R instruction and fill the struct with informations
+ * @param instruction : hexa format extracted from memory
+ * @param ptr_struct : struct to fill with decoded instruction
  */
 void decoder_type_R(uint32_t instruction, struct_R* ptr_struct);
 
 /**
- * Decode l'instruction passé en paramètre et place les information de celle-ci dans ptr_struct
- * @param instruction
- * @param ptr_struct
+ * Decode the specific type I instruction and fill the struct with informations
+ * @param instruction : hexa format extracted from memory
+ * @param ptr_struct : struct to fill with decoded instruction
  */
 void decoder_type_I(uint32_t instruction, struct_I* ptr_struct);
 
 /**
- * Decode l'instruction passé en paramètre et place les information de celle-ci dans ptr_struct
- * @param instruction
- * @param ptr_struct
+ * Decode the specific type S instruction and fill the struct with informations
+ * @param instruction : hexa format extracted from memory
+ * @param ptr_struct : struct to fill with decoded instruction
  */
 void decoder_type_S(uint32_t instruction, struct_S* ptr_struct);
 
 /**
- * Decode l'instruction passé en paramètre et place les information de celle-ci dans ptr_struct
- * @param instruction
- * @param ptr_struct
+ * Decode the specific type B instruction and fill the struct with informations
+ * @param instruction : hexa format extracted from memory
+ * @param ptr_struct : struct to fill with decoded instruction
  */
 void decoder_type_B(uint32_t instruction, struct_B* ptr_struct);
 
 /**
- * Decode l'instruction passé en paramètre et place les information de celle-ci dans ptr_struct
- * @param instruction
- * @param ptr_struct
+ * Decode the specific type U instruction and fill the struct with informations
+ * @param instruction : hexa format extracted from memory
+ * @param ptr_struct : struct to fill with decoded instruction
  */
 void decoder_type_U(uint32_t instruction, struct_U* ptr_struct);
 
 /**
- * Decode l'instruction passé en paramètre et place les information de celle-ci dans ptr_struct
- * @param instruction
- * @param ptr_struct
+ * Decode the specific type J instruction and fill the struct with informations
+ * @param instruction : hexa format extracted from memory
+ * @param ptr_struct : struct to fill with decoded instruction
  */
 void decoder_type_J(uint32_t instruction, struct_J* ptr_struct);
 

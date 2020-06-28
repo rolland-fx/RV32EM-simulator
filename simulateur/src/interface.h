@@ -9,31 +9,29 @@
 #include <stdio.h>
 #include "memory.h"
 
-//extern uint32_t Register[REGISTER_NUMBER];
-//extern uint32_t Memory[MEMORY_SIZE];
 
 /**
- * Affiche les informations générale au lancement du programme
+ * Show general information at start time
  * @param None
  * @return None
  */
 void InitialPrint(void);
 /**
- * Affiche pour l'instruction courante son format hexa et son decodage sous forme assembler
- * @param None
+ * Show the hexa and decoded format of the current instruction
+ * @param buffer : string for the decoded format of the instruction
  * @return None
  */
 void PrintInstruction(char* buffer);
 /**
- * Affiche l'état courant des registres
+ * Show current state of all registers
  * @param None
  * @return None
  */
 void PrintCurrentState(void);
 /**
- * Affiche la valeur de x=MemoryCaseToShow a partir de l'adresse address de la mémoire simulée
- * @param address  : adresse au format du tableau de memoire simulée
- * @param MemoryCaseToShow : Nombre de case mémoire a afficer depuis address
+ * Show MemoryCaseToShow of memory from address
+ * @param address  : Address of memory to show
+ * @param MemoryCaseToShow : Number of memory slice to show
  * @return None
  */
 void PrintSliceofMemory(uint32_t address, uint8_t MemoryCaseToShow);
