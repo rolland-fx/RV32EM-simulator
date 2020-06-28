@@ -610,6 +610,60 @@ execute_test/execute_R_test.c.s:
 	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/execute_test/execute_R_test.c.s
 .PHONY : execute_test/execute_R_test.c.s
 
+execute_test/execute_S_test.obj: execute_test/execute_S_test.c.obj
+
+.PHONY : execute_test/execute_S_test.obj
+
+# target to build an object file
+execute_test/execute_S_test.c.obj:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/execute_test/execute_S_test.c.obj
+.PHONY : execute_test/execute_S_test.c.obj
+
+execute_test/execute_S_test.i: execute_test/execute_S_test.c.i
+
+.PHONY : execute_test/execute_S_test.i
+
+# target to preprocess a source file
+execute_test/execute_S_test.c.i:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/execute_test/execute_S_test.c.i
+.PHONY : execute_test/execute_S_test.c.i
+
+execute_test/execute_S_test.s: execute_test/execute_S_test.c.s
+
+.PHONY : execute_test/execute_S_test.s
+
+# target to generate assembly for a file
+execute_test/execute_S_test.c.s:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/execute_test/execute_S_test.c.s
+.PHONY : execute_test/execute_S_test.c.s
+
+execute_test/execute_U_test.obj: execute_test/execute_U_test.c.obj
+
+.PHONY : execute_test/execute_U_test.obj
+
+# target to build an object file
+execute_test/execute_U_test.c.obj:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/execute_test/execute_U_test.c.obj
+.PHONY : execute_test/execute_U_test.c.obj
+
+execute_test/execute_U_test.i: execute_test/execute_U_test.c.i
+
+.PHONY : execute_test/execute_U_test.i
+
+# target to preprocess a source file
+execute_test/execute_U_test.c.i:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/execute_test/execute_U_test.c.i
+.PHONY : execute_test/execute_U_test.c.i
+
+execute_test/execute_U_test.s: execute_test/execute_U_test.c.s
+
+.PHONY : execute_test/execute_U_test.s
+
+# target to generate assembly for a file
+execute_test/execute_U_test.c.s:
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug && $(MAKE) -f test\CMakeFiles\test.dir\build.make test/CMakeFiles/test.dir/execute_test/execute_U_test.c.s
+.PHONY : execute_test/execute_U_test.c.s
+
 main_test.obj: main_test.c.obj
 
 .PHONY : main_test.obj
@@ -754,6 +808,12 @@ help:
 	@echo ... execute_test/execute_R_test.obj
 	@echo ... execute_test/execute_R_test.i
 	@echo ... execute_test/execute_R_test.s
+	@echo ... execute_test/execute_S_test.obj
+	@echo ... execute_test/execute_S_test.i
+	@echo ... execute_test/execute_S_test.s
+	@echo ... execute_test/execute_U_test.obj
+	@echo ... execute_test/execute_U_test.i
+	@echo ... execute_test/execute_U_test.s
 	@echo ... main_test.obj
 	@echo ... main_test.i
 	@echo ... main_test.s

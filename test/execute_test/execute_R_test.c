@@ -168,8 +168,8 @@ void execute_type_R_SUB_should_not_modify_x0(){
 void execute_type_R_SUB_should_place_rs1_minus_rs2_in_rd(){
     struct_R Struct_R;
 
-    uint32_t rs1 = -123456;
-    uint32_t rs2 = 654321;
+    uint32_t rs1 = 654321;
+    uint32_t rs2 = -123456;
 
     Register[1] = (uint32_t)rs1;
     Register[2] = (uint32_t)rs2;

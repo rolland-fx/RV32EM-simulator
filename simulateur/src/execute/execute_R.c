@@ -23,7 +23,7 @@ uint8_t execute_type_R_SUB(struct_R *ptr_struct) {
 
     if (ptr_struct->rd < 16 && ptr_struct->rs1 < 16 && ptr_struct->rs2 < 16) {
         if(ptr_struct->rd != 0)
-            Register[ptr_struct->rd] = Register[ptr_struct->rs2] - Register[ptr_struct->rs1];
+            Register[ptr_struct->rd] = Register[ptr_struct->rs1] - Register[ptr_struct->rs2];
         PC = PC + 4;
     } else {
         return_val = 1;

@@ -106,56 +106,65 @@ void create_string_type_R(struct_R* ptr_struct, uint32_t instruction,  char*buff
 }
 
 void create_string_type_I_LOAD(struct_I* ptr_struct, uint32_t instruction,  char*buffer){
+    uint16_t imm_u = ptr_struct->imm_11_0;
+    int16_t imm = ptr_struct->imm_11_0;
+    imm = imm << 4;
+    imm = imm >> 4;
+
     switch (ptr_struct->func3){
         case 0x0:   //LB
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [LB x%d x%d 0x%X]", instruction, ptr_struct->rd,
-                     ptr_struct->rs1, ptr_struct->imm_11_0);
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [LB x%d x%d %d]", instruction, ptr_struct->rd,
+                     ptr_struct->rs1, imm);
             break;
         case 0x1:   //LH
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [LH x%d x%d 0x%X]", instruction, ptr_struct->rd,
-                     ptr_struct->rs1, ptr_struct->imm_11_0);
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [LH x%d x%d %d]", instruction, ptr_struct->rd,
+                     ptr_struct->rs1, imm);
             break;
         case 0x2:   //LW
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [LW x%d x%d 0x%X]", instruction, ptr_struct->rd,
-                     ptr_struct->rs1, ptr_struct->imm_11_0);
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [LW x%d x%d %d]", instruction, ptr_struct->rd,
+                     ptr_struct->rs1, imm);
             break;
         case 0x4:   //LBU
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [LBU x%d x%d 0x%X]", instruction, ptr_struct->rd,
-                     ptr_struct->rs1, ptr_struct->imm_11_0);
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [LBU x%d x%d %d]", instruction, ptr_struct->rd,
+                     ptr_struct->rs1, imm_u);
             break;
         case 0x5:   //LHU
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [LHU x%d x%d 0x%X]", instruction, ptr_struct->rd,
-                     ptr_struct->rs1, ptr_struct->imm_11_0);
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [LHU x%d x%d %d]", instruction, ptr_struct->rd,
+                     ptr_struct->rs1, imm_u);
             break;
     }
 }
 
 void create_string_type_I_ARMT(struct_I* ptr_struct, uint32_t instruction,  char*buffer){
+    uint16_t imm_u = ptr_struct->imm_11_0;
+    int16_t imm = imm_u << 4;
+    imm = imm>> 4;
+
     switch(ptr_struct->func3){
         case ADDI_FUNCT3:
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [ADDI x%d x%d 0x%X]", instruction, ptr_struct->rd,
-                     ptr_struct->rs1, ptr_struct->imm_11_0);  break;
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [ADDI x%d x%d %d]", instruction, ptr_struct->rd,
+                     ptr_struct->rs1, imm);  break;
         case SLTI_FUNCT3:
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [SLTI x%d x%d 0x%X]", instruction, ptr_struct->rd,
-                     ptr_struct->rs1, ptr_struct->imm_11_0); break;
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [SLTI x%d x%d %d]", instruction, ptr_struct->rd,
+                     ptr_struct->rs1, imm); break;
         case SLTIU_FUNCT3:
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [SLTIU x%d x%d 0x%X]", instruction, ptr_struct->rd,
-                     ptr_struct->rs1, ptr_struct->imm_11_0);  break;
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [SLTIU x%d x%d %d]", instruction, ptr_struct->rd,
+                     ptr_struct->rs1, imm_u);  break;
         case XORI_FUNCT3:
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [XORI x%d x%d 0x%X]", instruction, ptr_struct->rd,
-                     ptr_struct->rs1, ptr_struct->imm_11_0);   break;
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [XORI x%d x%d %d]", instruction, ptr_struct->rd,
+                     ptr_struct->rs1, imm);   break;
         case ORI_FUNCT3:
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [ORI x%d x%d 0x%X]", instruction, ptr_struct->rd,
-                     ptr_struct->rs1, ptr_struct->imm_11_0);   break;
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [ORI x%d x%d %d]", instruction, ptr_struct->rd,
+                     ptr_struct->rs1, imm);   break;
         case ANDI_FUNCT3:
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [ANDI x%d x%d 0x%X]", instruction, ptr_struct->rd,
-                     ptr_struct->rs1, ptr_struct->imm_11_0);  break;
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [ANDI x%d x%d %d]", instruction, ptr_struct->rd,
+                     ptr_struct->rs1, imm);  break;
         case SLLI_FUNCT3:
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [SLLI x%d x%d 0x%X]", instruction, ptr_struct->rd,
-                     ptr_struct->rs1, ptr_struct->imm_11_0);   break;
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [SLLI x%d x%d %d]", instruction, ptr_struct->rd,
+                     ptr_struct->rs1, imm);   break;
         case SRxI_FUNCT3:
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [SRLI x%d x%d 0x%X]", instruction, ptr_struct->rd,
-                     ptr_struct->rs1, ptr_struct->imm_11_0);   break;
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [SRLI x%d x%d %d]", instruction, ptr_struct->rd,
+                     ptr_struct->rs1, imm);   break;
     }
 }
 
@@ -184,19 +193,21 @@ void create_string_type_I(struct_I* ptr_struct, uint32_t instruction,  char*buff
 
 void create_string_type_S(struct_S* ptr_struct, uint32_t instruction,  char*buffer) {
 
-    uint32_t offset = (uint32_t)((ptr_struct->imm_11_5 << 6) + ptr_struct->imm_4_0);
+    int16_t offset = (uint32_t)((ptr_struct->imm_11_5 << 6) + ptr_struct->imm_4_0);
+    offset = offset << 3;
+    offset = offset << 3;
 
     switch (ptr_struct->func3) {
         case STORE_8bits: //SB
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [SB x%d x%d 0x%X]", instruction, ptr_struct->rs1,
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [SB x%d x%d 0x%d]", instruction, ptr_struct->rs1,
                      ptr_struct->rs2, offset);
             break;
         case STORE_16bits: //SH
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [SH x%d x%d 0x%X]", instruction, ptr_struct->rs1,
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [SH x%d x%d 0x%d]", instruction, ptr_struct->rs1,
                      ptr_struct->rs2, offset);
             break;
         case STORE_32bits: // SW
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [SW x%d x%d 0x%X]", instruction, ptr_struct->rs1,
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [SW x%d x%d 0x%d]", instruction, ptr_struct->rs1,
                      ptr_struct->rs2, offset);
             break;
         default:

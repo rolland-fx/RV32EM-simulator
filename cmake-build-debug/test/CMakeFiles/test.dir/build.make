@@ -329,6 +329,32 @@ test/CMakeFiles/test.dir/execute_test/execute_R_test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/execute_test/execute_R_test.c.s"
 	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_R_test.c -o CMakeFiles\test.dir\execute_test\execute_R_test.c.s
 
+test/CMakeFiles/test.dir/execute_test/execute_S_test.c.obj: test/CMakeFiles/test.dir/flags.make
+test/CMakeFiles/test.dir/execute_test/execute_S_test.c.obj: ../test/execute_test/execute_S_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object test/CMakeFiles/test.dir/execute_test/execute_S_test.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\execute_test\execute_S_test.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_S_test.c
+
+test/CMakeFiles/test.dir/execute_test/execute_S_test.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/execute_test/execute_S_test.c.i"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_S_test.c > CMakeFiles\test.dir\execute_test\execute_S_test.c.i
+
+test/CMakeFiles/test.dir/execute_test/execute_S_test.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/execute_test/execute_S_test.c.s"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_S_test.c -o CMakeFiles\test.dir\execute_test\execute_S_test.c.s
+
+test/CMakeFiles/test.dir/execute_test/execute_U_test.c.obj: test/CMakeFiles/test.dir/flags.make
+test/CMakeFiles/test.dir/execute_test/execute_U_test.c.obj: ../test/execute_test/execute_U_test.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object test/CMakeFiles/test.dir/execute_test/execute_U_test.c.obj"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\test.dir\execute_test\execute_U_test.c.obj   -c C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_U_test.c
+
+test/CMakeFiles/test.dir/execute_test/execute_U_test.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test.dir/execute_test/execute_U_test.c.i"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_U_test.c > CMakeFiles\test.dir\execute_test\execute_U_test.c.i
+
+test/CMakeFiles/test.dir/execute_test/execute_U_test.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test.dir/execute_test/execute_U_test.c.s"
+	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && C:\PROGRA~2\MINGW-~1\I686-8~1.0-P\mingw32\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\alexa\CLionProjects\RV32EM-simulator\test\execute_test\execute_U_test.c -o CMakeFiles\test.dir\execute_test\execute_U_test.c.s
+
 # Object files for target test
 test_OBJECTS = \
 "CMakeFiles/test.dir/__/simulateur/src/decoder.c.obj" \
@@ -351,7 +377,9 @@ test_OBJECTS = \
 "CMakeFiles/test.dir/execute_test/execute_B_test.c.obj" \
 "CMakeFiles/test.dir/execute_test/execute_I_test.c.obj" \
 "CMakeFiles/test.dir/execute_test/execute_J_test.c.obj" \
-"CMakeFiles/test.dir/execute_test/execute_R_test.c.obj"
+"CMakeFiles/test.dir/execute_test/execute_R_test.c.obj" \
+"CMakeFiles/test.dir/execute_test/execute_S_test.c.obj" \
+"CMakeFiles/test.dir/execute_test/execute_U_test.c.obj"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
@@ -377,12 +405,14 @@ test/test.exe: test/CMakeFiles/test.dir/execute_test/execute_B_test.c.obj
 test/test.exe: test/CMakeFiles/test.dir/execute_test/execute_I_test.c.obj
 test/test.exe: test/CMakeFiles/test.dir/execute_test/execute_J_test.c.obj
 test/test.exe: test/CMakeFiles/test.dir/execute_test/execute_R_test.c.obj
+test/test.exe: test/CMakeFiles/test.dir/execute_test/execute_S_test.c.obj
+test/test.exe: test/CMakeFiles/test.dir/execute_test/execute_U_test.c.obj
 test/test.exe: test/CMakeFiles/test.dir/build.make
 test/test.exe: test/unity/libunity.a
 test/test.exe: test/CMakeFiles/test.dir/linklibs.rsp
 test/test.exe: test/CMakeFiles/test.dir/objects1.rsp
 test/test.exe: test/CMakeFiles/test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking C executable test.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking C executable test.exe"
 	cd /d C:\Users\alexa\CLionProjects\RV32EM-simulator\cmake-build-debug\test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\test.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

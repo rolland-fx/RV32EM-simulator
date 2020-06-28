@@ -20,7 +20,6 @@ void tearDown(void){
 int main(void){
     UNITY_BEGIN();
     RUN_TEST_loadProgramToMemory();
-    //RUN_TEST(test_decoder_instruction);
     RUN_TEST(run_test_all_type_I);
     RUN_TEST(run_test_all_type_S);
     RUN_TEST(run_test_all_type_J);

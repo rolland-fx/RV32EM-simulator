@@ -22,6 +22,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/alexa/CLionProjects/RV32EM-simulator/test/execute_test/execute_I_test.c" "C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/CMakeFiles/test.dir/execute_test/execute_I_test.c.obj"
   "C:/Users/alexa/CLionProjects/RV32EM-simulator/test/execute_test/execute_J_test.c" "C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/CMakeFiles/test.dir/execute_test/execute_J_test.c.obj"
   "C:/Users/alexa/CLionProjects/RV32EM-simulator/test/execute_test/execute_R_test.c" "C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/CMakeFiles/test.dir/execute_test/execute_R_test.c.obj"
+  "C:/Users/alexa/CLionProjects/RV32EM-simulator/test/execute_test/execute_S_test.c" "C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/CMakeFiles/test.dir/execute_test/execute_S_test.c.obj"
+  "C:/Users/alexa/CLionProjects/RV32EM-simulator/test/execute_test/execute_U_test.c" "C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/CMakeFiles/test.dir/execute_test/execute_U_test.c.obj"
   "C:/Users/alexa/CLionProjects/RV32EM-simulator/test/main_test.c" "C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/CMakeFiles/test.dir/main_test.c.obj"
   "C:/Users/alexa/CLionProjects/RV32EM-simulator/test/manager_test.c" "C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/CMakeFiles/test.dir/manager_test.c.obj"
   "C:/Users/alexa/CLionProjects/RV32EM-simulator/test/memory_test.c" "C:/Users/alexa/CLionProjects/RV32EM-simulator/cmake-build-debug/test/CMakeFiles/test.dir/memory_test.c.obj"

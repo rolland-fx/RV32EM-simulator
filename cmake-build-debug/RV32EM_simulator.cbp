@@ -282,6 +282,18 @@
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/execute_test/execute_R_test.h">
 			<Option target="test"/>
 		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/execute_test/execute_S_test.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/execute_test/execute_S_test.h">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/execute_test/execute_U_test.c">
+			<Option target="test"/>
+		</Unit>
+		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/execute_test/execute_U_test.h">
+			<Option target="test"/>
+		</Unit>
 		<Unit filename="C:/Users/alexa/CLionProjects/RV32EM-simulator/test/main_test.c">
 			<Option target="test"/>
 		</Unit>

@@ -6,14 +6,11 @@
 
 uint8_t execute_type_I_LB(struct_I* ptr_struct){
     uint8_t retVal = 0;
-    uint32_t offset = (uint32_t)ptr_struct->imm_11_0;
+    int16_t offset = (uint32_t)ptr_struct->imm_11_0;
 
-    if (offset & 0x00000800u){
-        offset = 0xFFFFF000u | offset;
-    }
-    else{
-        offset = 0x00000000u | offset;
-    }
+    offset = offset << 4;
+    offset = offset >> 4;
+
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
         if (ptr_struct->rd != 0) {
             Register[ptr_struct->rd] = user_memory_get_byte(Register[ptr_struct->rs1] + offset);
@@ -28,13 +25,10 @@ uint8_t execute_type_I_LB(struct_I* ptr_struct){
 
 uint8_t execute_type_I_LH(struct_I* ptr_struct){
     uint8_t retVal = 0;
-    uint32_t offset = (uint32_t)ptr_struct->imm_11_0;
-    if (offset & 0x00000800u){
-        offset = 0xFFFFF000u | offset;
-    }
-    else{
-        offset = 0x00000000u | offset;
-    }
+    int16_t offset = (uint32_t)ptr_struct->imm_11_0;
+
+    offset = offset << 4;
+    offset = offset >> 4;
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
         if (ptr_struct->rd != 0) {
@@ -50,14 +44,10 @@ uint8_t execute_type_I_LH(struct_I* ptr_struct){
 
 uint8_t execute_type_I_LW(struct_I* ptr_struct){
     uint8_t retVal = 0;
-    uint32_t offset = (uint32_t)ptr_struct->imm_11_0;
+    int16_t offset = (uint32_t)ptr_struct->imm_11_0;
 
-    if (offset & 0x00000800u){
-        offset = 0xFFFFF000u | offset;
-    }
-    else{
-        offset = 0x00000000u | offset;
-    }
+    offset = offset << 4;
+    offset = offset >> 4;
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
         if (ptr_struct->rd != 0) {

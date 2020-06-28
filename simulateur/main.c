@@ -24,10 +24,10 @@ int main(int argc, char *argv[] ) {
     //add_string_to_memory(0x00400000, "Ecole de technologie superieure");
 
     user_memory_save_word(0x00400000, 0x40490fdb);
-    user_memory_save_word(0x00400000-4, 0x449f2e14);
+    user_memory_save_word(0x00400004, 0x449f2e14);
 
-    user_memory_save_word(0x00400000-32, 0x7F800000);
-    user_memory_save_word(0x00400000-36, 0x007FFFFF);
+    user_memory_save_word(0x00400008, 0x7F800000);
+    user_memory_save_word(0x0040000c, 0x007FFFFF);
 
     return CodeRun();
 }
