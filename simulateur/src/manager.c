@@ -4,9 +4,8 @@
 
 #include "manager.h"
 
-
 char CodeRun() {
-    char buffer[4096];
+    char buffer[50];
     char Selection = 's';
     NextInstructionExist = 1;
     char InstructionCounter = 0;

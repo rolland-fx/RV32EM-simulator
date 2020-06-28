@@ -16,7 +16,4 @@
 #include "src/decoder.h"
 #include "src/execute.h"
 
-
-
-
 #endif //RV32EM_SIMULATOR_RV32EM_H

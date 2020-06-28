@@ -31,20 +31,68 @@ uint8_t loadProgramToMemory(char * file);
  */
 uint8_t is_end_of_program(void);
 
+/**
+ * Acces a byte of the simulated memory at the simulated address
+ * @param addr : 32 bits  adress in the simulated memory
+ * @return Return the byte at the adress in the memory
+ */
 uint8_t memory_get_byte(uint32_t addr);
+/**
+ * Acces two byte of the simulated memory at the simulated address
+ * @param addr : 32 bits adress in the simulated memory
+ * @return Return the 16 bits at the adress in the memory (N and N+1)
+ */
 uint16_t memory_get_half_word(uint32_t addr);
+/**
+ * Acces a 32 bit word of the simulated memory at the simulated address
+ * @param addr : 32 bits adress in the simulated memory
+ * @return Return the 32 bits at the adress in the memory (N to N+3)
+ */
 uint32_t memory_get_word(uint32_t addr);
 
+/**
+ * Store a byte in the simulated memory at the simulated address
+ * @param addr : 32 bits adress in the simulated memory
+ * @return Return the byte at the adress in the memory
+ */
 void memory_save_byte(uint32_t addr, uint8_t value);
+/**
+ * Store two byte in the simulated memory at the simulated address
+ * @param addr : 32 bits adress in the simulated memory
+ * @return Retur the two byte at the adress in the memory (N and N+1)
+ */
 void memory_save_half_word(uint32_t addr, uint16_t value);
+/**
+ * Store a word in the simulated memory at the simulated address
+ * @param addr : 32 bits adress in the simulated memory
+ * @return Return the word at the adress in the memory (N to N+3)
+ */
 void memory_save_word(uint32_t addr, uint32_t value);
 
 uint8_t user_memory_get_byte(uint32_t addr);
 uint16_t user_memory_get_half_word(uint32_t addr);
 uint32_t user_memory_get_word(uint32_t addr);
 
+/**
+ * Store a byte in the simulated memory at the simulated address
+ * This function can only acces the data memory
+ * @param addr : 32 bits adress in the simulated data memory
+ * @return Return the byte at the adress in the data memory
+ */
 void user_memory_save_byte(uint32_t addr, uint8_t value);
+/**
+ * Store the two byte in the simulated memory at the simulated address
+ * This function can only acces the data memory
+ * @param addr : 32 bits adress in the simulated data memory
+ * @return Return two bytes at the adress in the data memory (N and N+1)
+ */
 void user_memory_save_half_word(uint32_t addr, uint16_t value);
+/**
+ * Store the the word in the simulated memory at the simulated address
+ * This function can only acces the data memory
+ * @param addr : 32 bits adress in the simulated data memory
+ * @return Return the word at the adress in the data memory (N to N+3)
+ */
 void user_memory_save_word(uint32_t addr, uint32_t value);
 
 

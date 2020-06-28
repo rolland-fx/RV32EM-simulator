@@ -20,7 +20,13 @@
 
 #include "decoder.h"
 #include "memory.h"
-
+/**
+ * Will call the proper executer for the decoded instructions
+ * And will pass the pointer to the structure that contain all the informations needed
+ * @param instruction_type : type of instruction decoded
+ * @param ptr_struct : pointer to the structure corresponding to the decoded instruction type
+ * @return : 0 if instruction executed properly, 1 if not
+ */
 uint8_t execute_instruction(void* ptr_struct, const type_t instruction_type);
 
 #endif //RV32EM_SIMULATOR_EXECUTER_H
