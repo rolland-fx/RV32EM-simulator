@@ -4,11 +4,11 @@
 
 #include "manager.h"
 
-char CodeRun() {
+uint16_t CodeRun() {
     char buffer[50];
     char Selection = 's';
     NextInstructionExist = 1;
-    char InstructionCounter = 0;
+    uint16_t InstructionCounter = 0;
     while (NextInstructionExist){
         if (Selection != 'c') {
             printf("Execution pas-a-pas (s) ou continue (c)\n");

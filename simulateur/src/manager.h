@@ -28,7 +28,7 @@ uint8_t MemoryCaseToShow;
  * Process entry by user and calls the steps of execution
  * @return return the number of instructions executed
  */
-char CodeRun(void);
+uint16_t CodeRun(void);
 /**
  * Is called to show to the user data of the memory
  * Process address and number of case to show
