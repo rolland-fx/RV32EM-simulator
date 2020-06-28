@@ -13,6 +13,9 @@
 #include "../decoder.h"
 #include "../memory.h"
 
+#define LUI_OPCODE (0x37)
+#define AUIPC_OPCODE (0x17)
+
 /**
  * Execute the U type instruction contain by the struct ptr_struct
  * @param ptr_struct

@@ -206,32 +206,34 @@ void create_string_type_S(struct_S* ptr_struct, uint32_t instruction,  char*buff
 }
 
 void create_string_type_B(struct_B* ptr_struct, uint32_t instruction,  char*buffer) {
-    uint32_t imm = (ptr_struct->imm_4_1 << 1u) | (ptr_struct->imm_10_5 << 5u)
+    uint16_t imm_u = (ptr_struct->imm_4_1 << 1u) | (ptr_struct->imm_10_5 << 5u)
                    | (ptr_struct->imm_11 << 11u) | (ptr_struct->imm_12 << 12u);
+    int16_t imm = imm_u << 3;
+    imm = imm >> 3;
     switch(ptr_struct->func3){
         case BEQ_FUNCT3: //BEQ
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [BEQ x%d x%d 0x%X]", instruction, ptr_struct->rs1,
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [BEQ x%d x%d %d]", instruction, ptr_struct->rs1,
                      ptr_struct->rs2, imm);
             break;
         case BNE_FUNCT3: //BNE
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [BNE x%d x%d 0x%X]", instruction, ptr_struct->rs1,
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [BNE x%d x%d %d]", instruction, ptr_struct->rs1,
                      ptr_struct->rs2, imm);
             break;
         case BLT_FUNCT3: //BLT
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [BLT x%d x%d 0x%X]", instruction, ptr_struct->rs1,
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [BLT x%d x%d %d]", instruction, ptr_struct->rs1,
                      ptr_struct->rs2, imm);
             break;
         case BGE_FUNCT3: //BGE
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [BGE x%d x%d 0x%X]", instruction, ptr_struct->rs1,
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [BGE x%d x%d %d]", instruction, ptr_struct->rs1,
                      ptr_struct->rs2, imm);
             break;
         case BLTU_FUNCT3: //BLTU
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [BLTU x%d x%d 0x%X]", instruction, ptr_struct->rs1,
-                     ptr_struct->rs2, imm);
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [BLTU x%d x%d %d]", instruction, ptr_struct->rs1,
+                     ptr_struct->rs2, imm_u);
             break;
         case BGEU_FUNCT3: //BGEU
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [BGEU x%d x%d 0x%X]", instruction, ptr_struct->rs1,
-                     ptr_struct->rs2, imm);
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [BGEU x%d x%d %d]", instruction, ptr_struct->rs1,
+                     ptr_struct->rs2, imm_u);
             break;
         default:
             break;
@@ -239,13 +241,13 @@ void create_string_type_B(struct_B* ptr_struct, uint32_t instruction,  char*buff
 }
 
 void create_string_type_U(struct_U* ptr_struct, uint32_t instruction, char* buffer) {
-    uint32_t imm = (ptr_struct->imm << 12u);
+    uint32_t imm = (ptr_struct->imm);
     switch (ptr_struct->opcode)
     {
-        case 0x17: //LUI
+        case LUI_OPCODE: //LUI
             snprintf(buffer, buffer_length, "Instruction : 0x%08X [LUI x%d 0x%X]", instruction, ptr_struct->rd, imm);
             break;
-        case 0x37: //AUIPC
+        case AUIPC_OPCODE: //AUIPC
             snprintf(buffer, buffer_length, "Instruction : 0x%08X [AUIPC x%d 0x%X]", instruction, ptr_struct->rd, imm);
             break;
         default :
@@ -259,7 +261,7 @@ void create_string_type_J(struct_J* ptr_struct, uint32_t instruction, char* buff
 
     switch(ptr_struct->opcode){
         case JAL_OPCODE:
-            snprintf(buffer, buffer_length, "Instruction : 0x%08X [JAL x%d 0x%X]", instruction, ptr_struct->rd, imm);
+            snprintf(buffer, buffer_length, "Instruction : 0x%08X [JAL x%d 0x%X]", instruction, ptr_struct->rd, (imm<<1)+PC);
             break;
         default:
             break;
