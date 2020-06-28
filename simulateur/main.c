@@ -21,13 +21,15 @@ int main(int argc, char *argv[] ) {
     else{
         printf("\nFichier d'instruction charge\n");
     }
+
+    //Decommenter la ligne suivante pour le programme strlen
     //add_string_to_memory(0x00400000, "Ecole de technologie superieure");
 
-    user_memory_save_word(0x00400000, 0x40490fdb);
-    user_memory_save_word(0x00400004, 0x449f2e14);
-
-    user_memory_save_word(0x00400008, 0x7F800000);
-    user_memory_save_word(0x0040000c, 0x007FFFFF);
+    //Decommenter les 4 lignes suivante pour le programme fmul
+    //user_memory_save_word(0x00400000, 0x40490fdb);
+    //user_memory_save_word(0x00400004, 0x449f2e14);
+    //user_memory_save_word(0x00400008, 0x7F800000);
+    //user_memory_save_word(0x0040000c, 0x007FFFFF);
 
     return CodeRun();
 }
