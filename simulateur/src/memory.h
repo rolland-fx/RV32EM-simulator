@@ -95,5 +95,14 @@ void user_memory_save_half_word(uint32_t addr, uint16_t value);
  */
 void user_memory_save_word(uint32_t addr, uint32_t value);
 
+/**
+ * Store a string in the simulated data memory
+ * Can be called before the execution of a program
+ * to store data in the memory
+ * @param addr : 32 bits adress in the simulated data memory
+ * @param string : Pointer to the string to store
+ * @return None
+ */
+void add_string_to_memory(uint32_t addr, char* string);
 
 #endif //RV32EM_SIMULATOR_MEMORY_H

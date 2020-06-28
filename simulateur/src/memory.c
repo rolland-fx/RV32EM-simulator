@@ -185,3 +185,12 @@ uint8_t is_end_of_program(void){
         return 0;
     }
 }
+void add_string_to_memory(uint32_t addr, char* string){
+    uint16_t i;
+
+    for(i = 0; string[i] != '\0'; i++){
+        user_memory_save_byte(addr++, (uint8_t)string[i]);
+    }
+
+    user_memory_save_byte(addr, string[i]);
+}
