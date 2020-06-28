@@ -14,9 +14,9 @@
 #include "../memory.h"
 
 /**
- * Execute une instruction de type U en utilisant les informations stockée dans la structure
- * @param instruction
+ * Execute the U type instruction contain by the struct ptr_struct
  * @param ptr_struct
+ * @return non-zero if error
  */
 uint8_t execute_type_U(struct_U* ptr_struct);
 

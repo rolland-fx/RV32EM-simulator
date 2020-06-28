@@ -39,8 +39,9 @@
 
 
 /**
- *
+ * Execute the I type instruction contain by the struct ptr_struct
  * @param ptr_struct
+ * @return non-zero if error
  */
 uint8_t execute_type_I(struct_I *ptr_struct);
 

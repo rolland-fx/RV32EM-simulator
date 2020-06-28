@@ -17,6 +17,11 @@
 #define STORE_16bits (0x1)
 #define STORE_32bits (0x2)
 
+/**
+ * Execute the S type instruction contain by the struct ptr_struct
+ * @param ptr_struct
+ * @return non-zero if error
+ */
 uint8_t execute_type_S(struct_S* ptr_struct);
 
 #endif //RV32EM_SIMULATOR_EXECUTER_S_H
