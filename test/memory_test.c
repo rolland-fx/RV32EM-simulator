@@ -20,14 +20,14 @@ void loadProgramToMemory_should_copy_file_to_memory(){
                                    0xf9850513, 0x00400793, 0x00000073, 0x00028513, 0x00100793, 0x00000073, 0x10000517,
                                    0xf9050513, 0x00400793, 0x00000073, 0x00030513, 0x00100793, 0x00000073, 0x00008067};
 
-    TEST_ASSERT_EQUAL_UINT8 (0, loadProgramToMemory("riscv_test.txt"));
+    TEST_ASSERT_EQUAL_UINT8 (0, loadProgramToMemory("../../test/riscv_test.txt"));
     TEST_ASSERT_EQUAL_UINT32_ARRAY (expectedresult, (uint32_t*)Memory, 42);
 
 };
 
 void loadProgramToMemory_should_initialize_userMemorySize_and_userMemory()
 {
-    TEST_ASSERT_EQUAL_UINT8 (0, loadProgramToMemory("riscv_test.txt"));
+    TEST_ASSERT_EQUAL_UINT8 (0, loadProgramToMemory("../../test/riscv_test.txt"));
     TEST_ASSERT_EQUAL_UINT32 (MEMORY_SIZE - 42*4, userMemorySize);
     TEST_ASSERT_EQUAL_UINT32 (Memory + 42*4, userMemory);
 }
