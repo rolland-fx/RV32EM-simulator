@@ -6,10 +6,8 @@
 
 uint8_t execute_type_U(struct_U* ptr_struct) {
     uint8_t retVal = 0;
-    if(ptr_struct->rd < 16)
-    {
-        switch (ptr_struct->opcode)
-        {
+    if(ptr_struct->rd < 16){
+        switch (ptr_struct->opcode){
             case 0x17: //LUI
                 Register[ptr_struct->rd] = ((ptr_struct->imm << 12) | 0b000000000000);
                 PC += 4;
@@ -23,8 +21,7 @@ uint8_t execute_type_U(struct_U* ptr_struct) {
             break;
         }
     }
-    else
-    {
+    else{
         retVal = 1;
     }
     return retVal;

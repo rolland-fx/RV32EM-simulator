@@ -8,37 +8,31 @@ uint8_t execute_type_I_LB(struct_I* ptr_struct){
     uint8_t retVal = 0;
     uint32_t offset = (uint32_t)ptr_struct->imm_11_0;
 
-    if (offset & 0x00000800u)
-    {
+    if (offset & 0x00000800u){
         offset = 0xFFFFF000u | offset;
     }
-    else
-    {
+    else{
         offset = 0x00000000u | offset;
     }
-
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
         if (ptr_struct->rd != 0) {
             Register[ptr_struct->rd] = user_memory_get_byte(Register[ptr_struct->rs1] + offset);
         }
         PC += 4;
     }
-    else{
+    else {
         retVal = 1;
     }
-
     return retVal;
 }
 
 uint8_t execute_type_I_LH(struct_I* ptr_struct){
     uint8_t retVal = 0;
     uint32_t offset = (uint32_t)ptr_struct->imm_11_0;
-    if (offset & 0x00000800u)
-    {
+    if (offset & 0x00000800u){
         offset = 0xFFFFF000u | offset;
     }
-    else
-    {
+    else{
         offset = 0x00000000u | offset;
     }
 
@@ -51,7 +45,6 @@ uint8_t execute_type_I_LH(struct_I* ptr_struct){
     else{
         retVal = 1;
     }
-
     return retVal;
 }
 
@@ -59,12 +52,10 @@ uint8_t execute_type_I_LW(struct_I* ptr_struct){
     uint8_t retVal = 0;
     uint32_t offset = (uint32_t)ptr_struct->imm_11_0;
 
-    if (offset & 0x00000800u)
-    {
+    if (offset & 0x00000800u){
         offset = 0xFFFFF000u | offset;
     }
-    else
-    {
+    else{
         offset = 0x00000000u | offset;
     }
 
@@ -143,9 +134,9 @@ uint8_t execute_type_I_ADDI(struct_I* ptr_struct){
     }
 
     if(ptr_struct->rd < 16 && ptr_struct->rs1 < 16){
-        if(ptr_struct->rd != 0)
+        if(ptr_struct->rd != 0) {
             Register[ptr_struct->rd] = Register[ptr_struct->rs1] + imm;
-
+        }
         PC += 4;
     }
     else{
@@ -185,8 +176,7 @@ uint8_t execute_type_I_SLTIU(struct_I* ptr_struct){
     uint8_t retVal = 0;
     uint32_t imm = (uint32_t)ptr_struct->imm_11_0;
 
-    if (imm & 0x00000800u)
-    {
+    if (imm & 0x00000800u){
         imm = 0xFFFFF000u | imm;
     }
 
@@ -194,13 +184,14 @@ uint8_t execute_type_I_SLTIU(struct_I* ptr_struct){
         if (ptr_struct->rd != 0) {
             if ((imm == 1) || (Register[ptr_struct->rs1] < imm)) {
                 Register[ptr_struct->rd] = 1;
-            } else {
+            }
+            else {
                 Register[ptr_struct->rd] = 0;
             }
         }
         PC += 4;
     }
-    else{
+    else {
         retVal = 1;
     }
 
@@ -211,8 +202,7 @@ uint8_t execute_type_I_XORI(struct_I* ptr_struct){
     uint8_t retVal = 0;
     uint32_t imm = ptr_struct->imm_11_0;
 
-    if (imm & 0x00000800u)
-    {
+    if (imm & 0x00000800u){
         imm = 0xFFFFF000u | imm;
     }
 
@@ -220,7 +210,8 @@ uint8_t execute_type_I_XORI(struct_I* ptr_struct){
         if (ptr_struct->rd != 0) {
             if (imm == 0xFFFFFFFFu) {
                 Register[ptr_struct->rd] = ~Register[ptr_struct->rs1];
-            } else {
+            }
+            else {
                 Register[ptr_struct->rd] = Register[ptr_struct->rs1] ^ imm;
             }
         }
@@ -237,8 +228,7 @@ uint8_t execute_type_I_ORI(struct_I* ptr_struct){
     uint8_t retVal = 0;
     uint32_t imm = ptr_struct->imm_11_0;
 
-    if (imm & 0x00000800u)
-    {
+    if (imm & 0x00000800u){
         imm = 0xFFFFF000u | imm;
     }
 
@@ -259,8 +249,7 @@ uint8_t execute_type_I_ANDI(struct_I* ptr_struct){
     uint8_t retVal = 0;
     uint32_t imm = (uint32_t)ptr_struct->imm_11_0;
 
-    if (imm & 0x00000800u)
-    {
+    if (imm & 0x00000800u){
         imm = 0xFFFFF000u | imm;
     }
 

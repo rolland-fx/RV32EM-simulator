@@ -86,7 +86,7 @@ void decoder_type_J(uint32_t instruction, struct_J* ptr_struct){
     ptr_struct->imm_20      =   (instruction & 0x80000000u) >> 31u;
 }
 
-void decoder_type_U(uint32_t instruction, struct_U* ptr_struct) {
+void decoder_type_U(uint32_t instruction, struct_U* ptr_struct){
     ptr_struct->opcode      =   (instruction & 0x0000007Fu);
     ptr_struct->rd          =   (instruction & 0x00000F80u) >> 07u;
     ptr_struct->imm         =   (instruction & 0xFFFFF000u) >> 12u;
@@ -95,7 +95,6 @@ void decoder_type_U(uint32_t instruction, struct_U* ptr_struct) {
 
 
 /**
- * *** À COMPLÉTER ***
  * Can decode any type of instruction puts the parts of the instruction inside a structre.
  * Return the type of the instruction decoded
  * @param instruction
@@ -120,7 +119,7 @@ void* decoder_instruction(uint32_t instruction, type_t* instruction_type){
         case 0x6F: *instruction_type = J_type; break;
         default:    break;
     }
-    switch (*instruction_type) {
+    switch (*instruction_type){
         case R_type:
             retVal = (void*)&Struct_R;
             decoder_type_R(instruction,(struct_R*)(retVal));
