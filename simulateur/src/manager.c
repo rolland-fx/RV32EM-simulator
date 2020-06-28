@@ -58,7 +58,7 @@ char RunNextInstruction(char* buffer){
 }
 
 void MemoryChoice(void){
-    printf("Choix de l'adresse memoire a afficher. Format : FFFFFF \n");
+    printf("Choix de l'adresse memoire a afficher. Format : FFFFFFFF \n");
     printf(">");
     scanf("%s", MemoryAdressString);
     printf("\n");

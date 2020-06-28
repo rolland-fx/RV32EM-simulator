@@ -5,12 +5,13 @@
 
 void InitialPrint(){
     setbuf(stdout,0);
-    printf("Simulateur RISC-V RV32E par :\n");
+    printf("(c) 2020 - Simulateur RISC-V RV32E par :\n");
     printf("- Alexandre Viau\n");
     printf("- Filipe Andres\n");
     printf("- Jean-Pascal Choiniere\n");
     printf("- F-X Rolland\n");
-    printf("2020\n");
+    printf("choix possible\nq pour quitter\nm pour l'affichage memoire\n");
+    printf("s pour executer la prochaine instruction\nc pour executer le programme jusqu'a sa fin\n");
 }
 void PrintInstruction(char* buffer){
     printf("%s\n",buffer);
@@ -27,7 +28,6 @@ void PrintSliceofMemory(uint32_t address, uint8_t MemoryCaseToShow){
     printf("contenu memoire :\n");
     for (uint32_t i = address; i < (uint32_t) address + MemoryCaseToShow; i+=4){
         if(i < MEMORY_SIZE){
-            //printf("0x%08X : 0x%08X\n",i,Memory[i]);
             printf("0x%08X : 0x%08X\n",i,user_memory_get_word(i));
         }
     }
