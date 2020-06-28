@@ -7,7 +7,7 @@
 void execute_type_U_AUIPC_should_return_1_if_rd_greater_than_15(){
     struct_U Struct_U;
 
-    Struct_U.opcode = 0x37;
+    Struct_U.opcode = AUIPC_OPCODE;
     Struct_U.rd = 16;
     Struct_U.imm = 0;
 
@@ -17,7 +17,7 @@ void execute_type_U_AUIPC_should_add_4_to_PC(){
     struct_U Struct_U;
     uint32_t start_PC = 100;
 
-    Struct_U.opcode = 0x37;
+    Struct_U.opcode = AUIPC_OPCODE;
     Struct_U.rd = 4;
     Struct_U.imm = 0;
 
@@ -33,7 +33,7 @@ void execute_type_U_AUIPC_rc_should_be_imm_plus_offset_plus_PC(){
     uint8_t rd = 5;
     uint32_t start_PC = 8;
 
-    Struct_U.opcode = 0x37;
+    Struct_U.opcode = AUIPC_OPCODE;
     Struct_U.rd = rd;
     Struct_U.imm = 100;
 
@@ -47,7 +47,7 @@ void execute_type_U_AUIPC_rc_should_be_imm_plus_offset_plus_PC(){
 void execute_type_U_LUI_should_return_1_if_rd_greater_than_15(){
     struct_U Struct_U;
 
-    Struct_U.opcode = 0x17;
+    Struct_U.opcode = LUI_OPCODE;
     Struct_U.rd = 16;
     Struct_U.imm = 0;
 
@@ -57,7 +57,7 @@ void execute_type_U_LUI_should_add_4_to_PC(){
     struct_U Struct_U;
     uint32_t start_PC = 100;
 
-    Struct_U.opcode = 0x17;
+    Struct_U.opcode = LUI_OPCODE;
     Struct_U.rd = 4;
     Struct_U.imm = 0;
 
@@ -71,7 +71,7 @@ void execute_type_U_LUI_rc_should_be_imm_plus_offset(){
     struct_U Struct_U;
 
     uint8_t rd = 5;
-    Struct_U.opcode = 0x17;
+    Struct_U.opcode = LUI_OPCODE;
     Struct_U.rd = rd;
     Struct_U.imm = 100;
 
